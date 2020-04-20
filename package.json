@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install": "(cd client && npm i) && (npm i)",
+    "install-dev": "(cd client && npm i) && (npm i)",
     "start": "concurrently \"cd client && PORT=3000 npm start\" \"PORT=5000 node index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
