@@ -11,3 +11,8 @@ const pool = new Pool({
 })
 
 module.exports = { pool }
+
+// connectionString = {
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: true
+//   };

@@ -5,22 +5,21 @@ import Dashboard from './components/Dashboard';
 class App extends Component {
   state = { users: [] }
 
-  // async componentDidMount() {
-  //   const response = await fetch('/users')
-  //   const users = await response.json()
+  async componentDidMount() {
+    const response = await fetch('/users')
+    const users = await response.json()
 
-  //   this.setState({ users: users })
-  // }
+    this.setState({ users: users })
+  }
 
   render() {
     return (
       <div>
-        {/* <ul>
+        <ul>
           {this.state.users.map(user => {
             return <li key={user.id}> <b>{user.username}</b><b>{user.password}</b></li>
           })}
-        </ul> */}
-        <Dashboard />
+        </ul>
       </div>
     );
   }
