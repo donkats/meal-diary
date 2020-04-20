@@ -1,31 +1,67 @@
 import bodyParser from 'body-parser'
 import express from 'express'
+import cors from 'cors'
 import path from 'path'
-const app = express()
+
+const { pool } = require('./config');
+const app = express();
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(cors());
 
-const router = express.Router()
+const getUsers = (request, response) => {
+  pool.query('SELECT * FROM users', (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json(results.rows)
+  })
+}
 
-const staticFiles = express.static(path.join(__dirname, '../../client/build'))
-app.use(staticFiles)
+const addUser = (request, response) => {
+  const { username, password } = request.body
 
-router.get('/cities', (req, res) => {
-  const cities = [
-    {name: 'New York City', population: 8175133},
-    {name: 'Los Angeles',   population: 3792621},
-    {name: 'Chicago',       population: 2695598}
-  ]
-  res.json(cities)
+  pool.query('INSERT INTO users (username, password) VALUES ($1, $2)', [username, password], error => {
+    if (error) {
+      throw error
+    }
+    response.status(201).json({ status: 'success', message: 'User added.' })
+  })
+}
+
+app
+  .route('/users')
+  // GET endpoint
+  .get(getUsers)
+  // POST endpoint
+  .post(addUser)
+
+// Start server
+app.listen(process.env.PORT || 3001, () => {
+  console.log(`Server listening`)
 })
 
-app.use(router)
+// const router = express.Router()
 
-// any routes not picked up by the server api will be handled by the react router
-app.use('/*', staticFiles)
+// const staticFiles = express.static(path.join(__dirname, '../../client/build'))
+// app.use(staticFiles)
 
-app.set('port', (process.env.PORT || 3001))
-app.listen(app.get('port'), () => {
-  console.log(`Listening on ${app.get('port')}`)
-})
+// router.get('/cities', (req, res) => {
+//   const cities = [
+//     {name: 'New York City', population: 8175133},
+//     {name: 'Los Angeles',   population: 3792621},
+//     {name: 'Chicago',       population: 2695598}
+//   ]
+//   res.json(cities)
+// })
+
+// app.use(router)
+
+// // any routes not picked up by the server api will be handled by the react router
+// app.use('/*', staticFiles)
+
+// app.set('port', (process.env.PORT || 3001))
+// app.listen(app.get('port'), () => {
+//   console.log(`Listening on ${app.get('port')}`)
+// })
