@@ -2,11 +2,15 @@
   "name": "healthapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "install": "(cd client && npm i) && (cd server && npm i)",
+    "build": "concurrently \"cd client && npm run build\" \"cd server && npm run build\"",
+    "heroku-postbuild": "npm run build",
+    "install": "(cd client && npm install) && (cd server && npm install)",
     "heroku-build": "npm install && cd client &&  npm run build",
-    "start": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "start": "concurrently \"cd client && PORT=3000 npm run start\" \"cd server && PORT=3001 npm run start\"",
+
+    "start:prod": "cd server && npm run start:prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

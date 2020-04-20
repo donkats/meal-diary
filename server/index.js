@@ -1,34 +1,31 @@
-const express = require('express');
-const path = require('path');
-const generatePassword = require('password-generator');
+import bodyParser from 'body-parser'
+import express from 'express'
+import path from 'path'
+const app = express()
 
-const app = express();
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+const router = express.Router()
 
-// Put all API endpoints under '/api'
-app.get('/api/passwords', (req, res) => {
-  const count = 5;
+const staticFiles = express.static(path.join(__dirname, '../../client/build'))
+app.use(staticFiles)
 
-  // Generate some passwords
-  const passwords = Array.from(Array(count).keys()).map(i =>
-    generatePassword(12, false)
-  )
+router.get('/cities', (req, res) => {
+  const cities = [
+    {name: 'New York City', population: 8175133},
+    {name: 'Los Angeles',   population: 3792621},
+    {name: 'Chicago',       population: 2695598}
+  ]
+  res.json(cities)
+})
 
-  // Return them as json
-  res.json(passwords);
+app.use(router)
 
-  console.log(`Sent ${count} passwords`);
-});
+// any routes not picked up by the server api will be handled by the react router
+app.use('/*', staticFiles)
 
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
-
-const port = process.env.PORT || 5000;
-app.listen(port);
-
-console.log(`Password generator listening on ${port}`);
+app.set('port', (process.env.PORT || 3001))
+app.listen(app.get('port'), () => {
+  console.log(`Listening on ${app.get('port')}`)
+})
