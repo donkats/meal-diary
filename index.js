@@ -1,10 +1,8 @@
 const express = require('express');
 const path = require('path');
 const generatePassword = require('password-generator');
-const db = require('./models/index.js');
 
 const app = express();
-
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
@@ -17,7 +15,7 @@ app.get('/api/passwords', (req, res) => {
   const passwords = Array.from(Array(count).keys()).map(i =>
     generatePassword(12, false)
   )
-  db.Url.findOrCreate({where: {url: passwords}})
+
   // Return them as json
   res.json(passwords);
 
