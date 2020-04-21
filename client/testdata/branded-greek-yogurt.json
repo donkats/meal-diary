@@ -1,0 +1,71 @@
+{
+  "foods": [
+      {
+          "food_name": "Greek Yoghurt",
+          "brand_name": "Fage",
+          "serving_qty": 100,
+          "serving_unit": "g",
+          "serving_weight_grams": 100,
+          "nf_calories": 96.25,
+          "nf_total_fat": 5,
+          "nf_saturated_fat": 3.5999999046325684,
+          "nf_cholesterol": null,
+          "nf_sodium": 40,
+          "nf_total_carbohydrate": 3.799999952316284,
+          "nf_dietary_fiber": null,
+          "nf_sugars": 3.799999952316284,
+          "nf_protein": 9,
+          "nf_potassium": null,
+          "nf_p": null,
+          "full_nutrients": [
+              {
+                  "attr_id": 203,
+                  "value": 9
+              },
+              {
+                  "attr_id": 204,
+                  "value": 5
+              },
+              {
+                  "attr_id": 205,
+                  "value": 3.8
+              },
+              {
+                  "attr_id": 208,
+                  "value": 96.25
+              },
+              {
+                  "attr_id": 269,
+                  "value": 3.8
+              },
+              {
+                  "attr_id": 307,
+                  "value": 40
+              },
+              {
+                  "attr_id": 606,
+                  "value": 3.6
+              }
+          ],
+          "nix_brand_name": "Fage",
+          "nix_brand_id": "51db37b6176fe9790a89894d",
+          "nix_item_name": "Greek Yoghurt",
+          "nix_item_id": "59f9713644cf9c911e829812",
+          "metadata": {},
+          "source": 8,
+          "ndb_no": null,
+          "tags": null,
+          "alt_measures": null,
+          "lat": null,
+          "lng": null,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/59f971389da709d45f85857b.jpeg",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "note": null,
+          "updated_at": "2017-11-01T07:01:13+00:00",
+          "nf_ingredient_statement": null
+      }
+  ]
+}

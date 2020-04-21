@@ -1,0 +1,582 @@
+{
+  "common": [
+      {
+          "food_name": "greek yogurt",
+          "serving_unit": "oz",
+          "tag_name": "greek yogurt",
+          "serving_qty": 6,
+          "common_type": null,
+          "tag_id": "63",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/63_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "0 greek yogurt",
+          "serving_unit": "oz",
+          "tag_name": "0% greek yogurt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1814",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1814_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "fruit yoghurt",
+          "serving_unit": "container (6 oz)",
+          "tag_name": "fruit yogurt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "9151",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "2% greek yogurt",
+          "serving_unit": "container (7 oz)",
+          "tag_name": "2% greek yogurt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "3984",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3984_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "0% greek yogurt",
+          "serving_unit": "oz",
+          "tag_name": "0% greek yogurt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1814",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1814_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "frozen yoghurt",
+          "serving_unit": "cup",
+          "tag_name": "frozen yogurt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1331",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1331_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "soy yoghurt",
+          "serving_unit": "container",
+          "tag_name": "soy yogurt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "4262",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/4262_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "greek salad",
+          "serving_unit": "cup",
+          "tag_name": "greek salad",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "2045",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/2045_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "vanilla yoghurt",
+          "serving_unit": "container (6 oz)",
+          "tag_name": "vanilla yogurt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1734",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1734_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "plain greek yogurt",
+          "serving_unit": "oz",
+          "tag_name": "plain greek yogurt",
+          "serving_qty": 6,
+          "common_type": null,
+          "tag_id": "1681",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1681_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "coconut yoghurt",
+          "serving_unit": "container (6 oz)",
+          "tag_name": "coconut yogurt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "13093",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "strawberry yoghurt",
+          "serving_unit": "container (6 oz)",
+          "tag_name": "strawberry yogurt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1676",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1676_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "greek green beans",
+          "serving_unit": "cup",
+          "tag_name": "greek style green beans",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "14291",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "yoghurt muesli",
+          "serving_unit": "Serving",
+          "tag_name": "Yoghurt Muesli Cup",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "14826",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/14826_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "noosa yoghurt raspberry",
+          "serving_unit": "oz",
+          "tag_name": "noosa yoghurt raspberry",
+          "serving_qty": 8,
+          "common_type": 2,
+          "tag_id": "11347",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "greekpastures greek yogurt",
+          "serving_unit": "container",
+          "tag_name": "greekpastures greek yogurt",
+          "serving_qty": 1,
+          "common_type": 2,
+          "tag_id": "10294",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "yoghurt muesli cup",
+          "serving_unit": "Serving",
+          "tag_name": "Yoghurt Muesli Cup",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "14826",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/14826_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "yoghurt muesli parfait",
+          "serving_unit": "Serving",
+          "tag_name": "Yoghurt Muesli Cup",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "14826",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/14826_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "noosa finest yoghurt lemon",
+          "serving_unit": "oz",
+          "tag_name": "noosa finest yoghurt lemon",
+          "serving_qty": 8,
+          "common_type": 2,
+          "tag_id": "12092",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "noosa strawberry rhubarb finest yoghurt",
+          "serving_unit": "container",
+          "tag_name": "noosa strawberry rhubarb finest yoghurt",
+          "serving_qty": 1,
+          "common_type": 2,
+          "tag_id": "11121",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      }
+  ],
+  "branded": [
+      {
+          "food_name": "Greek Yoghurt",
+          "serving_unit": "g",
+          "nix_brand_id": "51db37b6176fe9790a89894d",
+          "brand_name_item_name": "Fage Greek Yoghurt",
+          "serving_qty": 100,
+          "nf_calories": 96.25,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/59f971389da709d45f85857b.jpeg"
+          },
+          "brand_name": "Fage",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "59f9713644cf9c911e829812",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Greek Style Yoghurt",
+          "serving_unit": "cup",
+          "nix_brand_id": "51db37b4176fe9790a898779",
+          "brand_name_item_name": "Caroline's Greek Style Yoghurt",
+          "serving_qty": 1,
+          "nf_calories": 80,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e8d76ee4cdde39f6cf5e722.jpeg"
+          },
+          "brand_name": "Caroline's",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5e8d76ebdee0eff320c75492",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Fat Free Greek Yoghurt",
+          "serving_unit": "cup",
+          "nix_brand_id": "51db37b6176fe9790a89894d",
+          "brand_name_item_name": "Fage Fat Free Greek Yoghurt",
+          "serving_qty": 1,
+          "nf_calories": 98.63999938964844,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/59c606c9ac041bb116363f33.jpeg"
+          },
+          "brand_name": "Fage",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "59c606c68d0136dc11491245",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Greek Style Yoghurt, Natural",
+          "serving_unit": "g",
+          "nix_brand_id": "57489798786e6eba4ae3c823",
+          "brand_name_item_name": "Anchor Greek Style Yoghurt, Natural",
+          "serving_qty": 150,
+          "nf_calories": 90.04000091552734,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/586df0599a2b0660694f2141.jpeg"
+          },
+          "brand_name": "Anchor",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "586c9d90b3d71b26784ebc3c",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Greek Style Yoghurt, Natural Lite",
+          "serving_unit": "g",
+          "nix_brand_id": "51db37bd176fe9790a898e85",
+          "brand_name_item_name": "Yoplait Greek Style Yoghurt, Natural Lite",
+          "serving_qty": 125,
+          "nf_calories": 110.58999633789062,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e843c60e8c42a956b810117.jpeg"
+          },
+          "brand_name": "Yoplait",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5e843c5ecdc0420c5dafb2b1",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Athentikos Greek Yoghurt, Luscious Strawberry",
+          "serving_unit": "g",
+          "nix_brand_id": "556cd5435fa32be31bf3eb04",
+          "brand_name_item_name": "Pauls Athentikos Greek Yoghurt, Luscious Strawberry",
+          "serving_qty": 140,
+          "nf_calories": 186.3000030517578,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/58733518eadd039c0a86e016.jpeg"
+          },
+          "brand_name": "Pauls",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "58733566abb7b0ab5a6f90a5",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Greek Yoghurt, Plain",
+          "serving_unit": "g",
+          "nix_brand_id": "5457c5dec0cdde5a6ab18d7f",
+          "brand_name_item_name": "Nadec Greek Yoghurt, Plain",
+          "serving_qty": 1,
+          "nf_calories": 120,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e64998d44dcc4ec65df8d10.jpeg"
+          },
+          "brand_name": "Nadec",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5e649989879985986da2b1c9",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Greek-Style Yoghurt",
+          "serving_unit": "g",
+          "nix_brand_id": "5a8e6a9957cdcb2b74c872bc",
+          "brand_name_item_name": "Raglan Coconut Yoghurt Greek-Style Yoghurt",
+          "serving_qty": 50,
+          "nf_calories": 110.3499984741211,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5c19ed108f57176a062786a9.jpeg"
+          },
+          "brand_name": "Raglan Coconut Yoghurt",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5c19ed0ecc4189a417bd2ae4",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Greek Style Yoghurt, Plain",
+          "serving_unit": "g",
+          "nix_brand_id": "581ae0d5f2d7668d1e512a24",
+          "brand_name_item_name": "Almarai Greek Style Yoghurt, Plain",
+          "serving_qty": 100,
+          "nf_calories": 135,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5c514d7a250826615809a297.jpeg"
+          },
+          "brand_name": "Almarai",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5c514d778b0791bc1a47fc49",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Greek Yoghurt, Blueberry",
+          "serving_unit": "gm",
+          "nix_brand_id": "51db37ec176fe9790a89a84d",
+          "brand_name_item_name": "Nada Greek Yoghurt, Blueberry",
+          "serving_qty": 100,
+          "nf_calories": 94,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/59d487402563fe193cbf553d.jpeg"
+          },
+          "brand_name": "Nada",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "59d335df7148305b2e0c436b",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Low Fat Greek Recipe Strained Yoghurt",
+          "serving_unit": "g",
+          "nix_brand_id": "5c52a253165a98f978cfa080",
+          "brand_name_item_name": "Fage Total Low Fat Greek Recipe Strained Yoghurt",
+          "serving_qty": 1,
+          "nf_calories": 69.9800033569336,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e6c938e65b3f4255832b1e7.jpeg"
+          },
+          "brand_name": "Fage Total",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5e6c938cdfa2385b601fad2b",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "0% Greek Style Yoghurt With Vanilla",
+          "serving_unit": "g",
+          "nix_brand_id": "552b8b990ab300ad64cc054a",
+          "brand_name_item_name": "Yeo Valley 0% Greek Style Yoghurt With Vanilla",
+          "serving_qty": 100,
+          "nf_calories": 76.19000244140625,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5879cd6b796edb211a532e8a.jpeg"
+          },
+          "brand_name": "Yeo Valley",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "58787b89b3e309782f21be9c",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Coconut Yoghurt, Greek-Style",
+          "serving_unit": "g",
+          "nix_brand_id": "5a8e6a9957cdcb2b74c872bc",
+          "brand_name_item_name": "Raglan Coconut Yoghurt Coconut Yoghurt, Greek-Style",
+          "serving_qty": 50,
+          "nf_calories": 108.19999694824219,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5a8e6aa0b7647d9059e92e45.jpeg"
+          },
+          "brand_name": "Raglan Coconut Yoghurt",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5a8e6a9857cdcb2b74c872bb",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Greek Style Yoghurt, Raspberry",
+          "serving_unit": "g",
+          "nix_brand_id": "58241c22399af37d0a5b7d39",
+          "brand_name_item_name": "Elle & Vire Greek Style Yoghurt, Raspberry",
+          "serving_qty": 100,
+          "nf_calories": 151.6699981689453,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5a8bc7f78af1c44a41c8426f.jpeg"
+          },
+          "brand_name": "Elle & Vire",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5a8bc7f4f2f0c54721b9f04d",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Fat Free Greek Recipe Strained Yoghurt, Blueberry",
+          "serving_unit": "cup",
+          "nix_brand_id": "5755cdc84af4385340519458",
+          "brand_name_item_name": "Fage Fruyo Fat Free Greek Recipe Strained Yoghurt, Blueberry",
+          "serving_qty": 1,
+          "nf_calories": 141.63999938964844,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/58071aa36cddabd93a1e8200.jpeg"
+          },
+          "brand_name": "Fage Fruyo",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "580719d84acb0e951f7b8fa6",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Vanilla Bean Greek Style Yoghurt",
+          "serving_unit": "g",
+          "nix_brand_id": "59098047e55a03186de345c5",
+          "brand_name_item_name": "Tasmanian Tamar Valley Dairy Vanilla Bean Greek Style Yoghurt",
+          "serving_qty": 1,
+          "nf_calories": 134.9499969482422,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e634722490d70de36ea8ce6.jpeg"
+          },
+          "brand_name": "Tasmanian Tamar Valley Dairy",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5e63471fa0e4abce3e34894a",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Greek Yoghurt, Blackberry & Raspberry",
+          "serving_unit": "g",
+          "nix_brand_id": "51db37ec176fe9790a89a84d",
+          "brand_name_item_name": "Nada Greek Yoghurt, Blackberry & Raspberry",
+          "serving_qty": 100,
+          "nf_calories": 145.4600067138672,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cb6d081588dddde3bad8ab9.jpeg"
+          },
+          "brand_name": "Nada",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5cb57e6590ec7c5719111710",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Fat Free Greek Recipe Strained Yoghurt, Strawberry",
+          "serving_unit": "cup",
+          "nix_brand_id": "5755cdc84af4385340519458",
+          "brand_name_item_name": "Fage Fruyo Fat Free Greek Recipe Strained Yoghurt, Strawberry",
+          "serving_qty": 1,
+          "nf_calories": 141.63999938964844,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/58071a256cf203f522fa4947.jpeg"
+          },
+          "brand_name": "Fage Fruyo",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "580719d8ea27c6103a245d21",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Fresh Fruit And Organic Greek-Style Yoghurt With Honey",
+          "serving_unit": "serving",
+          "nix_brand_id": "5a147083fa0e12980da5e743",
+          "brand_name_item_name": "Wetherspoon Fresh Fruit And Organic Greek-Style Yoghurt With Honey",
+          "serving_qty": 1,
+          "nf_calories": 360,
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "brand_name": "Wetherspoon",
+          "region": 1,
+          "brand_type": 1,
+          "nix_item_id": "c64050877251315196bc79aa",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Yoghurt, Greek Honey",
+          "serving_unit": "g",
+          "nix_brand_id": "5b40655149935c221fdc80cf",
+          "brand_name_item_name": "Mundella Yoghurt, Greek Honey",
+          "serving_qty": 125,
+          "nf_calories": 152.6199951171875,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5bab2f93326d10f97ea31b48.jpeg"
+          },
+          "brand_name": "Mundella",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "5bab2f8f28c87f71490d3ce3",
+          "locale": "en_US"
+      }
+  ]
+}

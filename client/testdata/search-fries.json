@@ -1,0 +1,610 @@
+{
+    "common": [
+        {
+            "food_name": "fries",
+            "serving_unit": "serving medium",
+            "tag_name": "french fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "564",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/564_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "yam fries",
+            "serving_unit": "fries",
+            "tag_name": "yam fries",
+            "serving_qty": 10,
+            "common_type": null,
+            "tag_id": "9090",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "steak fries",
+            "serving_unit": "steak fries",
+            "tag_name": "steak fries",
+            "serving_qty": 10,
+            "common_type": null,
+            "tag_id": "3479",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3479_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "small fries",
+            "serving_unit": "small",
+            "tag_name": "french fries, small",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "9669",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/9669_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "large fries",
+            "serving_unit": "serving large",
+            "tag_name": "large french fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "3360",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3360_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "nacho fries",
+            "serving_unit": "order",
+            "tag_name": "nacho fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "5902",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "curly fries",
+            "serving_unit": "order",
+            "tag_name": "curly fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "3485",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3485_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "wendy fries",
+            "serving_unit": "medium Serving",
+            "tag_name": "wendy's french fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "2168",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/2168_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "garlic fries",
+            "serving_unit": "order",
+            "tag_name": "garlic truffle fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "9404",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "french fries",
+            "serving_unit": "serving medium",
+            "tag_name": "french fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "564",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/564_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "cheese fries",
+            "serving_unit": "cup",
+            "tag_name": "cheese fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "2213",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/2213_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "waffle fries",
+            "serving_unit": "waffle fries",
+            "tag_name": "waffle fries (restaurant)",
+            "serving_qty": 10,
+            "common_type": null,
+            "tag_id": "2380",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/2380_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonald fries",
+            "serving_unit": "medium serving",
+            "tag_name": "mcdonald's fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "2042",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/2042_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "zucchini fries",
+            "serving_unit": "piece",
+            "tag_name": "zucchini fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "4621",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/4621_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonalds fries",
+            "serving_unit": "medium serving",
+            "tag_name": "mcdonald's fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "2042",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/2042_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "small french fries",
+            "serving_unit": "small",
+            "tag_name": "french fries, small",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "9669",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/9669_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "sweet potato fries",
+            "serving_unit": "fries",
+            "tag_name": "sweet potato fries",
+            "serving_qty": 10,
+            "common_type": null,
+            "tag_id": "1891",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1891_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "frozen french fries",
+            "serving_unit": "fries",
+            "tag_name": "baked french fries",
+            "serving_qty": 10,
+            "common_type": null,
+            "tag_id": "4449",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/4449_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonalds small french fries",
+            "serving_unit": "fries",
+            "tag_name": "mcdonald's small fries",
+            "serving_qty": 1,
+            "common_type": 2,
+            "tag_id": "3151",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3151_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonalds medium french fries",
+            "serving_unit": "medium serving",
+            "tag_name": "mcdonald's medium fries",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "3152",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3152_thumb.jpg"
+            },
+            "locale": "en_US"
+        }
+    ],
+    "branded": [
+        {
+            "food_name": "Fries, Regular",
+            "serving_unit": "oz",
+            "nix_brand_id": "513fbc1283aa2dc80c00058a",
+            "brand_name_item_name": "Meatheads Burgers & Fries Fries, Regular",
+            "serving_qty": 6.5,
+            "nf_calories": 560,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Meatheads Burgers & Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "53444e877395ed134519ef08",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Fries, Kids",
+            "serving_unit": "oz",
+            "nix_brand_id": "513fbc1283aa2dc80c00058a",
+            "brand_name_item_name": "Meatheads Burgers & Fries Fries, Kids",
+            "serving_qty": 3.5,
+            "nf_calories": 300,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Meatheads Burgers & Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "53444e877395ed134519ef09",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Fries, Large",
+            "serving_unit": "oz",
+            "nix_brand_id": "513fbc1283aa2dc80c00058a",
+            "brand_name_item_name": "Meatheads Burgers & Fries Fries, Large",
+            "serving_qty": 9,
+            "nf_calories": 780,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Meatheads Burgers & Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "53444e887ba4ca15456f5af4",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Famous Fries",
+            "serving_unit": "oz",
+            "nix_brand_id": "5abde0cc54914c6e73731c6f",
+            "brand_name_item_name": "Checkers Famous Fries",
+            "serving_qty": 3,
+            "nf_calories": 160,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5abde3246d3e405819b89421.jpeg"
+            },
+            "brand_name": "Checkers",
+            "region": 1,
+            "brand_type": 2,
+            "nix_item_id": "51c3f9b097c3e6dfa4df03be",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Bacon Cheese Fries",
+            "serving_unit": "oz",
+            "nix_brand_id": "513fbc1283aa2dc80c00058a",
+            "brand_name_item_name": "Meatheads Burgers & Fries Bacon Cheese Fries",
+            "serving_qty": 9,
+            "nf_calories": 1170,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Meatheads Burgers & Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "ddee1196fe7dd28fc42dda3f",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Oven-Baked Fries, Hot Fries",
+            "serving_unit": "pieces",
+            "nix_brand_id": "51db37c2176fe9790a899191",
+            "brand_name_item_name": "Tom's Oven-Baked Fries, Hot Fries",
+            "serving_qty": 35,
+            "nf_calories": 140,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Tom's",
+            "region": 1,
+            "brand_type": 2,
+            "nix_item_id": "51d2ff05cc9bff111580f57b",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Cajun Fries, Kids",
+            "serving_unit": "oz",
+            "nix_brand_id": "513fbc1283aa2dc80c00058a",
+            "brand_name_item_name": "Meatheads Burgers & Fries Cajun Fries, Kids",
+            "serving_qty": 3.5,
+            "nf_calories": 300,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Meatheads Burgers & Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "ddee1196d96bcc0ff2916e13",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Fries, Medium",
+            "serving_unit": "order",
+            "nix_brand_id": "513fbc1283aa2dc80c0002e4",
+            "brand_name_item_name": "Boardwalk Fries Burgers Shakes Fries, Medium",
+            "serving_qty": 1,
+            "nf_calories": 990,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Boardwalk Fries Burgers Shakes",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "52cdd0d0051cb9eb320132f1",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Chili Cheese Fries",
+            "serving_unit": "oz",
+            "nix_brand_id": "513fbc1283aa2dc80c00058a",
+            "brand_name_item_name": "Meatheads Burgers & Fries Chili Cheese Fries",
+            "serving_qty": 9,
+            "nf_calories": 1150,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Meatheads Burgers & Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "53444e879a631f1645ecfefa",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Cajun Fries, Large",
+            "serving_unit": "oz",
+            "nix_brand_id": "513fbc1283aa2dc80c00058a",
+            "brand_name_item_name": "Meatheads Burgers & Fries Cajun Fries, Large",
+            "serving_qty": 9,
+            "nf_calories": 780,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Meatheads Burgers & Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "53444e86bbe335144598064e",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Cajun Fries, Regular",
+            "serving_unit": "oz",
+            "nix_brand_id": "513fbc1283aa2dc80c00058a",
+            "brand_name_item_name": "Meatheads Burgers & Fries Cajun Fries, Regular",
+            "serving_qty": 6.5,
+            "nf_calories": 560,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Meatheads Burgers & Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "53444e86bbe335144598064d",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "New York Fries, Jumbo",
+            "serving_unit": "each",
+            "nix_brand_id": "521b95444a56d006cae29a0e",
+            "brand_name_item_name": "New York Fries New York Fries, Jumbo",
+            "serving_qty": 1,
+            "nf_calories": 1040,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "New York Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "529e803df9655f6d3500d6a5",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "New York Fries, Small",
+            "serving_unit": "each",
+            "nix_brand_id": "521b95444a56d006cae29a0e",
+            "brand_name_item_name": "New York Fries New York Fries, Small",
+            "serving_qty": 1,
+            "nf_calories": 430,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "New York Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "529e803dea63d4933500d725",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "French Fries - Side of Fries",
+            "serving_unit": "serving",
+            "nix_brand_id": "513fbc1283aa2dc80c000358",
+            "brand_name_item_name": "Claim Jumper French Fries - Side of Fries",
+            "serving_qty": 1,
+            "nf_calories": 460,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Claim Jumper",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "513fc9c9673c4fbc26003ff6",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Refillable Fries w/ Chili Fries",
+            "serving_unit": "Serving",
+            "nix_brand_id": "513fbc1283aa2dc80c000844",
+            "brand_name_item_name": "Ruby's Diner Refillable Fries w/ Chili Fries",
+            "serving_qty": 1,
+            "nf_calories": 670,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Ruby's Diner",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "516d9a40e3afed032c7da798",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "New York Fries, Large",
+            "serving_unit": "each",
+            "nix_brand_id": "521b95444a56d006cae29a0e",
+            "brand_name_item_name": "New York Fries New York Fries, Large",
+            "serving_qty": 1,
+            "nf_calories": 840,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "New York Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "529e803df9655f6d3500d6a7",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "New York Fries, Regular",
+            "serving_unit": "each",
+            "nix_brand_id": "521b95444a56d006cae29a0e",
+            "brand_name_item_name": "New York Fries New York Fries, Regular",
+            "serving_qty": 1,
+            "nf_calories": 580,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "New York Fries",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "529e803df9655f6d3500d692",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Add Cheese to Fries",
+            "serving_unit": "serving",
+            "nix_brand_id": "513fbc1283aa2dc80c0002e4",
+            "brand_name_item_name": "Boardwalk Fries Burgers Shakes Add Cheese to Fries",
+            "serving_qty": 1,
+            "nf_calories": 590,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Boardwalk Fries Burgers Shakes",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "513fc9cd673c4fbc26006a94",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Funnel Cake Fries, Regular",
+            "serving_unit": "order",
+            "nix_brand_id": "513fbc1283aa2dc80c0002e4",
+            "brand_name_item_name": "Boardwalk Fries Burgers Shakes Funnel Cake Fries, Regular",
+            "serving_qty": 1,
+            "nf_calories": 150,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Boardwalk Fries Burgers Shakes",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "513fc9cd673c4fbc26006a9e",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Add Chili to Fries",
+            "serving_unit": "serving",
+            "nix_brand_id": "513fbc1283aa2dc80c0002e4",
+            "brand_name_item_name": "Boardwalk Fries Burgers Shakes Add Chili to Fries",
+            "serving_qty": 1,
+            "nf_calories": 270,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Boardwalk Fries Burgers Shakes",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "52cdd0d0051cb9eb320132ed",
+            "locale": "en_US"
+        }
+    ]
+}
