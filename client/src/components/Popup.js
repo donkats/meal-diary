@@ -5,9 +5,10 @@ function hidePopup() {
 }
 
 function searchClick() {
-  const content = document.querySelector('.searchbar').value;
-  console.log('search bar content:', content);
-  if (content.trim() != '') {
+  const input = document.querySelector('.searchbar');
+  console.log('search bar content:', input.value);
+  if (input.value.trim() !== '') {
+    input.value = '';
     // make fetch request here
   }
 }
