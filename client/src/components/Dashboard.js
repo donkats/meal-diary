@@ -1,14 +1,17 @@
 import React from 'react';
+import FoodOverview from './FoodOverview';
 
-function Dashboard(props) {
+function Dashboard() {
   return (
-    <div className="dashboard">
-      <header>Today</header>
-      <div className="breakfast"><h2>Breakfast</h2></div>
-      <div className="lunch"><h2>Lunch</h2></div>
-      <div className="dinner"><h2>Dinner</h2></div>
-    </div>
+    <main className="dashboard">
+      <header className="date-header">
+        <div className="back">{'<'}</div>
+        <h1>Today</h1>
+        <div className="next">{'>'}</div>
+      </header>
+      <FoodOverview />
+    </main>
   )
 }
 
-export default Dashboard
+export default Dashboard;
