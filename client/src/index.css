@@ -46,14 +46,29 @@ body {
   font-weight: bolder;
 }
 
+.overview-box h3 {
+  width: 100%;
+  margin: 10px 0;
+  background-color: whitesmoke;
+}
+
 .add-btn-box {
   text-align: right;
 }
 
 .add-btn {
+  cursor: pointer;
   padding: 20px;
   background-color: olivedrab;
   color: white;
   font-size: 14px;
   font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: darkolivegreen;
+}
+
+.add-btn:focus {
+  outline: none;
 }
