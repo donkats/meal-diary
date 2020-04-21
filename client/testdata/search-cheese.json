@@ -1,0 +1,566 @@
+{
+  "common": [
+      {
+          "food_name": "cheese",
+          "serving_unit": "slice (1 oz)",
+          "tag_name": "cheese",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1034",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1034_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "cheesecake",
+          "serving_unit": "piece (1 NLEA serving)",
+          "tag_name": "cheesecake",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "107",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/107_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "goat cheese",
+          "serving_unit": "oz",
+          "tag_name": "goat cheese",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "584",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/584_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "feta cheese",
+          "serving_unit": "oz",
+          "tag_name": "feta",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "551",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/551_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "blue cheese",
+          "serving_unit": "oz",
+          "tag_name": "bleu cheese",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "422",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/422_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "cheese stick",
+          "serving_unit": "Stick",
+          "tag_name": "Cheese stick",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "15080",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1150_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "cheese pizza",
+          "serving_unit": "large slice",
+          "tag_name": "cheese pizza",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "68",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/68_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "cheeseburger",
+          "serving_unit": "item",
+          "tag_name": "cheeseburger",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "445",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/445_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "cream cheese",
+          "serving_unit": "tbsp",
+          "tag_name": "cream cheese",
+          "serving_qty": 2,
+          "common_type": null,
+          "tag_id": "514",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/514_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "swiss cheese",
+          "serving_unit": "cup, shredded",
+          "tag_name": "swiss",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "837",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/837_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "string cheese",
+          "serving_unit": "Stick",
+          "tag_name": "string cheese",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1150",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1150_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "cheddar cheese",
+          "serving_unit": "oz",
+          "tag_name": "cheddar",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "458",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/458_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "cottage cheese",
+          "serving_unit": "cup",
+          "tag_name": "cottage cheese",
+          "serving_qty": 0.5,
+          "common_type": null,
+          "tag_id": "510",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/510_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "grilled cheese",
+          "serving_unit": "sandwich",
+          "tag_name": "grilled cheese",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1763",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1763_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "parmesan cheese",
+          "serving_unit": "tbsp",
+          "tag_name": "grated parmesan",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "594",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/594_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "american cheese",
+          "serving_unit": "slice (3/4 oz)",
+          "tag_name": "american cheese",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "382",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/382_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "shredded cheese",
+          "serving_unit": "cup",
+          "tag_name": "shredded cheddar cheese",
+          "serving_qty": 0.25,
+          "common_type": null,
+          "tag_id": "5311",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/5311_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "mozzarella cheese",
+          "serving_unit": "oz",
+          "tag_name": "mozzarella",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "690",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/690_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "sharp cheddar cheese",
+          "serving_unit": "slice (1 oz)",
+          "tag_name": "sharp cheddar",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "2203",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/2203_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "shredded cheddar cheese",
+          "serving_unit": "cup",
+          "tag_name": "shredded cheddar cheese",
+          "serving_qty": 0.25,
+          "common_type": null,
+          "tag_id": "5311",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/5311_thumb.jpg"
+          },
+          "locale": "en_US"
+      }
+  ],
+  "branded": [
+      {
+          "food_name": "Light String Cheese",
+          "serving_unit": "piece",
+          "nix_brand_id": "51db37cb176fe9790a8998bd",
+          "brand_name_item_name": "Frigo Cheese Heads Light String Cheese",
+          "serving_qty": 1,
+          "nf_calories": 50,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cc2b4d8cb53916614c21c69.jpeg"
+          },
+          "brand_name": "Frigo Cheese Heads",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51c3f2c997c3e6de73cbd718",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "1 Slice Hard Salami, 2 Slices Colby Jack Cheese",
+          "serving_unit": "pkg",
+          "nix_brand_id": "54836a2305e256f87e091b03",
+          "brand_name_item_name": "Cheesewich 1 Slice Hard Salami, 2 Slices Colby Jack Cheese",
+          "serving_qty": 1,
+          "nf_calories": 290,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cc552597f48b489670c02a2.jpeg"
+          },
+          "brand_name": "Cheesewich",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "54836a2305e256f87e091b04",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Crunchy Cheese",
+          "serving_unit": "pieces",
+          "nix_brand_id": "546b62d6ade15fe62e67f28e",
+          "brand_name_item_name": "Moon Cheese Crunchy Cheese",
+          "serving_qty": 6.5,
+          "nf_calories": 70,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e2a9957c76c95896a7c6bef.jpeg"
+          },
+          "brand_name": "Moon Cheese",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5a55bb52d82484467b61b8c7",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Cheese Heads, String Cheese",
+          "serving_unit": "piece",
+          "nix_brand_id": "51db37b6176fe9790a89895f",
+          "brand_name_item_name": "Frigo Cheese Heads, String Cheese",
+          "serving_qty": 1,
+          "nf_calories": 80,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5c8b534a4e2286f478842635.jpeg"
+          },
+          "brand_name": "Frigo",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51c3f2c597c3e6de73cbd6f6",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Cheese Flavored Snacks, Crunchy",
+          "serving_unit": "package",
+          "nix_brand_id": "51db37d0176fe9790a899de6",
+          "brand_name_item_name": "Cheetos Cheese Flavored Snacks, Crunchy",
+          "serving_qty": 1,
+          "nf_calories": 160,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5c8b54264e2286f47884265d.jpeg"
+          },
+          "brand_name": "Cheetos",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d2fefdcc9bff111580f539",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Cheese, Pimento with Jalapenos",
+          "serving_unit": "tbsp",
+          "nix_brand_id": "547dd5053055844701f63519",
+          "brand_name_item_name": "Palmetto Cheese Cheese, Pimento with Jalapenos",
+          "serving_qty": 2,
+          "nf_calories": 130,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/554136655af313707f0a0ac8.jpeg"
+          },
+          "brand_name": "Palmetto Cheese",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "554135715af313707f0a0a8a",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Tortilla Chips, Nacho Cheese",
+          "serving_unit": "package",
+          "nix_brand_id": "51db37cb176fe9790a8998e9",
+          "brand_name_item_name": "Doritos Tortilla Chips, Nacho Cheese",
+          "serving_qty": 1,
+          "nf_calories": 140,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5d05ec98218ee2285c844946.jpeg"
+          },
+          "brand_name": "Doritos",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d2fee3cc9bff111580f491",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Singles American Cheese",
+          "serving_unit": "slice",
+          "nix_brand_id": "51db37b4176fe9790a8987c4",
+          "brand_name_item_name": "Kraft Singles American Cheese",
+          "serving_qty": 1,
+          "nf_calories": 60,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5d7de615a9c3b60842fb8b1c.jpeg"
+          },
+          "brand_name": "Kraft",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d2fd7fcc9bff111580ea65",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Wheat Dinner Rolls",
+          "serving_unit": "roll",
+          "nix_brand_id": "5965006831a80a7338b667ae",
+          "brand_name_item_name": "Cheesecake Factory Wheat Dinner Rolls",
+          "serving_qty": 1,
+          "nf_calories": 110,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5abc92b2385aa86c48d28087.jpeg"
+          },
+          "brand_name": "Cheesecake Factory",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5abc92af385aa86c48d28086",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Our Famous Brown Bread, Mini Wheat Baguettes",
+          "serving_unit": "of baguette",
+          "nix_brand_id": "5965006831a80a7338b667ae",
+          "brand_name_item_name": "Cheesecake Factory Our Famous Brown Bread, Mini Wheat Baguettes",
+          "serving_qty": 0.5,
+          "nf_calories": 190,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5ab5f9b6d436ae127b858c9f.jpeg"
+          },
+          "brand_name": "Cheesecake Factory",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5ab5f9b0d436ae127b858c9d",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Grated Parmesan Cheese",
+          "serving_unit": "tsp",
+          "nix_brand_id": "5cf0d2a5bc704e611812f10e",
+          "brand_name_item_name": "Reggano Cheese Grated Parmesan Cheese",
+          "serving_qty": 2,
+          "nf_calories": 20,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cf0d2a7236e258a4c02dea2.jpeg"
+          },
+          "brand_name": "Reggano Cheese",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5cf0d2a4bc704e611812f10d",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Macaroni And Cheese Dinner",
+          "serving_unit": "box as packaged",
+          "nix_brand_id": "51db37b4176fe9790a8987c4",
+          "brand_name_item_name": "Kraft Macaroni And Cheese Dinner",
+          "serving_qty": 0.33000001311302185,
+          "nf_calories": 250,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5b5c1d1529f162275dc92340.jpeg"
+          },
+          "brand_name": "Kraft",
+          "region": 2,
+          "brand_type": 2,
+          "nix_item_id": "51d2ff1dcc9bff111580f5e4",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Salami & Colby Jack Cheese",
+          "serving_unit": "pkg",
+          "nix_brand_id": "54836a2305e256f87e091b03",
+          "brand_name_item_name": "Cheesewich Salami & Colby Jack Cheese",
+          "serving_qty": 1,
+          "nf_calories": 290,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/576ca98b483c2643625bcbe2.jpeg"
+          },
+          "brand_name": "Cheesewich",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "576ca93485b4746a61121064",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Our Famous Brown Bread, Wheat",
+          "serving_unit": "slice",
+          "nix_brand_id": "5965006831a80a7338b667ae",
+          "brand_name_item_name": "Cheesecake Factory Our Famous Brown Bread, Wheat",
+          "serving_qty": 1,
+          "nf_calories": 80,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e8c2a10e5f4448f74ff5dd6.jpeg"
+          },
+          "brand_name": "Cheesecake Factory",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5ab5f9b66ded763c1dbd5589",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Colby Jack & Turkey Sticks",
+          "serving_unit": "serving",
+          "nix_brand_id": "51db37cb176fe9790a8998bd",
+          "brand_name_item_name": "Frigo Cheese Heads Colby Jack & Turkey Sticks",
+          "serving_qty": 1,
+          "nf_calories": 150,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5547e93352b71b692cea2723.jpeg"
+          },
+          "brand_name": "Frigo Cheese Heads",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5547e9264daa032e7b21be66",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Hard Salami and Mild Cheddar Cheese",
+          "serving_unit": "pkg",
+          "nix_brand_id": "54836a2305e256f87e091b03",
+          "brand_name_item_name": "Cheesewich Hard Salami and Mild Cheddar Cheese",
+          "serving_qty": 1,
+          "nf_calories": 290,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5bf8fe0b709eabde2793499f.jpeg"
+          },
+          "brand_name": "Cheesewich",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5bf8fe08709eabde2793499e",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "1 Slice Hard Salami, 2 Slices Pepper Jack Cheese",
+          "serving_unit": "pkg",
+          "nix_brand_id": "54836a2305e256f87e091b03",
+          "brand_name_item_name": "Cheesewich 1 Slice Hard Salami, 2 Slices Pepper Jack Cheese",
+          "serving_qty": 1,
+          "nf_calories": 270,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5dc3c4418209868c6f8c8dc4.jpeg"
+          },
+          "brand_name": "Cheesewich",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5dc3c43eb31994e4740935f9",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Cheddar Believe It",
+          "serving_unit": "package",
+          "nix_brand_id": "546b62d6ade15fe62e67f28e",
+          "brand_name_item_name": "Moon Cheese Cheddar Believe It",
+          "serving_qty": 1,
+          "nf_calories": 170,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e2e8cbda0960e3e6d0f37d9.jpeg"
+          },
+          "brand_name": "Moon Cheese",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5e2e8cbab34ee3aa7354203a",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Cheese Snack, Cheddar",
+          "serving_unit": "pieces",
+          "nix_brand_id": "546b62d6ade15fe62e67f28e",
+          "brand_name_item_name": "Moon Cheese Cheese Snack, Cheddar",
+          "serving_qty": 9.5,
+          "nf_calories": 100,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/58a7f2f03c5aa585793b6c86.jpeg"
+          },
+          "brand_name": "Moon Cheese",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "58a7f13be5f9f99b44331326",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Shells & Cheese, Original",
+          "serving_unit": "carton",
+          "nix_brand_id": "527a3d76046b590200000002",
+          "brand_name_item_name": "Cheese Club Shells & Cheese, Original",
+          "serving_qty": 1,
+          "nf_calories": 370,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e32803219b88e9d55464a7f.jpeg"
+          },
+          "brand_name": "Cheese Club",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5e32802f19b88e9d55464a7e",
+          "locale": "en_US"
+      }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+    "foods": [
+        {
+            "food_name": "Tortilla Wraps, Spinach & Herbs",
+            "brand_name": "Ole Mexican Foods",
+            "serving_qty": 1,
+            "serving_unit": "tortilla",
+            "serving_weight_grams": 45,
+            "nf_calories": 50,
+            "nf_total_fat": 1.5,
+            "nf_saturated_fat": 0,
+            "nf_cholesterol": 0,
+            "nf_sodium": 330,
+            "nf_total_carbohydrate": 16,
+            "nf_dietary_fiber": 11,
+            "nf_sugars": 0,
+            "nf_protein": 4,
+            "nf_potassium": null,
+            "nf_p": null,
+            "full_nutrients": [
+                {
+                    "attr_id": 203,
+                    "value": 4
+                },
+                {
+                    "attr_id": 204,
+                    "value": 1.5
+                },
+                {
+                    "attr_id": 205,
+                    "value": 16
+                },
+                {
+                    "attr_id": 208,
+                    "value": 50
+                },
+                {
+                    "attr_id": 269,
+                    "value": 0
+                },
+                {
+                    "attr_id": 291,
+                    "value": 11
+                },
+                {
+                    "attr_id": 301,
+                    "value": 104
+                },
+                {
+                    "attr_id": 303,
+                    "value": 0.72
+                },
+                {
+                    "attr_id": 307,
+                    "value": 330
+                },
+                {
+                    "attr_id": 318,
+                    "value": 0
+                },
+                {
+                    "attr_id": 401,
+                    "value": 0
+                },
+                {
+                    "attr_id": 601,
+                    "value": 0
+                },
+                {
+                    "attr_id": 605,
+                    "value": 0
+                },
+                {
+                    "attr_id": 606,
+                    "value": 0
+                }
+            ],
+            "nix_brand_name": "Ole Mexican Foods",
+            "nix_brand_id": "51db37d0176fe9790a899d9a",
+            "nix_item_name": "Tortilla Wraps, Spinach & Herbs",
+            "nix_item_id": "51c36c1b97c3e69de4b07f84",
+            "metadata": {},
+            "source": 8,
+            "ndb_no": null,
+            "tags": null,
+            "alt_measures": null,
+            "lat": null,
+            "lng": null,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5d5e42d4d226eb8305913293.jpeg",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "note": null,
+            "updated_at": "2019-08-22T07:23:01+00:00",
+            "nf_ingredient_statement": "Water, Whole Wheat Flour, Enriched Bleached Flour, Virgin Olive Oil, Spinach Seasoning (Fresh Puree and Extracts [Garlic, Basil, Bell Pepper, Anise], Oat Fiber, Soy Protein, Cellulose Fiber, Wheat Gluten, Artificial Color [Yellow 5, Yellow 6, Blue 2], Baking Powder, Fumaric Acid, Sodium Acid, Pyrophosphate, Salt, Monocalcium Phosphate, Modified Wheat Protein, Yeast, CMC, Gum, Mono and Diglycerides, Lecithin, Sorbic Acid (Mold Inhibitor), Enzymes."
+        }
+    ]
+}

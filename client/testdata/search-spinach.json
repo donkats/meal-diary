@@ -1,0 +1,584 @@
+{
+  "common": [
+      {
+          "food_name": "spinach pie",
+          "serving_unit": "triangle",
+          "tag_name": "spanakopita",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "2884",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "raw spinach",
+          "serving_unit": "cup",
+          "tag_name": "raw spinach",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "779",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/779_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach raw",
+          "serving_unit": "cup",
+          "tag_name": "raw spinach",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "779",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/779_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "baby spinach",
+          "serving_unit": "cup",
+          "tag_name": "raw spinach",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "779",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/779_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "fresh spinach",
+          "serving_unit": "cup",
+          "tag_name": "raw spinach",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "779",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/779_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach salad",
+          "serving_unit": "cup",
+          "tag_name": "spinach salad",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "3458",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3458_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach pasta",
+          "serving_unit": "cup",
+          "tag_name": "spinach pasta",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "3799",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3799_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach bagels",
+          "serving_unit": "bagel",
+          "tag_name": "spinach bagel",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "7033",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "frozen spinach",
+          "serving_unit": "cup",
+          "tag_name": "frozen spinach",
+          "serving_qty": 0.5,
+          "common_type": null,
+          "tag_id": "3337",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3337_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach omelet",
+          "serving_unit": "3-egg omelet",
+          "tag_name": "spinach omelet",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "5163",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/5163_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach cooked",
+          "serving_unit": "cup",
+          "tag_name": "cooked spinach",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1889",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1889_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "cooked spinach",
+          "serving_unit": "cup",
+          "tag_name": "cooked spinach",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1889",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1889_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "creamed spinach",
+          "serving_unit": "serving",
+          "tag_name": "creamed spinach",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1346",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1346_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "steamed spinach",
+          "serving_unit": "cup",
+          "tag_name": "cooked spinach",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1889",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1889_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach ravioli",
+          "serving_unit": "cup without sauce",
+          "tag_name": "spinach ravioli",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "4384",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/4384_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "sauteed spinach",
+          "serving_unit": "cup",
+          "tag_name": "sauteed spinach",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "4358",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/4358_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach tortilla",
+          "serving_unit": "tortilla (approx 10\" dia)",
+          "tag_name": "spinach tortilla wrap",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "8697",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach enchilada",
+          "serving_unit": "enchilada",
+          "tag_name": "spinach enchiladas",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "5288",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach strawberry smoothie",
+          "serving_unit": "fl oz",
+          "tag_name": "spinach strawberry smoothie",
+          "serving_qty": 16,
+          "common_type": null,
+          "tag_id": "9398",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "spinach salad with strawberries",
+          "serving_unit": "salad",
+          "tag_name": "spinach and strawberry salad",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "5735",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      }
+  ],
+  "branded": [
+      {
+          "food_name": "Tortilla Wraps, Spinach & Herbs",
+          "serving_unit": "tortilla",
+          "nix_brand_id": "51db37d0176fe9790a899d9a",
+          "brand_name_item_name": "Ole Mexican Foods Tortilla Wraps, Spinach & Herbs",
+          "serving_qty": 1,
+          "nf_calories": 50,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5d5e42d4d226eb8305913293.jpeg"
+          },
+          "brand_name": "Ole Mexican Foods",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51c36c1b97c3e69de4b07f84",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Carb Balance Tortilla Wraps, Spinach Herb",
+          "serving_unit": "tortilla",
+          "nix_brand_id": "51db37c6176fe9790a89940d",
+          "brand_name_item_name": "Mission Carb Balance Tortilla Wraps, Spinach Herb",
+          "serving_qty": 1,
+          "nf_calories": 60,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5d7208ce6c6fdbe37c975168.jpeg"
+          },
+          "brand_name": "Mission",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5d7208ca5dab18961f9183c7",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Fresh Spinach",
+          "serving_unit": "cups",
+          "nix_brand_id": "51db37c9176fe9790a899692",
+          "brand_name_item_name": "Marketside Fresh Spinach",
+          "serving_qty": 4,
+          "nf_calories": 20,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/538f431ad0323d3d70875940.jpeg"
+          },
+          "brand_name": "Marketside",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "538f43548905339d31ee9247",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Spinach",
+          "serving_unit": "cups",
+          "nix_brand_id": "51db37b0176fe9790a8983cb",
+          "brand_name_item_name": "Dole Spinach",
+          "serving_qty": 3,
+          "nf_calories": 20,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cc2ae684f46455e1d399cca.jpeg"
+          },
+          "brand_name": "Dole",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d2ff12cc9bff111580f5b7",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Baby Spinach",
+          "serving_unit": "cups",
+          "nix_brand_id": "51db37c9176fe9790a899692",
+          "brand_name_item_name": "Marketside Baby Spinach",
+          "serving_qty": 4,
+          "nf_calories": 20,
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "brand_name": "Marketside",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "53e4da221d1c17a228c468ab",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Organic Baby Spinach",
+          "serving_unit": "container",
+          "nix_brand_id": "51db37c9176fe9790a899692",
+          "brand_name_item_name": "Marketside Organic Baby Spinach",
+          "serving_qty": 1,
+          "nf_calories": 35,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5886fce7391cfabd210c8757.jpeg"
+          },
+          "brand_name": "Marketside",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "53f4dbe863d2ab425084eb6e",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Wraps, Garden Spinach Herb",
+          "serving_unit": "tortilla",
+          "nix_brand_id": "51db37c6176fe9790a89940d",
+          "brand_name_item_name": "Mission Wraps, Garden Spinach Herb",
+          "serving_qty": 1,
+          "nf_calories": 210,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cc402169b39d41e4787cd76.jpeg"
+          },
+          "brand_name": "Mission",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d2fa51cc9bff111580d4f2",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Chopped Spinach",
+          "serving_unit": "cup",
+          "nix_brand_id": "51db37b1176fe9790a898466",
+          "brand_name_item_name": "Great Value Chopped Spinach",
+          "serving_qty": 1,
+          "nf_calories": 35,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e9aa85a3395f1573a72ec3e.jpeg"
+          },
+          "brand_name": "Great Value",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "59cc9f7d21ec11fa2e7d15be",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Spinach Egg White Frittatas",
+          "serving_unit": "frittata",
+          "nix_brand_id": "51db37b3176fe9790a89862f",
+          "brand_name_item_name": "Garden Lites Spinach Egg White Frittatas",
+          "serving_qty": 1,
+          "nf_calories": 70,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5bfcee14974667e435d5c93a.jpeg"
+          },
+          "brand_name": "Garden Lites",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5bfcee10b301af447a4ac241",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Classic Spinach",
+          "serving_unit": "cups",
+          "nix_brand_id": "57fb27244393488e497f712f",
+          "brand_name_item_name": "Cooking with Spinach Classic Spinach",
+          "serving_qty": 3,
+          "nf_calories": 20,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/58a3ffd86d52efa743663f90.jpeg"
+          },
+          "brand_name": "Cooking with Spinach",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "58a3feab1e29a50b05682862",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Spinach and Artichoke Hummus",
+          "serving_unit": "tbsp",
+          "nix_brand_id": "51db37b3176fe9790a8986ce",
+          "brand_name_item_name": "Sabra Spinach and Artichoke Hummus",
+          "serving_qty": 2,
+          "nf_calories": 70,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/53cd1dede718b1ea25718efd.jpeg"
+          },
+          "brand_name": "Sabra",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51c3f36897c3e6de73cbdbac",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Spinach, Baby",
+          "serving_unit": "package",
+          "nix_brand_id": "51db37ca176fe9790a89980c",
+          "brand_name_item_name": "Private Selection Spinach, Baby",
+          "serving_qty": 1,
+          "nf_calories": 35,
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "brand_name": "Private Selection",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51c35b6697c3e69de4b00317",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Spinach, Classic",
+          "serving_unit": "cups",
+          "nix_brand_id": "51db37ed176fe9790a89a8b9",
+          "brand_name_item_name": "NewStar Spinach, Classic",
+          "serving_qty": 3,
+          "nf_calories": 20,
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "brand_name": "NewStar",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51c35ef997c3e69de4b019a2",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Tender Spinach",
+          "serving_unit": "cups",
+          "nix_brand_id": "545ce47b90529ba36e4e1d9d",
+          "brand_name_item_name": "Fresh Selections by Kroger Tender Spinach",
+          "serving_qty": 2,
+          "nf_calories": 20,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5460ee378e3df2917ff633e2.jpeg"
+          },
+          "brand_name": "Fresh Selections by Kroger",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "545ce44f13fb28bc6d02a079",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Baby Spinach, Organic",
+          "serving_unit": "cups",
+          "nix_brand_id": "51db37c9176fe9790a8995fb",
+          "brand_name_item_name": "Earthbound Farm Baby Spinach, Organic",
+          "serving_qty": 2,
+          "nf_calories": 20,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5d3d4a6b242f7f2c633e90e1.jpeg"
+          },
+          "brand_name": "Earthbound Farm",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "53cd1c1d9628b8892a249eb1",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Frittatas, Bacon & Spinach",
+          "serving_unit": "frittatas",
+          "nix_brand_id": "526830fa3203b9c339000026",
+          "brand_name_item_name": "Jimmy Dean Delights Frittatas, Bacon & Spinach",
+          "serving_qty": 2,
+          "nf_calories": 250,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/56c3793821ff0d3542a2f595.jpeg"
+          },
+          "brand_name": "Jimmy Dean Delights",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "56c3785ffcae7ea0553a4827",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Gluten Free Spinach Herb",
+          "serving_unit": "tortilla",
+          "nix_brand_id": "51db37c6176fe9790a89940d",
+          "brand_name_item_name": "Mission Gluten Free Spinach Herb",
+          "serving_qty": 1,
+          "nf_calories": 120,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cb583d5612f016820ac82ee.jpeg"
+          },
+          "brand_name": "Mission",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5cb583d2612f016820ac82ed",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Pizza, Spinach & Mushroom",
+          "serving_unit": "package",
+          "nix_brand_id": "51db37cb176fe9790a899888",
+          "brand_name_item_name": "Lean Cuisine Pizza, Spinach & Mushroom",
+          "serving_qty": 1,
+          "nf_calories": 340,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e747ae8161117e5657f27fb.jpeg"
+          },
+          "brand_name": "Lean Cuisine",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51c35f6f97c3e69de4b01d6e",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Creamy Spinach Dip",
+          "serving_unit": "tbsp",
+          "nix_brand_id": "51db37c2176fe9790a8991d2",
+          "brand_name_item_name": "Tostitos Creamy Spinach Dip",
+          "serving_qty": 2,
+          "nf_calories": 50,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/536a9cc6c3cba98a306af229.jpeg"
+          },
+          "brand_name": "Tostitos",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d2f9cccc9bff111580d1e4",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Spinach, Baby Mustards & Baby Chards",
+          "serving_unit": "cups",
+          "nix_brand_id": "57fb27244393488e497f712f",
+          "brand_name_item_name": "Cooking with Spinach Spinach, Baby Mustards & Baby Chards",
+          "serving_qty": 3,
+          "nf_calories": 20,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5c0e0f351483a8254e86de4a.jpeg"
+          },
+          "brand_name": "Cooking with Spinach",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5c0e0f321483a8254e86de49",
+          "locale": "en_US"
+      }
+  ]
+}

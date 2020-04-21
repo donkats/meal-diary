@@ -1,0 +1,576 @@
+{
+  "common": [
+      {
+          "food_name": "milk",
+          "serving_unit": "cup",
+          "tag_name": "milk",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "313",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/313_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "0% milk",
+          "serving_unit": "cup",
+          "tag_name": "skim nonfat fat free milk",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "810",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/810_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "milktea",
+          "serving_unit": "mug",
+          "tag_name": "Milk tea",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "3948",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3948_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "2% milk",
+          "serving_unit": "cup",
+          "tag_name": "milk, 2%",
+          "serving_qty": 1,
+          "common_type": 2,
+          "tag_id": "9337",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/9337_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "1% milk",
+          "serving_unit": "cup",
+          "tag_name": "1% milk",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "376",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/376_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "milktart",
+          "serving_unit": "piece",
+          "tag_name": "milk tart",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "13928",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "milkyway",
+          "serving_unit": "serving 2.05 oz bar",
+          "tag_name": "milky way",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "3473",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/3473_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "milkfish",
+          "serving_unit": "oz",
+          "tag_name": "milkfish",
+          "serving_qty": 3,
+          "common_type": null,
+          "tag_id": "6653",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/6653_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "milkshake",
+          "serving_unit": "fl oz",
+          "tag_name": "milkshake",
+          "serving_qty": 16,
+          "common_type": null,
+          "tag_id": "8747",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/8747_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "skim milk",
+          "serving_unit": "cup",
+          "tag_name": "skim nonfat fat free milk",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "810",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/810_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "whole milk",
+          "serving_unit": "cup",
+          "tag_name": "whole milk",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "878",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/878_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "almond milk",
+          "serving_unit": "cup",
+          "tag_name": "almond milk",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "291",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/291_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "coconut milk",
+          "serving_unit": "cup",
+          "tag_name": "coconut milk",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "288",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/288_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "chocolate milk",
+          "serving_unit": "cup",
+          "tag_name": "chocolate milk",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "1382",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1382_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "milk chocolate",
+          "serving_unit": "bar (1.55 oz)",
+          "tag_name": "milk chocolate",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "76",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/76_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "orange milkshake",
+          "serving_unit": "fl oz",
+          "tag_name": "orange milkshake",
+          "serving_qty": 16,
+          "common_type": null,
+          "tag_id": "12886",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "malted milkshake",
+          "serving_unit": "milk shake (about 10 fl oz)",
+          "tag_name": "milk shake with malt",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "5688",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "semi skimmed milk",
+          "serving_unit": "cup",
+          "tag_name": "2% milk",
+          "serving_qty": 1,
+          "common_type": null,
+          "tag_id": "377",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/377_thumb.jpg"
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "malted milk balls",
+          "serving_unit": "piece",
+          "tag_name": "malted milk ball",
+          "serving_qty": 18,
+          "common_type": null,
+          "tag_id": "3536",
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "locale": "en_US"
+      },
+      {
+          "food_name": "chocolate milkshake",
+          "serving_unit": "fl oz",
+          "tag_name": "chocolate milk shake",
+          "serving_qty": 16,
+          "common_type": null,
+          "tag_id": "2007",
+          "photo": {
+              "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/2007_thumb.jpg"
+          },
+          "locale": "en_US"
+      }
+  ],
+  "branded": [
+      {
+          "food_name": "Light Protein Shake, Chocolate",
+          "serving_unit": "fl oz",
+          "nix_brand_id": "51db37ca176fe9790a89975d",
+          "brand_name_item_name": "Muscle Milk Light Protein Shake, Chocolate",
+          "serving_qty": 11,
+          "nf_calories": 100,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/59c8a9cb399101b919cfd9de.jpeg"
+          },
+          "brand_name": "Muscle Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "59c8a9c840495bc44ffd6559",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Non Dairy Protein Shake, Chocolate",
+          "serving_unit": "fl oz",
+          "nix_brand_id": "51db3827176fe9790a89b7aa",
+          "brand_name_item_name": "Genuine Muscle Milk Non Dairy Protein Shake, Chocolate",
+          "serving_qty": 11,
+          "nf_calories": 160,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e3e61993e18b26e075c3e0e.jpeg"
+          },
+          "brand_name": "Genuine Muscle Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "53874426c58919142a541fc0",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Non Dairy Protein Shake, Knockout Chocolate",
+          "serving_unit": "fl oz",
+          "nix_brand_id": "51db37ca176fe9790a89975d",
+          "brand_name_item_name": "Muscle Milk Non Dairy Protein Shake, Knockout Chocolate",
+          "serving_qty": 11,
+          "nf_calories": 160,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e27f53807e4268039addb57.jpeg"
+          },
+          "brand_name": "Muscle Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "546a09dc399532f861bc6d0b",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Protein Shake, Vanilla Creme",
+          "serving_unit": "fl oz",
+          "nix_brand_id": "51db37ca176fe9790a89975d",
+          "brand_name_item_name": "Muscle Milk Protein Shake, Vanilla Creme",
+          "serving_qty": 11,
+          "nf_calories": 160,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cc553a3cc3b45957079ca6d.jpeg"
+          },
+          "brand_name": "Muscle Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "53d8ef610edc918d54f32225",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Macadamia Milk, Unsweetened Vanilla",
+          "serving_unit": "oz",
+          "nix_brand_id": "5617d32400fc8a55781e0acb",
+          "brand_name_item_name": "Milkadamia Macadamia Milk, Unsweetened Vanilla",
+          "serving_qty": 8,
+          "nf_calories": 50,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5df0965e15e85d664ae1977c.jpeg"
+          },
+          "brand_name": "Milkadamia",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "59d87c0665d1dbf40922275a",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Non Dairy Protein Shake, Intense Vanilla",
+          "serving_unit": "fl oz",
+          "nix_brand_id": "51db37ca176fe9790a89975d",
+          "brand_name_item_name": "Muscle Milk Non Dairy Protein Shake, Intense Vanilla",
+          "serving_qty": 14,
+          "nf_calories": 200,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5d3fee5a39bb583615752439.jpeg"
+          },
+          "brand_name": "Muscle Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5388e41068bd056849aaa3c5",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Non-Dairy Protein Shake, Chocolate",
+          "serving_unit": "fl oz",
+          "nix_brand_id": "51db37ca176fe9790a89975d",
+          "brand_name_item_name": "Muscle Milk Non-Dairy Protein Shake, Chocolate",
+          "serving_qty": 14,
+          "nf_calories": 160,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cc6a2d907e0d5f95b63b074.jpeg"
+          },
+          "brand_name": "Muscle Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d37eeecc9bff5553aaa8ed",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Protein Powder, Vanilla Creme",
+          "serving_unit": "scoops",
+          "nix_brand_id": "51db37ca176fe9790a89975d",
+          "brand_name_item_name": "Muscle Milk Protein Powder, Vanilla Creme",
+          "serving_qty": 2,
+          "nf_calories": 280,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5c6e5476e757391c0349f5a4.jpeg"
+          },
+          "brand_name": "Muscle Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d37a4ccc9bff5553aa9e68",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Macadamia Milk, Unsweetened",
+          "serving_unit": "oz",
+          "nix_brand_id": "5617d32400fc8a55781e0acb",
+          "brand_name_item_name": "Milkadamia Macadamia Milk, Unsweetened",
+          "serving_qty": 8,
+          "nf_calories": 50,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/583933b2eda469e917b9ac71.jpeg"
+          },
+          "brand_name": "Milkadamia",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "583933aeeda469e917b9ac70",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Chocolate Coated Caramel Candy",
+          "serving_unit": "pieces",
+          "nix_brand_id": "51db37e9176fe9790a89a7c4",
+          "brand_name_item_name": "Milk Duds Chocolate Coated Caramel Candy",
+          "serving_qty": 13,
+          "nf_calories": 130,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cd5273067145d632f8cb699.jpeg"
+          },
+          "brand_name": "Milk Duds",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d2feafcc9bff111580f309",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Milk, Fat Free, 0% Milkfat",
+          "serving_unit": "cup",
+          "nix_brand_id": "51db37b1176fe9790a898466",
+          "brand_name_item_name": "Great Value Milk, Fat Free, 0% Milkfat",
+          "serving_qty": 1,
+          "nf_calories": 80,
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "brand_name": "Great Value",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51c3c14b97c3e6d8d3b49636",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Non-Dairy Protein Shake, Vanilla Creme",
+          "serving_unit": "fl oz",
+          "nix_brand_id": "51db37ca176fe9790a89975d",
+          "brand_name_item_name": "Muscle Milk Non-Dairy Protein Shake, Vanilla Creme",
+          "serving_qty": 14,
+          "nf_calories": 160,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5b5d6beae2aabf2938622fdd.jpeg"
+          },
+          "brand_name": "Muscle Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d37a07cc9bff5553aa9d04",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Powdered Milk, Full Cream",
+          "serving_unit": "tablespoons",
+          "nix_brand_id": "5e61fa3dd075b5ed13868492",
+          "brand_name_item_name": "Dairy Dairy The Milky Milk Powdered Milk, Full Cream",
+          "serving_qty": 3,
+          "nf_calories": 152,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e61fa46d075b5ed13868493.jpeg"
+          },
+          "brand_name": "Dairy Dairy The Milky Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5e61fa3bd075b5ed13868491",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Protein Nutrition Shake, Strawberries 'N Creme",
+          "serving_unit": "fl oz",
+          "nix_brand_id": "51db3827176fe9790a89b7aa",
+          "brand_name_item_name": "Genuine Muscle Milk Protein Nutrition Shake, Strawberries 'N Creme",
+          "serving_qty": 11,
+          "nf_calories": 160,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/53f4ddf2daecff5c6ce3c3e6.jpeg"
+          },
+          "brand_name": "Genuine Muscle Milk",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "53f4dbcd63d2ab425084eb64",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Chocolate Bar",
+          "serving_unit": "bar",
+          "nix_brand_id": "51db37b9176fe9790a898c01",
+          "brand_name_item_name": "Milky Way Chocolate Bar",
+          "serving_qty": 1,
+          "nf_calories": 240,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cc0cb5544ee5c0a765639af.jpeg"
+          },
+          "brand_name": "Milky Way",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51d2fe9bcc9bff111580f26b",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Choco Grains Biscuits",
+          "serving_unit": "biscuits",
+          "nix_brand_id": "51db37c7176fe9790a899512",
+          "brand_name_item_name": "Milka Choco Grains Biscuits",
+          "serving_qty": 2,
+          "nf_calories": 130,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/569c77cdeb3f548565942d15.jpeg"
+          },
+          "brand_name": "Milka",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "569c77db18e124f72f1bc2e4",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Macadamia Milk",
+          "serving_unit": "cup",
+          "nix_brand_id": "5617d32400fc8a55781e0acb",
+          "brand_name_item_name": "Milkadamia Macadamia Milk",
+          "serving_qty": 1,
+          "nf_calories": 130,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5617d3ed4a37e6ad4d0c9f6b.jpeg"
+          },
+          "brand_name": "Milkadamia",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5617d3d14a37e6ad4d0c9f61",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Milk Chocolate Confection with Creme Filling",
+          "serving_unit": "sections",
+          "nix_brand_id": "51db37c7176fe9790a899512",
+          "brand_name_item_name": "Milka Milk Chocolate Confection with Creme Filling",
+          "serving_qty": 6,
+          "nf_calories": 230,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/57fee41636b52d473bf90430.jpeg"
+          },
+          "brand_name": "Milka",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "57fee3a83e81790b1a892a68",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "Mmmax, Alpine Milk",
+          "serving_unit": "g",
+          "nix_brand_id": "51db37c7176fe9790a899512",
+          "brand_name_item_name": "Milka Mmmax, Alpine Milk",
+          "serving_qty": 1,
+          "nf_calories": 160,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e731b4fd27ece2446c41f0c.jpeg"
+          },
+          "brand_name": "Milka",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "5e688d11755d56836359b4f1",
+          "locale": "en_US"
+      },
+      {
+          "food_name": "2% Reduced Fat Milk",
+          "serving_unit": "cup",
+          "nix_brand_id": "51db37b1176fe9790a898466",
+          "brand_name_item_name": "Great Value 2% Reduced Fat Milk",
+          "serving_qty": 1,
+          "nf_calories": 130,
+          "photo": {
+              "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5c8b51b8c397fd0679775125.jpeg"
+          },
+          "brand_name": "Great Value",
+          "region": 1,
+          "brand_type": 2,
+          "nix_item_id": "51c3c14c97c3e6d8d3b49645",
+          "locale": "en_US"
+      }
+  ]
+}
