@@ -15,7 +15,7 @@ function searchClick() {
 
 function Popup() {
   return (
-    <div className="popup">
+    <div className="popup hidden">
       <div className="popup-inner">
         <span className="close-popup" onClick={() => hidePopup()}>&times;</span>
         <div className="popup-content">
