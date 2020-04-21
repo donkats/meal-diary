@@ -25,7 +25,7 @@ const addUser = (request, response) => {
 const addMeals = (request, response) => {
   const { foodName, kcal, amount, userId, meal, grams, kcalIntake, date } = request.body;
 
-  pool.query('INSERT INTO ingredients (food_name, kcal, amount) VALUES ($1, $2, $3)', [foodName, kcal, amount], error => {
+  pool.query('INSERT INTO ingredients (food_name, kcal, amount) VALUES ($1, $2, $3) ON CONFLICT ON CONSTRAINT constraintname DO NOTHING', [foodName, kcal, amount], error => {
     // add if not exist option
     if (error) {
       throw error
