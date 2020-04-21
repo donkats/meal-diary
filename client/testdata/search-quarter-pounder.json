@@ -1,0 +1,620 @@
+{
+    "common": [
+        {
+            "food_name": "quarter pounder",
+            "serving_unit": "oz",
+            "tag_name": "mcdonald's quarter pounder with cheese",
+            "serving_qty": 7.3,
+            "common_type": 1,
+            "tag_id": "4672",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "plain quarter pounder",
+            "serving_unit": "item",
+            "tag_name": "mcdonald's quarter pounder without cheese",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "2535",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "quarter chicken",
+            "serving_unit": "oz",
+            "tag_name": "quarter chicken",
+            "serving_qty": 0.75,
+            "common_type": null,
+            "tag_id": "4024",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "quarter pounder no cheese",
+            "serving_unit": "item",
+            "tag_name": "mcdonald's quarter pounder without cheese",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "2535",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonalds quarter pounder",
+            "serving_unit": "oz",
+            "tag_name": "mcdonald's quarter pounder with cheese",
+            "serving_qty": 7.3,
+            "common_type": 1,
+            "tag_id": "4672",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "leg quarter",
+            "serving_unit": "leg, with skin",
+            "tag_name": "Chicken leg quarter",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "15068",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/469_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonald's quarter pounder",
+            "serving_unit": "oz",
+            "tag_name": "mcdonald's quarter pounder with cheese",
+            "serving_qty": 7.3,
+            "common_type": 1,
+            "tag_id": "4672",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "quarter pounder with cheese",
+            "serving_unit": "oz",
+            "tag_name": "mcdonald's quarter pounder with cheese",
+            "serving_qty": 7.3,
+            "common_type": 1,
+            "tag_id": "4672",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "grilled leg quarter",
+            "serving_unit": "leg, with skin",
+            "tag_name": "grilled chicken leg",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "8050",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/8050_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "chicken leg quarter",
+            "serving_unit": "leg, with skin",
+            "tag_name": "Chicken leg quarter",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "15068",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/469_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "quarter pounder without cheese",
+            "serving_unit": "item",
+            "tag_name": "mcdonald's quarter pounder without cheese",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "2535",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonalds plain quarter pounder",
+            "serving_unit": "oz",
+            "tag_name": "mcdonald's quarter pounder with cheese",
+            "serving_qty": 7.3,
+            "common_type": 1,
+            "tag_id": "4672",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonalds double quarter pounder",
+            "serving_unit": "oz",
+            "tag_name": "mcdonalds double quarter pounder with cheese",
+            "serving_qty": 10.3,
+            "common_type": 2,
+            "tag_id": "10366",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonald's quarter pounder no cheese",
+            "serving_unit": "item",
+            "tag_name": "mcdonald's quarter pounder without cheese",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "2535",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "grilled chicken leg quarter",
+            "serving_unit": "leg, with skin",
+            "tag_name": "grilled chicken leg",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "8050",
+            "photo": {
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/8050_thumb.jpg"
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonalds quarter pounder with cheese",
+            "serving_unit": "oz",
+            "tag_name": "mcdonald's quarter pounder with cheese",
+            "serving_qty": 7.3,
+            "common_type": 1,
+            "tag_id": "4672",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "snyders the pounder mini pretzels",
+            "serving_unit": "minis",
+            "tag_name": "snyders the pounder mini pretzels",
+            "serving_qty": 20,
+            "common_type": 2,
+            "tag_id": "10445",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonald's quarter pounder with cheese",
+            "serving_unit": "oz",
+            "tag_name": "mcdonald's quarter pounder with cheese",
+            "serving_qty": 7.3,
+            "common_type": 1,
+            "tag_id": "4672",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonald's quarter pounder without cheese",
+            "serving_unit": "item",
+            "tag_name": "mcdonald's quarter pounder without cheese",
+            "serving_qty": 1,
+            "common_type": null,
+            "tag_id": "2535",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        },
+        {
+            "food_name": "mcdonalds double quarter pounder with cheese",
+            "serving_unit": "oz",
+            "tag_name": "mcdonalds double quarter pounder with cheese",
+            "serving_qty": 10.3,
+            "common_type": 2,
+            "tag_id": "10366",
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "locale": "en_US"
+        }
+    ],
+    "branded": [
+        {
+            "food_name": "Quarter Pounder",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Quarter Pounder",
+            "serving_qty": 1,
+            "nf_calories": 430,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "c64083495519eae513452eec",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder (New York)",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Quarter Pounder (New York)",
+            "serving_qty": 1,
+            "nf_calories": 430,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "c6408349986ad1b6d70cf827",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder, Spicy Bean",
+            "serving_unit": "burger",
+            "nix_brand_id": "54abfe828aeb5b0d0a6ddfc6",
+            "brand_name_item_name": "ASDA Quarter Pounder, Spicy Bean",
+            "serving_qty": 1,
+            "nf_calories": 240.75999450683594,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/576d70a1bad5eec57349d022.jpeg"
+            },
+            "brand_name": "ASDA",
+            "region": 2,
+            "brand_type": 2,
+            "nix_item_id": "576cf6e888f1944051a3b353",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounders",
+            "serving_unit": "patty",
+            "nix_brand_id": "559a0195bc8163e517831696",
+            "brand_name_item_name": "For BBQ Pack Quarter Pounders",
+            "serving_qty": 1,
+            "nf_calories": 230,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/559a02e33179835473b24801.jpeg"
+            },
+            "brand_name": "For BBQ Pack",
+            "region": 1,
+            "brand_type": 2,
+            "nix_item_id": "559a02ae3179835473b247f2",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder Deluxe",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Quarter Pounder Deluxe",
+            "serving_qty": 1,
+            "nf_calories": 640,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "521b95c74a56d006d578b12e",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder Bacon & Cheese",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Quarter Pounder Bacon & Cheese",
+            "serving_qty": 1,
+            "nf_calories": 590,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "521b95c74a56d006d578b12c",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder with Cheese",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Quarter Pounder with Cheese",
+            "serving_qty": 1,
+            "nf_calories": 530,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "513fc9e73fe3ffd403001171",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Scotch Beef Quarter Pounder",
+            "serving_unit": "grilled quarter pounder",
+            "nix_brand_id": "51db37c3176fe9790a899295",
+            "brand_name_item_name": "Morrisons Scotch Beef Quarter Pounder",
+            "serving_qty": 1,
+            "nf_calories": 230.9600067138672,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/576dc21ab017311f6473544d.jpeg"
+            },
+            "brand_name": "Morrisons",
+            "region": 2,
+            "brand_type": 2,
+            "nix_item_id": "5761b5e1635bfcbd7df9e878",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder Sandwich",
+            "serving_unit": "g",
+            "nix_brand_id": "574896c0824977cd38a7c8a5",
+            "brand_name_item_name": "Rustlers Quarter Pounder Sandwich",
+            "serving_qty": 100,
+            "nf_calories": 292.3500061035156,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "Rustlers",
+            "region": 2,
+            "brand_type": 2,
+            "nix_item_id": "577dfe96ced9330367b0953d",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder Burger",
+            "serving_unit": "patty",
+            "nix_brand_id": "53dbc4d1f8ce4766300fb8ec",
+            "brand_name_item_name": "Sweet Earth Quarter Pounder Burger",
+            "serving_qty": 1,
+            "nf_calories": 260,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5db2a7a36498fc3461a18dcc.jpeg"
+            },
+            "brand_name": "Sweet Earth",
+            "region": 1,
+            "brand_type": 2,
+            "nix_item_id": "5db2a79fafe7bd0344e7558e",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Chilli & Lime Beef, Quarter Pounder",
+            "serving_unit": "g (grilled)",
+            "nix_brand_id": "54abfe828aeb5b0d0a6ddfc6",
+            "brand_name_item_name": "ASDA Chilli & Lime Beef, Quarter Pounder",
+            "serving_qty": 100,
+            "nf_calories": 217.35000610351562,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/598c0558ed5d14a6355feec5.jpeg"
+            },
+            "brand_name": "ASDA",
+            "region": 2,
+            "brand_type": 2,
+            "nix_item_id": "598c0555306b814040ff8fed",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder Cheddar Bacon Onion",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Quarter Pounder Cheddar Bacon Onion",
+            "serving_qty": 1,
+            "nf_calories": 770,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "c6408349610c2a71ab6d47f6",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder with Cheese Bacon",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Quarter Pounder with Cheese Bacon",
+            "serving_qty": 1,
+            "nf_calories": 640,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "152152206994a479c9298d37",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Aberdeen Angus, Quarter Pounder Beef Burgers",
+            "serving_unit": "serving (grilled)",
+            "nix_brand_id": "54abfe828aeb5b0d0a6ddfc6",
+            "brand_name_item_name": "ASDA Aberdeen Angus, Quarter Pounder Beef Burgers",
+            "serving_qty": 1,
+            "nf_calories": 219.02000427246094,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/583e7983982b129d2de9cd28.jpeg"
+            },
+            "brand_name": "ASDA",
+            "region": 2,
+            "brand_type": 2,
+            "nix_item_id": "583e79a58014c3653ae217f4",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Bacon Quarter Pounder with Cheese",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Bacon Quarter Pounder with Cheese",
+            "serving_qty": 1,
+            "nf_calories": 630,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "69240416fe1aa82bd391470f",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Double Quarter Pounder with Cheese",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Double Quarter Pounder with Cheese",
+            "serving_qty": 1,
+            "nf_calories": 770,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "513fc9e73fe3ffd4030010c6",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Quarter Pounder Deluxe (New York)",
+            "serving_unit": "burger",
+            "nix_brand_id": "513fbc1283aa2dc80c000053",
+            "brand_name_item_name": "McDonald's Quarter Pounder Deluxe (New York)",
+            "serving_qty": 1,
+            "nf_calories": 590,
+            "photo": {
+                "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+                "highres": null,
+                "is_user_uploaded": false
+            },
+            "brand_name": "McDonald's",
+            "region": 1,
+            "brand_type": 1,
+            "nix_item_id": "c640834935fde9000badb5a4",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Flamegrilled Quarter Pounder with Tomato Ketchup",
+            "serving_unit": "g",
+            "nix_brand_id": "5e5cb10e30765f7811b40a90",
+            "brand_name_item_name": "Texas James Flamegrilled Quarter Pounder with Tomato Ketchup",
+            "serving_qty": 1,
+            "nf_calories": 269,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5e5cb11530765f7811b40a92.jpeg"
+            },
+            "brand_name": "Texas James",
+            "region": 2,
+            "brand_type": 2,
+            "nix_item_id": "5e5cb10e30765f7811b40a8f",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "Beef Quarter Pounder",
+            "serving_unit": "burger",
+            "nix_brand_id": "5833ed89ef7b8e431e9789ef",
+            "brand_name_item_name": "Coop Beef Quarter Pounder",
+            "serving_qty": 1,
+            "nf_calories": 274.6700134277344,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5c91e79cf9d4548e292f8b22.jpeg"
+            },
+            "brand_name": "Coop",
+            "region": 2,
+            "brand_type": 2,
+            "nix_item_id": "5c91e79780854cf071e8e751",
+            "locale": "en_US"
+        },
+        {
+            "food_name": "British Beef Quarter Pounder",
+            "serving_unit": "burger when cooked according to instructions",
+            "nix_brand_id": "545238f3ed1969521b404e10",
+            "brand_name_item_name": "Tesco British Beef Quarter Pounder",
+            "serving_qty": 1,
+            "nf_calories": 213.2899932861328,
+            "photo": {
+                "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5c63c2eea852d0c3671a7d67.jpeg"
+            },
+            "brand_name": "Tesco",
+            "region": 2,
+            "brand_type": 2,
+            "nix_item_id": "5c63c2e9a852d0c3671a7d65",
+            "locale": "en_US"
+        }
+    ]
+}

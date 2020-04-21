@@ -1,0 +1,108 @@
+{
+  "foods": [
+      {
+          "food_name": "quarter pounder",
+          "brand_name": null,
+          "serving_qty": 1,
+          "serving_unit": "burger",
+          "serving_weight_grams": 206,
+          "nf_calories": 530,
+          "nf_total_fat": 28,
+          "nf_saturated_fat": 13,
+          "nf_cholesterol": 100,
+          "nf_sodium": 1110,
+          "nf_total_carbohydrate": 39,
+          "nf_dietary_fiber": 2,
+          "nf_sugars": 10,
+          "nf_protein": 31,
+          "nf_potassium": null,
+          "nf_p": null,
+          "full_nutrients": [
+              {
+                  "attr_id": 203,
+                  "value": 31
+              },
+              {
+                  "attr_id": 204,
+                  "value": 28
+              },
+              {
+                  "attr_id": 205,
+                  "value": 39
+              },
+              {
+                  "attr_id": 208,
+                  "value": 530
+              },
+              {
+                  "attr_id": 269,
+                  "value": 10
+              },
+              {
+                  "attr_id": 291,
+                  "value": 2
+              },
+              {
+                  "attr_id": 301,
+                  "value": 200
+              },
+              {
+                  "attr_id": 303,
+                  "value": 4.5
+              },
+              {
+                  "attr_id": 307,
+                  "value": 1110
+              },
+              {
+                  "attr_id": 318,
+                  "value": 1000
+              },
+              {
+                  "attr_id": 401,
+                  "value": 2.4
+              },
+              {
+                  "attr_id": 601,
+                  "value": 100
+              },
+              {
+                  "attr_id": 605,
+                  "value": 1.5
+              },
+              {
+                  "attr_id": 606,
+                  "value": 13
+              }
+          ],
+          "nix_brand_name": "McDonald's",
+          "nix_brand_id": "513fbc1283aa2dc80c000053",
+          "nix_item_name": "Quarter Pounder with Cheese",
+          "nix_item_id": "513fc9e73fe3ffd403001171",
+          "upc": null,
+          "consumed_at": "2020-04-21T13:09:53+00:00",
+          "metadata": {
+              "is_raw_food": false
+          },
+          "source": 1,
+          "ndb_no": 21235,
+          "tags": {
+              "item": "mcdonald's quarter pounder with cheese",
+              "measure": null,
+              "quantity": "1.0",
+              "food_group": null,
+              "tag_id": 4672
+          },
+          "alt_measures": [],
+          "lat": null,
+          "lng": null,
+          "meal_type": 1,
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "sub_recipe": null
+      }
+  ]
+}

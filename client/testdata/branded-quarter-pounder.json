@@ -1,0 +1,99 @@
+{
+  "foods": [
+      {
+          "food_name": "Quarter Pounder",
+          "brand_name": "McDonald's",
+          "serving_qty": 1,
+          "serving_unit": "burger",
+          "serving_weight_grams": null,
+          "nf_calories": 430,
+          "nf_total_fat": 20,
+          "nf_saturated_fat": 8,
+          "nf_cholesterol": 75,
+          "nf_sodium": 700,
+          "nf_total_carbohydrate": 38,
+          "nf_dietary_fiber": 2,
+          "nf_sugars": 9,
+          "nf_protein": 26,
+          "nf_potassium": null,
+          "nf_p": null,
+          "full_nutrients": [
+              {
+                  "attr_id": 203,
+                  "value": 26
+              },
+              {
+                  "attr_id": 204,
+                  "value": 20
+              },
+              {
+                  "attr_id": 205,
+                  "value": 38
+              },
+              {
+                  "attr_id": 208,
+                  "value": 430
+              },
+              {
+                  "attr_id": 269,
+                  "value": 9
+              },
+              {
+                  "attr_id": 291,
+                  "value": 2
+              },
+              {
+                  "attr_id": 301,
+                  "value": 78
+              },
+              {
+                  "attr_id": 303,
+                  "value": 4.5
+              },
+              {
+                  "attr_id": 307,
+                  "value": 700
+              },
+              {
+                  "attr_id": 318,
+                  "value": 200
+              },
+              {
+                  "attr_id": 401,
+                  "value": 2.4
+              },
+              {
+                  "attr_id": 601,
+                  "value": 75
+              },
+              {
+                  "attr_id": 605,
+                  "value": 1
+              },
+              {
+                  "attr_id": 606,
+                  "value": 8
+              }
+          ],
+          "nix_brand_name": "McDonald's",
+          "nix_brand_id": "513fbc1283aa2dc80c000053",
+          "nix_item_name": "Quarter Pounder",
+          "nix_item_id": "c64083495519eae513452eec",
+          "metadata": {},
+          "source": 8,
+          "ndb_no": null,
+          "tags": null,
+          "alt_measures": null,
+          "lat": null,
+          "lng": null,
+          "photo": {
+              "thumb": "https://d2eawub7utcl6.cloudfront.net/images/nix-apple-grey.png",
+              "highres": null,
+              "is_user_uploaded": false
+          },
+          "note": null,
+          "updated_at": "2018-08-27T18:55:24+00:00",
+          "nf_ingredient_statement": null
+      }
+  ]
+}
