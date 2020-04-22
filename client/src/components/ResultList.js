@@ -1,25 +1,41 @@
 import React, { useState } from 'react';
 
-function expandItem(element) {
-  const foodName = element.textContent;
-  console.log(foodName);
-  // fetch(`/common/${foodName}`)
+function expandItem(element, type, updateContent) {
+  if (type === 'common') {
+    const foodName = element.textContent;
+    fetch(`/common/${foodName}`)
+      .then((data) => data.json())
+      .then((data) => updateContent(data));
+  } else {
+    fetch(`/branded/${element.id}`)
+      .then((data) => data.json())
+      .then((data) => updateContent(data));
+  }
 
+  document.querySelectorAll('.active').forEach((el) => el.classList.toggle('active'));
   const siblingEl = element.nextElementSibling;
   siblingEl.classList.toggle('active');
 }
 
 function ResultList(props) {
   const [content, updateContent] = useState(null);
+  let grams = '';
+  let kcal = '';
+  if (content) {
+    if (content.foods[0]['serving_weight_grams']) grams = `(${content.foods[0]['serving_weight_grams']}g)`;
+    kcal = `(${content.foods[0]['nf_calories']}kcal)`;
+  }
 
-  console.log(props.type, 'list:', props.list);
   return (
     <div className="result-column">
       {props.list.map((item) => (
         <div className="result-item" key={item.foodName}>
-          <button type="button" className="item-btn" key={item.foodName} onClick={(e) => expandItem(e.target, updateContent)}>{item.foodName}</button>
+          <button type="button" className="item-btn" key={item.foodName} id={item.nixItemId}
+          onClick={(e) => expandItem(e.target, props.type, updateContent)}>{item.foodName}</button>
           <div className="item-content">
-            <input type="text" placeholder="0" ></input> x {item.servingQty} {item.servingUnit}
+            <input type="text" className="qty-input" placeholder="0" />
+            <label> x {item.servingQty} {item.servingUnit} {content ? `${grams} ${kcal}` : '' }</label>
+            <button type="button" className="add-item-btn">add</button>
           </div>
         </div>
         )

@@ -144,7 +144,6 @@ body {
   font-size: 16px;
   text-align: left;
   border: none;
-  /* background-color: #eeeeee; */
 }
 
 .item-btn:hover {
@@ -154,18 +153,27 @@ body {
 .item-content {
   padding: 10px;
   display: none;
+  font-size: 14px;
   background-color: #eeeeee;
   color: #555555;
+}
+
+.qty-input {
+  width: 15px;
+  font-size: 14px;
 }
 
 .active {
   display: block;
 }
 
-.expand-btn {
+.add-item-btn {
   cursor: pointer;
-  float: right;
-  width: 16px;
+  margin-left: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: olivedrab;
+  color: white;
 }
 
 .add-item-btn:focus {

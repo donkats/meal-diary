@@ -91,7 +91,6 @@ app
 function fetchItem(req, res) {
   const type = req.params.type;
   const query = req.params.name;
-  console.log('query:', query)
 
   const commonObj = {
     method: 'POST',
@@ -133,5 +132,5 @@ app
 
 // Start server
 app.listen(process.env.PORT || 3001, () => {
-  console.log(`Server listening`)
+  console.log(`server listening`)
 });
