@@ -10,7 +10,6 @@ function fetchData(updateResults) {
   const query = input.value.trim();
 
   if (query !== '') {
-    console.log('fetching:', query);
     fetch(`/search/${query}`)
       .then((data) => data.json())
       .then((res) => updateResults(res));

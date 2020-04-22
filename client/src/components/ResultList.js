@@ -22,8 +22,8 @@ function ResultList(props) {
   let grams = '';
   let kcal = '';
   if (content) {
-    if (content.foods[0]['serving_weight_grams']) grams = `(${content.foods[0]['serving_weight_grams']}g)`;
-    kcal = `(${content.foods[0]['nf_calories']}kcal)`;
+    if (content.gramsUnit) grams = `(${content.gramsUnit}g)`;
+    kcal = `(${content.kcal}kcal)`;
   }
 
   return (
