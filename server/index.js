@@ -17,7 +17,20 @@ app
 
 app
   .route('/meals')
-  .post(db.addMeals);
+  .post(db.addMeals)
+  .get(db.getAllMeals)
+app
+  .route('/breakfast')
+  .get(db.getBreakfast)
+app
+  .route('/lunch')
+  .get(db.getLunch)
+app
+  .route('/dinner')
+  .get(db.getDinner)
+app
+  .route('/calories')
+  .get(db.getDailyCalories)
 
 // Start server
 app.listen(process.env.PORT || 3001, () => {
