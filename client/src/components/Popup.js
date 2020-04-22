@@ -1,31 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ResultList from './ResultList';
 
 function hidePopup() {
   document.querySelector('.popup').classList.add('hidden');
 }
 
-function searchClick() {
+function fetchData(updateResults) {
   const input = document.querySelector('.searchbar');
-  console.log('search bar content:', input.value);
-  if (input.value.trim() !== '') {
+  const query = input.value.trim();
+
+  if (query !== '') {
+    console.log('fetching:', query);
+    fetch(`/search/${query}`)
+      .then((data) => data.json())
+      .then((res) => updateResults(res));
     input.value = '';
-    // make fetch request here
   }
 }
 
 function Popup() {
+  const [results, updateResults] = useState({});
+
   return (
-    <div className="popup"> {/* hidden */}
+    <div className="popup">
       <div className="popup-inner">
         <span className="close-popup" onClick={() => hidePopup()}>&times;</span>
         <div className="popup-content">
-          <h3>Search for product:</h3>
           <div className="search-container">
             <input type="search" className="searchbar" placeholder="search..." />
             <input type="image" className="search-icon" 
               src="https://img.icons8.com/ios-filled/24/000000/search.png" alt="search icon"
-              onClick={() => searchClick()} />
+              onClick={() => fetchData(updateResults)} />
           </div>
+          {Object.entries(results).length ? 
+            <div className="results">
+              <ResultList list={results.common} type="common" />
+              <ResultList list={results.branded} type="branded" />
+            </div>
+            : ''}
         </div>
       </div>
     </div>
