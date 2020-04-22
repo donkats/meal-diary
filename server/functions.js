@@ -26,19 +26,14 @@ const addMeals = (request, response) => {
   const { foodName, kcal, amount, userId, meal, grams, kcalIntake, date } = request.body;
 
   pool.query('INSERT INTO ingredients (food_name, kcal, amount) VALUES ($1, $2, $3) ON CONFLICT ON CONSTRAINT constraintname DO NOTHING', [foodName, kcal, amount], error => {
-    // add if not exist option
-    if (error) {
-      throw error
-    }
-    // response.status(201).json({ status: 'success', message: 'Ingredient added'})
-  });
-  pool.query('INSERT INTO meals (meal, grams, kcal_intake, date, users_id, ingredients_id) VALUES ($1, $2, $3, $4, $5, (select id from ingredients where food_name = $6))', 
-  [meal, grams, kcalIntake, date, userId, foodName], error => {
-    // add if not exist option
-    if (error) {
-      throw error
-    }
-    response.status(201).json({ status: 'success', message: 'Ingredient and meal added'})
+
+    pool.query('INSERT INTO meals (meal, grams, kcal_intake, date, users_id, ingredients_id) VALUES ($1, $2, $3, $4, $5, (select id from ingredients where food_name = $6))', 
+    [meal, grams, kcalIntake, date, userId, foodName], error => {
+      if (error) {
+        throw error
+      }
+      response.status(201).json({ status: 'success', message: 'Ingredient and meal added'})
+    });
   });
 };
 
