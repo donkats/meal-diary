@@ -10,10 +10,10 @@ function Dashboard() {
         <h1>Today</h1>
         <div className="next">{'>'}</div>
       </header>
-      <Goalcal userId='3' date='23-04-2020'/>
-      <MealSection meal="breakfast" userId="3" date="23-04-2020"/>
-      <MealSection meal="lunch" userId="3" date="23-04-2020"/>
-      <MealSection meal="dinner" userId="3" date="23-04-2020"/>
+      <Goalcal userId='9' date='24-04-2020'/>
+      <MealSection meal="breakfast" userId="9" date="24-04-2020"/>
+      <MealSection meal="lunch" userId="9" date="24-04-2020"/>
+      <MealSection meal="dinner" userId="9" date="24-04-2020"/>
     </main>
   )
 }

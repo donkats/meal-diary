@@ -82,9 +82,9 @@ body {
 
 .kcal {
   float: right;
+  margin-top: 6px;
   font-size: 14px;
   color: olivedrab;
-  /* font-weight: bold; */
 }
 
 .meal-item {
