@@ -17,6 +17,28 @@ function expandItem(element, type, updateContent) {
   siblingEl.classList.toggle('active');
 }
 
+function addItemToDb(item, id, type) {
+  console.log(item)
+  const { foodName, kcal, servingQ, servingUnit, gramsUnit } = item;
+  const units = document.getElementById(id+type).value;
+
+  const itemObject = { 
+    foodName,
+    kcal,
+    servingQ,
+    servingUnit,
+    gramsUnit,
+    userId: '3',
+    meal:'breakfast',
+    units,
+    kcalIntake: units * kcal,
+    date: '23-04-2020'
+   }
+   console.log(itemObject);
+}
+
+
+
 function ResultList(props) {
   const [content, updateContent] = useState(null);
   let grams = '';
@@ -28,14 +50,14 @@ function ResultList(props) {
 
   return (
     <div className="result-column">
-      {props.list.map((item) => (
+      {props.list.map((item, index) => (
         <div className="result-item" key={item.foodName}>
           <button type="button" className="item-btn" key={item.foodName} id={item.nixItemId}
           onClick={(e) => expandItem(e.target, props.type, updateContent)}>{item.foodName}</button>
           <div className="item-content">
-            <input type="text" className="qty-input" placeholder="0" />
-            <label> x {item.servingQty} {item.servingUnit} {content ? `${grams} ${kcal}` : '' }</label>
-            <button type="button" className="add-item-btn">add</button>
+            <input type="text" id={`${index}${props.type}`} className="qty-input" placeholder="0" />
+            <label> x {item.servingQ} {item.servingUnit} {content ? `${grams} ${kcal}` : '' }</label>
+            <button type="button" className="add-item-btn" onClick={() => addItemToDb(content, index, props.type)}>add</button>
           </div>
         </div>
         )

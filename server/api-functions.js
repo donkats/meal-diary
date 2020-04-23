@@ -11,7 +11,7 @@ function parseData(data) {
     return {
       foodName: food['food_name'],
       servingUnit: food['serving_unit'],
-      servingQty: food['serving_qty'],
+      servingQ: food['serving_qty'],
       photo: food.photo,
     }
   });
@@ -22,7 +22,7 @@ function parseData(data) {
       foodName: food['food_name'],
       brandName: food['brand_name'],
       servingUnit: food['serving_unit'],
-      servingQty: food['serving_qty'],
+      servingQ: food['serving_qty'],
       calories: food['nf_calories'],
       photo: food.photo,
     }
@@ -36,7 +36,7 @@ function parseCommonItem(data) {
     return {
       foodName: product['food_name'],
       servingUnit: product['serving_unit'],
-      servingQty: product['serving_qty'],
+      servingQ: product['serving_qty'],
       gramsUnit: product['serving_weight_grams'],
       kcal: product['nf_calories'],
       photo: product.photo['thumb']
@@ -48,7 +48,7 @@ function parseBrandedItem(data) {
     return {
       foodName: product['food_name'],
       servingUnit: product['serving_unit'],
-      servingQty: product['serving_qty'],
+      servingQ: product['serving_qty'],
       gramsUnit: product['serving_weight_grams'],
       kcal: product['nf_calories'],
       photo: product.photo['thumb'],
