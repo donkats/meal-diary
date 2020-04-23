@@ -37,36 +37,6 @@ const addMeals = (request, response) => {
   });
 };
 
-const getBreakfast = (request, response) => {
-  const { userId, date } = request.body;
-  pool.query('SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3', [userId, date, 'breakfast'], (error, results) => {
-    if (error) {
-      throw error
-    }
-    response.status(200).json(results.rows)
-  })
-};
-
-const getLunch = (request, response) => {
-  const { userId, date } = request.body;
-  pool.query('SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3', [userId, date, 'lunch'], (error, results) => {
-    if (error) {
-      throw error
-    }
-    response.status(200).json(results.rows)
-  })
-};
-
-const getDinner = (request, response) => {
-  const { userId, date } = request.body;
-  pool.query('SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3', [userId, date, 'dinner'], (error, results) => {
-    if (error) {
-      throw error
-    }
-    response.status(200).json(results.rows)
-  })
-};
-
 const getAllMeals = (request, response) => {
   const { userId, date } = request.body;
   pool.query('SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2', [userId, date], (error, results) => {
@@ -78,8 +48,9 @@ const getAllMeals = (request, response) => {
 };
 
 const getDailyCalories = (request, response) => {
-  const { userId, date } = request.body;
-  pool.query('SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2', [userId, date], (error, results) => {
+  const id = request.params.id;
+  const date = request.params.date
+  pool.query('SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2', [id, date], (error, results) => {
     if (error) {
       throw error
     }
@@ -95,15 +66,26 @@ function calculateCalories(array) {
   return result;
 }
 
+const getMeals = (request, response) => {
+  const id = request.params.id;
+  const meal = request.params.meal;
+  const date = request.params.date;
+  
+  pool.query('SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3', [id, date, meal], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json(results.rows)
+  })
+};
+
 module.exports = {
   getUsers,
   addUser,
   addMeals, 
-  getBreakfast, 
-  getLunch,
-  getDinner,
   getAllMeals, 
-  getDailyCalories
+  getDailyCalories,
+  getMeals
 }
 
 // 'SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3';

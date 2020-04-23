@@ -20,23 +20,14 @@ app
   .route('/meals')
   .post(db.addMeals)
   .get(db.getAllMeals);
-// database - get breakfast rows per date per user
-app
-  .route('/breakfast')
-  .get(db.getBreakfast);
-// database - get lunch rows per date per user
-app
-  .route('/lunch')
-  .get(db.getLunch);
-// database - get dinner rows per date per user
-app
-  .route('/dinner')
-  .get(db.getDinner);
 // database - get amount of calories per date per user
 app
-  .route('/calories')
+  .route('/calories/:id/:date')
   .get(db.getDailyCalories);
 // api - get list of products
+app
+  .route('/meals/:id/:meal/:date')
+  .get(db.getMeals)
 app
   .route('/search/:query')
   .get(api.fetchSearch);
