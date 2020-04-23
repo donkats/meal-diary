@@ -25,6 +25,10 @@ body {
   color: white;
 }
 
+.sidebarlink {
+  text-decoration: none
+}
+
 .dashboard {
   margin-left: 250px;
   padding: 50px;
@@ -218,4 +222,13 @@ body {
   border-radius: inherit;
   transition: width .2s ease-in;
   max-width: 100%;
+}
+
+/* Analytics Component */
+
+.graphAnalytics{
+  padding-top: 5%;
+  margin-left: 30%;
+  height: 800px;
+  width: 800px;
 }

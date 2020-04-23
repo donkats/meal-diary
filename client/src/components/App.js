@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Dashboard from './Dashboard';
-import Sidebar from './Sidebar';
+import Analytics from './Analytics';
 
 class App extends Component {
-  state = { users: [] }
+  // state = { users: [] }
 
   // async componentDidMount() {
   //   const response = await fetch('/users')
@@ -14,15 +15,18 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        {/* <ul>
-          {this.state.users.map(user => {
-            return <li key={user.id}> <b>{user.username}</b><b>{user.password}</b></li>
-          })}
-        </ul> */}
-        <Sidebar />
-        <Dashboard />
-      </>
+    <Router>
+        <div>
+          <nav className="sidebar">
+            <Link to={'/'} className="sidebarlink"> Dashboard </Link>
+            <Link to={'/analytics'} className="sidebarlink">Analytics</Link>
+          </nav>
+          <Switch>
+              <Route exact path='/' component={Dashboard} />
+              <Route path='/analytics' component={Analytics} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

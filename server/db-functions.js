@@ -54,17 +54,9 @@ const getDailyCalories = (request, response) => {
     if (error) {
       throw error
     }
-    response.status(200).json(calculateCalories(results.rows))
+    response.status(200).json((results.rows).map(a => a.kcal_intake).reduce((a, b) => a + b, 0))
   })
 };
-
-function calculateCalories(array) {
-  let result = 0;
-  for (let i=0; i<array.length; i+=1) {
-    result = result + array[i].kcal_intake;
-  }
-  return result;
-}
 
 const getMeals = (request, response) => {
   const id = request.params.id;
