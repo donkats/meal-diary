@@ -4,6 +4,8 @@ body {
   font-family: sans-serif;
 }
 
+/* LARGE COMPONENTS */
+
 .sidebar {
   box-sizing: border-box;
   position: fixed;
@@ -34,6 +36,8 @@ body {
   padding: 50px;
 }
 
+/* DATE SLIDER */
+
 .date-header {
   display: flex;
   justify-content: space-between;
@@ -51,11 +55,49 @@ body {
   font-weight: bolder;
 }
 
-.overview-box h3 {
+/* MEALS OVERVIEW */
+.meal h3 {
+  box-sizing: border-box;
   width: 100%;
-  margin: 10px 0 0 0;
-  padding: 8px 0;
+  margin: 0;
+  padding: 10px;
   border-bottom: solid 1px #999999;
+  background-color: olivedrab;
+  color: #ffffff;
+}
+
+.meal {
+  margin: 20px 0;
+  border: 1px solid #999999;
+}
+
+.total-kcal {
+  text-align: right;
+  padding: 10px;
+  background-color: olivedrab;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.kcal {
+  float: right;
+  font-size: 14px;
+  color: olivedrab;
+  /* font-weight: bold; */
+}
+
+.meal-item {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border-bottom: solid 1px #999999;
+  font-size: 14px;
+  background-color: #fafafa;
+}
+
+.meal-item-details {
+  color: #555555;
 }
 
 .add-btn {
@@ -76,6 +118,8 @@ body {
 .add-btn:focus {
   outline: none;
 }
+
+/* SEARCH ITEM POP-UP */
 
 .popup {  
   position: fixed;  

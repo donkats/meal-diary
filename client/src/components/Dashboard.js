@@ -1,6 +1,6 @@
 import React from 'react';
-import FoodOverview from './FoodOverview';
 import Goalcal from './Goalcal';
+import MealSection from './MealSection';
 
 function Dashboard() {
   return (
@@ -11,7 +11,9 @@ function Dashboard() {
         <div className="next">{'>'}</div>
       </header>
       <Goalcal />
-      <FoodOverview />
+      <MealSection meal="breakfast" userId="3" date="23-04-2020"/>
+      <MealSection meal="lunch" userId="3" date="23-04-2020"/>
+      <MealSection meal="dinner" userId="3" date="23-04-2020"/>
     </main>
   )
 }
