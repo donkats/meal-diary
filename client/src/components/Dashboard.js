@@ -10,7 +10,7 @@ function Dashboard() {
         <h1>Today</h1>
         <div className="next">{'>'}</div>
       </header>
-      <Goalcal />
+      <Goalcal userId='3' date='23-04-2020'/>
       <MealSection meal="breakfast" userId="3" date="23-04-2020"/>
       <MealSection meal="lunch" userId="3" date="23-04-2020"/>
       <MealSection meal="dinner" userId="3" date="23-04-2020"/>
