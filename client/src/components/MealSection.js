@@ -29,13 +29,13 @@ function MealSection(props) {
       <h3>{meal.charAt(0).toUpperCase() + meal.slice(1)}</h3>
       {meals.map((item, index) => (
         <div className="meal-item" key={index}>
-          {item['food_name']} <span className="kcal">{item.kcal_intake} kcal</span>
+          {item['food_name']} <span className="kcal">{Math.round(item.kcal_intake)} kcal</span>
           <br /> 
           <span className="meal-item-details">{item.units} x {item.serving_q} {item.serving_unit}</span>
         </div>
       ))}
       <button className="add-btn" onClick={() => showPopup(meal)}>+ add breakfast</button>
-      <div className="total-kcal">Total: {totalKcal} kcal</div>
+      <div className="total-kcal">Total: {Math.round(totalKcal)} kcal</div>
       <Popup meal={meal} hidePopup={hidePopup} />
     </div>
   )
