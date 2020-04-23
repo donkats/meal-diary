@@ -28,11 +28,11 @@ function addItemToDb(item, id, type, meal) {
     servingQ,
     servingUnit,
     gramsUnit,
-    userId: '3',
+    userId: '9',
     meal,
     units,
     kcalIntake: units * kcal,
-    date: '23-04-2020'
+    date: '24-04-2020'
    }
   const fetchObj = {
     method: 'POST',

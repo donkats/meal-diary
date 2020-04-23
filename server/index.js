@@ -20,6 +20,10 @@ app
   .route('/meals')
   .post(db.addMeals)
   .get(db.getAllMeals);
+  // database - get amount of calories per user of all dates
+app
+.route('/calorie/:id')
+.get(db.getUserCalories);
 // database - get amount of calories per date per user
 app
   .route('/calories/:id/:date')

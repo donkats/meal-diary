@@ -59,6 +59,17 @@ const getDailyCalories = (request, response) => {
   })
 };
 
+const getUserCalories = (request, response) => {
+  const id = request.params.id;
+  const date = request.params.date
+  pool.query('SELECT date, sum(kcal_intake) FROM meals GROUP BY date, users_id HAVING users_id= $1 ORDER BY date ASC', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json((results.rows))
+  })
+};
+
 const getMeals = (request, response) => {
   const id = request.params.id;
   const meal = request.params.meal;
@@ -78,6 +89,7 @@ module.exports = {
   addMeals, 
   getAllMeals, 
   getDailyCalories,
+  getUserCalories,
   getMeals
 }
 
