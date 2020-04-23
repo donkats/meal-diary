@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ResultList from './ResultList';
 
-function hidePopup() {
-  document.querySelector('.popup').classList.add('hidden');
+function hidePopup(meal) {
+  document.getElementById(meal).classList.add('hidden');
 }
 
 function fetchData(updateResults) {
@@ -17,13 +17,13 @@ function fetchData(updateResults) {
   }
 }
 
-function Popup() {
+function Popup(props) {
   const [results, updateResults] = useState({});
 
   return (
-    <div className="popup hidden">
+    <div className="popup hidden" id={props.meal}>
       <div className="popup-inner">
-        <span className="close-popup" onClick={() => hidePopup()}>&times;</span>
+        <span className="close-popup" onClick={() => hidePopup(props.meal)}>&times;</span>
         <div className="popup-content">
           <div className="search-container">
             <input type="search" className="searchbar" placeholder="search..." />
@@ -33,8 +33,8 @@ function Popup() {
           </div>
           {Object.entries(results).length ? 
             <div className="results">
-              <ResultList list={results.common} type="common" />
-              <ResultList list={results.branded} type="branded" />
+              <ResultList list={results.common} meal={props.meal} type="common" />
+              <ResultList list={results.branded} meal={props.meal} type="branded" />
             </div>
             : ''}
         </div>

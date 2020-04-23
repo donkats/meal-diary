@@ -17,7 +17,7 @@ function expandItem(element, type, updateContent) {
   siblingEl.classList.toggle('active');
 }
 
-function addItemToDb(item, id, type) {
+function addItemToDb(item, id, type, meal) {
   console.log(item)
   const { foodName, kcal, servingQ, servingUnit, gramsUnit } = item;
   const units = document.getElementById(id+type).value;
@@ -29,12 +29,17 @@ function addItemToDb(item, id, type) {
     servingUnit,
     gramsUnit,
     userId: '3',
-    meal:'breakfast',
+    meal,
     units,
     kcalIntake: units * kcal,
     date: '23-04-2020'
    }
-   console.log(itemObject);
+  const fetchObj = {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(itemObject)
+  }
+  fetch('/meals', fetchObj);
 }
 
 
@@ -57,7 +62,7 @@ function ResultList(props) {
           <div className="item-content">
             <input type="text" id={`${index}${props.type}`} className="qty-input" placeholder="0" />
             <label> x {item.servingQ} {item.servingUnit} {content ? `${grams} ${kcal}` : '' }</label>
-            <button type="button" className="add-item-btn" onClick={() => addItemToDb(content, index, props.type)}>add</button>
+            <button type="button" className="add-item-btn" onClick={() => addItemToDb(content, index, props.type, props.meal)}>add</button>
           </div>
         </div>
         )
