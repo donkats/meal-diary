@@ -5,8 +5,8 @@ function hidePopup(meal) {
   document.getElementById(meal).classList.add('hidden');
 }
 
-function fetchData(updateResults) {
-  const input = document.querySelector('.searchbar');
+function fetchData(updateResults, meal) {
+  const input = document.getElementById(`search${meal}`);
   const query = input.value.trim();
 
   if (query !== '') {
@@ -26,10 +26,10 @@ function Popup(props) {
         <span className="close-popup" onClick={() => hidePopup(props.meal)}>&times;</span>
         <div className="popup-content">
           <div className="search-container">
-            <input type="search" className="searchbar" placeholder="search..." />
+            <input type="search" id={`search${props.meal}`} className="searchbar" placeholder="search..." />
             <input type="image" className="search-icon" 
               src="https://img.icons8.com/ios-filled/24/000000/search.png" alt="search icon"
-              onClick={() => fetchData(updateResults)} />
+              onClick={() => fetchData(updateResults, props.meal)} />
           </div>
           {Object.entries(results).length ? 
             <div className="results">

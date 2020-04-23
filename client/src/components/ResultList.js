@@ -42,8 +42,6 @@ function addItemToDb(item, id, type, meal) {
   fetch('/meals', fetchObj);
 }
 
-
-
 function ResultList(props) {
   const [content, updateContent] = useState(null);
   let grams = '';
