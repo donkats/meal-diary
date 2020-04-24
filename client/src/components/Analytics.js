@@ -46,7 +46,7 @@ function Analytics() {
     <div className="graphAnalytics">
       <Line data={data.Data}
         options={{
-          xaxis: {
+          title: {
             display: true,
             text: 'Calorie intake per day',
             fontSize: 20

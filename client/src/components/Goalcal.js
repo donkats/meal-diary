@@ -13,6 +13,15 @@ function Goalcal(props) {
       .then((data) => updateCalories({calories: Math.round(data), percent: Math.round(data/kcalGoal*100) }));
   }, []);
 
+  // function fetchNumber() {
+  //   fetch(`/calories/${id}/${date}`)
+  //     .then((data) => data.json())
+  //     .then((data) => updateCalories({calories: Math.round(data), percent: Math.round(data/kcalGoal*100) }));
+  // }
+  // const close = document.getElementsByClassName("close-popup");
+  // close[0].addEventListener('click', fetchNumber, true);
+
+
   return (
     // <div className="calories-summary">
     //   <div className="calories-goal"><h2>Goal Calories</h2><p className="cal-counter">2500 calories</p></div>

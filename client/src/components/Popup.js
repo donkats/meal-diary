@@ -18,23 +18,24 @@ function fetchData(updateResults, meal, event) {
 }
 
 function Popup(props) {
+  const { meal, hidePopup, closePopup } = props;
   const [results, updateResults] = useState({});
   return (
     <div className="popup hidden" id={props.meal}>
       <div className="popup-inner">
-        <span className="close-popup" onClick={() => hidePopup(props.meal)}>&times;</span>
+        <span className="close-popup" onClick={() => hidePopup(meal, closePopup)}>&times;</span>
         <div className="popup-content">
           <div className="search-container">
-            <input type="search" id={`search${props.meal}`} className="searchbar" placeholder="search..." 
-            onKeyUp={(event) => fetchData(updateResults, props.meal, event)}/>
+            <input type="search" id={`search${meal}`} className="searchbar" placeholder="search..." 
+            onKeyUp={(event) => fetchData(updateResults, meal, event)}/>
             <input type="image" className="search-icon" 
               src="https://img.icons8.com/ios-filled/24/000000/search.png" alt="search icon"
-              onClick={(event) => fetchData(updateResults, props.meal, event)} />
+              onClick={(event) => fetchData(updateResults, meal, event)} />
           </div>
           {Object.entries(results).length ? 
             <div className="results">
-              <ResultList list={results.common} meal={props.meal} type="common" />
-              <ResultList list={results.branded} meal={props.meal} type="branded" />
+              <ResultList list={results.common} meal={meal} type="common" />
+              <ResultList list={results.branded} meal={meal} type="branded" />
             </div>
             : ''}
         </div>
