@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 
+function showNotification() {
+  document.querySelector('.added').style.display = 'inline';
+  document.querySelector('.added').classList.add('slide-in');
+  setTimeout(() => {
+    document.querySelector('.added').classList.remove('slide-in');
+    document.querySelector('.added').style.display = 'none';
+  }, 2000);
+}
+
 function expandItem(element, type, updateContent) {
   if (type === 'common') {
     const foodName = element.textContent;
@@ -18,7 +27,6 @@ function expandItem(element, type, updateContent) {
 }
 
 function addItemToDb(item, id, type, meal) {
-  console.log(item)
   const { foodName, kcal, servingQ, servingUnit, gramsUnit } = item;
   const units = document.getElementById(id+type).value;
 
@@ -34,12 +42,15 @@ function addItemToDb(item, id, type, meal) {
     kcalIntake: units * kcal,
     date: '24-04-2020'
    }
+
   const fetchObj = {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(itemObject)
   }
+
   fetch('/meals', fetchObj);
+  showNotification();
 }
 
 function ResultList(props) {
@@ -61,6 +72,7 @@ function ResultList(props) {
             <input type="text" id={`${index}${props.type}`} className="qty-input" placeholder="0" />
             <label> x {item.servingQ} {item.servingUnit} {content ? `${grams} ${kcal}` : '' }</label>
             <button type="button" className="add-item-btn" onClick={() => addItemToDb(content, index, props.type, props.meal)}>add</button>
+            <span className="added slide-in">Added!</span>
           </div>
         </div>
         )

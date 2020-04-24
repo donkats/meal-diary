@@ -217,7 +217,7 @@ body {
 
 .add-item-btn {
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 8px;
   padding: 5px 10px;
   font-size: 14px;
   background-color: olivedrab;
@@ -226,6 +226,29 @@ body {
 
 .add-item-btn:focus {
   outline: none;
+}
+
+.add-item-btn:hover {
+  background-color: #4f691a;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.added {
+  display: none;
+  margin-left: 8px;
+  color: olivedrab;
+}
+
+.slide-in {
+  animation: fade-in 1s ease alternate infinite;
 }
 
 .close-popup {
