@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import ResultList from './ResultList';
 
-function fetchData(updateResults, meal) {
+function hidePopup(meal) {
+  document.getElementById(meal).classList.add('hidden');
+}
+
+function fetchData(updateResults, meal, event) {
   const input = document.getElementById(`search${meal}`);
   const query = input.value.trim();
 
-  if (query !== '') {
+  if ((event.type === 'click' || event.keyCode === 13) && query !== '') {
     fetch(`/search/${query}`)
       .then((data) => data.json())
       .then((res) => updateResults(res));
@@ -14,24 +18,23 @@ function fetchData(updateResults, meal) {
 }
 
 function Popup(props) {
-  const { meal, hidePopup, closePopup } = props;
   const [results, updateResults] = useState({});
-
   return (
-    <div className="popup hidden" id={meal}>
+    <div className="popup hidden" id={props.meal}>
       <div className="popup-inner">
-        <span className="close-popup" onClick={() => hidePopup(meal, closePopup)}>&times;</span>
+        <span className="close-popup" onClick={() => hidePopup(props.meal)}>&times;</span>
         <div className="popup-content">
           <div className="search-container">
-            <input type="search" id={`search${meal}`} className="searchbar" placeholder="search..." />
+            <input type="search" id={`search${props.meal}`} className="searchbar" placeholder="search..." 
+            onKeyUp={(event) => fetchData(updateResults, props.meal, event)}/>
             <input type="image" className="search-icon" 
               src="https://img.icons8.com/ios-filled/24/000000/search.png" alt="search icon"
-              onClick={() => fetchData(updateResults, props.meal)} />
+              onClick={(event) => fetchData(updateResults, props.meal, event)} />
           </div>
           {Object.entries(results).length ? 
             <div className="results">
-              <ResultList list={results.common} meal={meal} type="common" />
-              <ResultList list={results.branded} meal={meal} type="branded" />
+              <ResultList list={results.common} meal={props.meal} type="common" />
+              <ResultList list={results.branded} meal={props.meal} type="branded" />
             </div>
             : ''}
         </div>

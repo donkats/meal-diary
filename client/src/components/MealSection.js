@@ -34,7 +34,7 @@ function MealSection(props) {
           <span className="meal-item-details">{item.units} x {item.serving_q} {item.serving_unit}</span>
         </div>
       ))}
-      <button className="add-btn" onClick={() => showPopup(meal)}>+ add breakfast</button>
+      <button className="add-btn" onClick={() => showPopup(meal)}>+ add {props.meal}</button>
       <div className="total-kcal">Total: {Math.round(totalKcal)} kcal</div>
       <Popup meal={meal} hidePopup={hidePopup} />
     </div>
