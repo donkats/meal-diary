@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import ResultList from './ResultList';
 
-function hidePopup(meal) {
-  document.getElementById(meal).classList.add('hidden');
-}
-
 function fetchData(updateResults, meal, event) {
   const input = document.getElementById(`search${meal}`);
   const query = input.value.trim();
@@ -18,8 +14,9 @@ function fetchData(updateResults, meal, event) {
 }
 
 function Popup(props) {
-  const { meal, hidePopup, closePopup } = props;
+  const { meal, date, hidePopup, closePopup } = props;
   const [results, updateResults] = useState({});
+  
   return (
     <div className="popup hidden" id={props.meal}>
       <div className="popup-inner">
@@ -34,8 +31,8 @@ function Popup(props) {
           </div>
           {Object.entries(results).length ? 
             <div className="results">
-              <ResultList list={results.common} meal={meal} type="common" />
-              <ResultList list={results.branded} meal={meal} type="branded" />
+              <ResultList list={results.common} meal={meal} date={date} type="common" />
+              <ResultList list={results.branded} meal={meal} date={date} type="branded" />
             </div>
             : ''}
         </div>
