@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors());
 
 app
-  .route('/users')
+  .route('/users/:email/:pass')
   .get(db.getUsers)
   .post(db.addUser);
 // database - post - posts in ingredients, then in meals

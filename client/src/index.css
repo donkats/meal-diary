@@ -303,3 +303,13 @@ body {
   height: 800px;
   width: 800px;
 }
+
+/* Bootstrap styles for forms*/
+select.form-control,
+textarea.form-control,
+input.form-control {
+  font-size: 16px;
+}
+input[type=file] {
+  width: 100%;
+}

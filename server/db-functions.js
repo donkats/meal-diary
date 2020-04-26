@@ -1,11 +1,28 @@
 const { pool } = require('./config');
 
+function userDataParse(data) {
+  if (data.length) {
+    return {
+      isAuthenticated: true,
+      id: data[0].id
+    }
+  } else {
+    return {
+      isAuthenticated: false,
+      message: "Wrong email or password, please try again"
+    }
+  }
+}
+
 const getUsers = (request, response) => {
-  pool.query('SELECT * FROM users', (error, results) => {
+  const email = request.params.email;
+  const pass = request.params.pass;
+
+  pool.query('SELECT * FROM users WHERE email = $1 AND password = $2', [email, pass], (error, results) => {
     if (error) {
       throw error
     }
-    response.status(200).json(results.rows)
+    response.status(200).json(userDataParse(results.rows))
   })
 };
 

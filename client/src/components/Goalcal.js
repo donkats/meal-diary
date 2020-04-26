@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 function Goalcal(props) {
   const id = props.userId;
   const date = props.date;
+  console.log('id on goalcal component', id)
   const kcalGoal = 2800;
 
   const [calories, updateCalories] = useState({});

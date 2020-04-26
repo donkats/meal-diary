@@ -18,7 +18,8 @@ function fetchData(updateResults, meal, event) {
 }
 
 function Popup(props) {
-  const { meal, hidePopup, closePopup } = props;
+  const { meal, hidePopup, closePopup , id } = props;
+  console.log('id on popup component', id);
   const [results, updateResults] = useState({});
   return (
     <div className="popup hidden" id={props.meal}>
@@ -34,8 +35,8 @@ function Popup(props) {
           </div>
           {Object.entries(results).length ? 
             <div className="results">
-              <ResultList list={results.common} meal={meal} type="common" />
-              <ResultList list={results.branded} meal={meal} type="branded" />
+              <ResultList list={results.common} meal={meal} type="common" id={id}/>
+              <ResultList list={results.branded} meal={meal} type="branded" id={id} />
             </div>
             : ''}
         </div>
