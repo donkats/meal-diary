@@ -28,6 +28,7 @@ function expandItem(element, type, updateContent) {
 
 function addItemToDb(item, id, type, meal, date, userId) {
   const { foodName, kcal, servingQ, servingUnit, gramsUnit } = item;
+  console.log('resultlist > userid:', userId);
   const units = document.getElementById(id+type).value;
   console.log('id inside result list-additemtodb', userId)
   const itemObject = { 
@@ -56,8 +57,6 @@ function addItemToDb(item, id, type, meal, date, userId) {
 function ResultList(props) {
   const { date, list, meal, type, userId } = props;
   const [content, updateContent] = useState(null);
-  const id = props.id;
-  console.log('id on resultslist', id);
   let grams = '';
   let kcal = '';
   if (content) {

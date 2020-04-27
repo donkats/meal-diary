@@ -15,6 +15,7 @@ function fetchData(updateResults, meal, event) {
 
 function Popup(props) {
   const { meal, date, hidePopup, closePopup, userId } = props;
+  // console.log('popup > userid:', userId);
   const [results, updateResults] = useState({});
   
   return (

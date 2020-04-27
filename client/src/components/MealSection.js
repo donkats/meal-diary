@@ -3,6 +3,7 @@ import Popup from './Popup';
 
 function MealSection(props) {
   const { meal, userId, date, fetchSum } = props;
+  // console.log('mealsection > userid:', userId);
   const [meals, updateMeals] = useState([]);
 
   const totalKcal = meals.length > 0 ? meals.reduce((val, item) => val + item.kcal_intake, 0) : 0;
@@ -39,7 +40,7 @@ function MealSection(props) {
       ))}
       <button className="add-btn" onClick={() => showPopup(meal)}>+ add {props.meal}</button>
       <div className="total-kcal">Total: {Math.round(totalKcal)} kcal</div>
-      <Popup meal={meal} hidePopup={hidePopup} date={date} id={userId} />
+      <Popup meal={meal} hidePopup={hidePopup} date={date} userId={userId} />
     </div>
   )
 }
