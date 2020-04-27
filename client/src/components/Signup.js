@@ -7,6 +7,7 @@ import {
 } from "react-bootstrap";
 import { useAppContext } from "./context";
 import "./Signup.css";
+import { Redirect } from "react-router-dom";
 
 
 export default function Signup() {
