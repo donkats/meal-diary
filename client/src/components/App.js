@@ -8,6 +8,7 @@ import Dashboard from './Dashboard';
 import Analytics from './Analytics';
 import Home from './Home';
 import Login from './Login';
+import UserInfo from './UserInfo';
 
 // function App() {
 //   return (
@@ -48,6 +49,7 @@ function App() {
       <nav className="sidebar">
         {isAuthenticated["authentication"]
           ? <>
+            <UserInfo />
             <Link to={'/'} className="sidebarlink">Home</Link>
             <Link to={'/dashboard'} className="sidebarlink"> Dashboard </Link>
             <Link to={'/analytics'} className="sidebarlink">Analytics</Link>

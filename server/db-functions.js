@@ -26,6 +26,16 @@ const getUsers = (request, response) => {
   })
 };
 
+const getUser = (request, response) => {
+  const id = request.params.id;
+  pool.query('SELECT date, name, daily_goal, kilograms FROM users INNER JOIN weight on users.id = weight.users_id WHERE users.id = $1 ORDER BY date DESC LIMIT 1', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json((results.rows))
+  })
+};
+
 const addUser = (request, response) => {
   const { username, password, email, height, daily_goal, name, diet  } = request.body;
   console.log(username, password);
@@ -100,6 +110,7 @@ const getMeals = (request, response) => {
 
 module.exports = {
   getUsers,
+  getUser,
   addUser,
   addMeals, 
   getAllMeals, 

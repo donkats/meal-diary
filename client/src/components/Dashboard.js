@@ -13,10 +13,10 @@ function Dashboard(props) {
         <h1>Today</h1>
         <div className="next">{'>'}</div>
       </header>
-      <Goalcal userId={id} date='25-04-2020'/>
-      <MealSection meal="breakfast" userId={id} date="25-04-2020"/>
-      <MealSection meal="lunch" userId={id} date="25-04-2020"/>
-      <MealSection meal="dinner" userId={id} date="25-04-2020"/>
+      <Goalcal userId={id} date="2020-04-25"/>
+      <MealSection meal="breakfast" userId={id} date="2020-04-25"/>
+      <MealSection meal="lunch" userId={id} date="2020-04-25"/>
+      <MealSection meal="dinner" userId={id} date="2020-04-25"/>
     </main>
   )
 }
