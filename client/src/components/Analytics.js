@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Line } from 'react-chartjs-2'
 import axios from 'axios'
+import moment from 'moment';
 
 function Analytics() {
   const [data, setData] = useState([])
@@ -15,8 +16,8 @@ function Analytics() {
 
       calorieInfo.forEach(record => {
         console.log(record)
-        xaxis.push(record.date)
-        yakis.push(record.sum)
+        xaxis.push(moment(record.date).format('DD-MM-YYYY'))
+        yakis.push(Math.round(record.sum))
       })
       console.log({ xaxis, yakis })
       setData({

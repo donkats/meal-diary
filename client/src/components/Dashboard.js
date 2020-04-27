@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import Goalcal from './Goalcal';
 import MealSection from './MealSection';
+import Dateslider from './Dateslider';
+// import { useAppContext } from './context';
+const moment = require('moment');
 
 const sections = ['breakfast', 'lunch', 'dinner'];
 
-function Dashboard() {
-  const userId = 9;
-  const date = '2020-04-25';
+function Dashboard(props) {
+  // const { isAuthenticated } = useAppContext();
+
+  // const iddashboard = props.id;
+  // console.log('id on dashboard', iddashboard);
+  // console.log('authentication', isAuthenticated["id"]);
+  const userId = props.id;
+  const [date, setDate] = useState(moment().format('YYYY-MM-DD'));
+  // const date = '2020-04-25';
+  console.log('date from moment', moment().format('YYYY-MM-DD'));
+  console.log(date);
   const kcalGoal = 2500;
 
   const [kcalSum, updateSum] = useState(0);
@@ -24,11 +35,7 @@ function Dashboard() {
 
   return (
     <main className="dashboard">
-      <header className="date-header">
-        <div className="back">{'<'}</div>
-        <h1>Today</h1>
-        <div className="next">{'>'}</div>
-      </header>
+      <Dateslider date={date}/>
       <Goalcal userId={userId} date={date} kcalSum={kcalSum} kcalGoal={kcalGoal} />
       {sections.map((meal) => <MealSection key={meal} meal={meal} userId={userId} date={date} fetchSum={fetchSum} />)}
     </main>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { Navbar, Nav, NavItem } from "react-bootstrap";
+import { NavItem } from "react-bootstrap";
 import "./App.css";
 //new lines 3 and 4
 import { AppContext } from './context';
@@ -41,7 +41,7 @@ function App() {
     userHasAuthenticated( {"authentication": false, "id": 0 });
   }
   console.log(isAuthenticated["authentication"], isAuthenticated["id"]);
-  const id = isAuthenticated.id;
+
   return (
   <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
   <Router>
@@ -71,7 +71,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home}/>
         <Route path='/analytics' component={Analytics} />
-        <Route path='/dashboard'> <Dashboard id={id}/> /></Route>
+        <Route path='/dashboard'> <Dashboard id={isAuthenticated["id"]}/> /></Route>
         
         <Route exact path='/login' component={Login}/>
       </Switch>

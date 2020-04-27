@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Button, FormGroup, FormControl } from "react-bootstrap";
 import { useAppContext } from './context';
 import "./Login.css";
 
-export default function Login() {
+export default function Login(props) {
   const { userHasAuthenticated } = useAppContext();
 
   const [email, setEmail] = useState("");
@@ -23,12 +23,16 @@ export default function Login() {
       //.then((data) => console.log(data.isAuthenticated))
       .then((data) => userHasAuthenticated({"authentication": data.isAuthenticated, "id": data.id}));
     
+  
+    
   }
 
   return (
+  
+
     <div className="Login">
       <form onSubmit={handleSubmit}>
-        <FormGroup controlId="email" bsSize="large">
+        <FormGroup controlId="email">
           <label>Email</label>
           <FormControl
             autoFocus
@@ -37,7 +41,7 @@ export default function Login() {
             onChange={e => setEmail(e.target.value)}
           />
         </FormGroup>
-        <FormGroup controlId="password" bsSize="large">
+        <FormGroup controlId="password">
           <label>Password</label>
           <FormControl
             value={password}
@@ -45,7 +49,7 @@ export default function Login() {
             type="password"
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+        <Button block disabled={!validateForm()} type="submit">
           Login
         </Button>
       </form>
