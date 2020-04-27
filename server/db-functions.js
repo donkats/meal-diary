@@ -36,12 +36,24 @@ const getUser = (request, response) => {
   })
 };
 
+// const addUser = (request, response) => {
+//   const { username, password, email, height, daily_goal, name, diet  } = request.body;
+//   console.log(username, password);
+//   // const info = [ 'newuser', 'newpass'];
+//   pool.query('INSERT INTO users (username, password, email, height, daily_goal, name, diet) VALUES ($1, $2, $3, $4, $5, $6, $7)', 
+//   [username, password, email, height, daily_goal, name, diet], error => {
+//     if (error) {
+//       throw error
+//     }
+//     response.status(201).json({ status: 'success', message: 'User added.' })
+//   })
+// };
 const addUser = (request, response) => {
-  const { username, password, email, height, daily_goal, name, diet  } = request.body;
-  console.log(username, password);
+  const { password, email, height, goal, name, diet, username  } = request.body;
+  // console.log(username, password);
   // const info = [ 'newuser', 'newpass'];
-  pool.query('INSERT INTO users (username, password, email, height, daily_goal, name, diet) VALUES ($1, $2, $3, $4, $5, $6, $7)', 
-  [username, password, email, height, daily_goal, name, diet], error => {
+  pool.query('INSERT INTO users (password, email, height, daily_goal, name, diet, username) VALUES ($1, $2, $3, $4, $5, $6, $7)', 
+  [password, email, height, goal, name, diet, username], error => {
     if (error) {
       throw error
     }

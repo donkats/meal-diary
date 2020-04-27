@@ -5,9 +5,10 @@ import moment from 'moment';
 
 function Analytics(props) {
   const [data,setData] = useState([])
-
-useEffect(()=> {
-    axios.get("/calorie/9").then(res => {
+  const id = props.id;
+  //id added on line 8 and 11
+  useEffect(()=> {
+    axios.get(`/calorie/${id}`).then(res => {
       const nutritionalValue = res.data;
       let labels = [];
       let data = [];

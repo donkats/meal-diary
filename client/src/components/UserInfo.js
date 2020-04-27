@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 const moment = require('moment');
 
-function UserInfo() {
+function UserInfo(props) {
   const [users,setUsers] = useState([])
-
+  const id = props.id;
+  // id added on line 6 and 9
   useEffect(() => {
-    fetch('/user/9')
+    fetch(`/user/${id}`)
       .then(res => res.json())
       .then((users) => {
         setUsers(users)

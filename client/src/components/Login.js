@@ -15,21 +15,14 @@ export default function Login(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const email = event.target.email.value;
-    const passw = event.target.password.value;
 
-    fetch(`/users/${email}/${passw}`)
+    fetch(`/users/${email}/${password}`)
       .then((data) => data.json())
       //.then((data) => console.log(data.isAuthenticated))
       .then((data) => userHasAuthenticated({"authentication": data.isAuthenticated, "id": data.id}));
-    
-  
-    
   }
 
   return (
-  
-
     <div className="Login">
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email">
@@ -37,14 +30,12 @@ export default function Login(props) {
           <FormControl
             autoFocus
             type="email"
-            value={email}
             onChange={e => setEmail(e.target.value)}
           />
         </FormGroup>
         <FormGroup controlId="password">
           <label>Password</label>
           <FormControl
-            value={password}
             onChange={e => setPassword(e.target.value)}
             type="password"
           />

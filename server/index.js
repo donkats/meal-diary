@@ -11,9 +11,12 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors());
 
 app
+  .route('/newusers')
+  .post(db.addUser);
+app
   .route('/users/:email/:pass')
   .get(db.getUsers)
-  .post(db.addUser);
+  // .post(db.addUser);
 // database - get latest info of one user - latest weight
   app
   .route('/user/:id')

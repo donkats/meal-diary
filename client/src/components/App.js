@@ -6,6 +6,7 @@ import Dashboard from './Dashboard';
 import Analytics from './Analytics';
 import Home from './Home';
 import Login from './Login';
+import Signup from './Signup';
 import UserInfo from './UserInfo';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       <nav className="sidebar">
         {isAuthenticated["authentication"]
           ? <>
-            <UserInfo />
+            <UserInfo id={isAuthenticated["id"]}/>
             <Link to={'/'} className="sidebarlink">Home</Link>
             <Link to={'/dashboard'} className="sidebarlink"> Dashboard </Link>
             <Link to={'/analytics'} className="sidebarlink">Analytics</Link>
@@ -43,10 +44,10 @@ function App() {
       </nav>
       <Switch>
         <Route exact path='/' component={Home}/>
-        <Route path='/analytics' component={Analytics} />
-        <Route path='/dashboard'> <Dashboard id={isAuthenticated["id"]}/> /></Route>
-        
+        <Route path='/analytics'> <Analytics id={isAuthenticated["id"]}/></Route>
+        <Route path='/dashboard'> <Dashboard id={isAuthenticated["id"]}/></Route>
         <Route exact path='/login' component={Login}/>
+        <Route exact path='/signup' component={Signup}/>
       </Switch>
     </div>
   </Router>
