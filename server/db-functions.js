@@ -1,11 +1,38 @@
 const { pool } = require('./config');
 
+function userDataParse(data) {
+  if (data.length) {
+    return {
+      isAuthenticated: true,
+      id: data[0].id
+    }
+  } else {
+    return {
+      isAuthenticated: false,
+      message: "Wrong email or password, please try again"
+    }
+  }
+}
+
 const getUsers = (request, response) => {
-  pool.query('SELECT * FROM users', (error, results) => {
+  const email = request.params.email;
+  const pass = request.params.pass;
+
+  pool.query('SELECT * FROM users WHERE email = $1 AND password = $2', [email, pass], (error, results) => {
     if (error) {
       throw error
     }
-    response.status(200).json(results.rows)
+    response.status(200).json(userDataParse(results.rows))
+  })
+};
+
+const getUser = (request, response) => {
+  const id = request.params.id;
+  pool.query('SELECT date, name, daily_goal, kilograms FROM users INNER JOIN weight on users.id = weight.users_id WHERE users.id = $1 ORDER BY date DESC LIMIT 1', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json((results.rows))
   })
 };
 
@@ -83,6 +110,7 @@ const getMeals = (request, response) => {
 
 module.exports = {
   getUsers,
+  getUser,
   addUser,
   addMeals, 
   getAllMeals, 

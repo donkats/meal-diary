@@ -14,7 +14,7 @@ function fetchData(updateResults, meal, event) {
 }
 
 function Popup(props) {
-  const { meal, date, hidePopup, closePopup } = props;
+  const { meal, date, hidePopup, closePopup, userId } = props;
   const [results, updateResults] = useState({});
   
   return (
@@ -31,8 +31,8 @@ function Popup(props) {
           </div>
           {Object.entries(results).length ? 
             <div className="results">
-              <ResultList list={results.common} meal={meal} date={date} type="common" />
-              <ResultList list={results.branded} meal={meal} date={date} type="branded" />
+              <ResultList list={results.common} meal={meal} date={date} userId={userId} type="common" />
+              <ResultList list={results.branded} meal={meal} date={date} userId={userId} type="branded" />
             </div>
             : ''}
         </div>

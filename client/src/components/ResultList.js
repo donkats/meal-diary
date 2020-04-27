@@ -26,23 +26,23 @@ function expandItem(element, type, updateContent) {
   siblingEl.classList.toggle('active');
 }
 
-function addItemToDb(item, id, type, meal, date) {
+function addItemToDb(item, id, type, meal, date, userId) {
   const { foodName, kcal, servingQ, servingUnit, gramsUnit } = item;
   const units = document.getElementById(id+type).value;
-
+  console.log('id inside result list-additemtodb', userId)
   const itemObject = { 
     foodName,
     kcal,
     servingQ,
     servingUnit,
     gramsUnit,
-    userId: '9',
+    userId,
     meal,
     units,
     kcalIntake: units * kcal,
     date
    }
-
+  console.log('item object on resultlist-additemtodb', itemObject); 
   const fetchObj = {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
@@ -54,8 +54,10 @@ function addItemToDb(item, id, type, meal, date) {
 }
 
 function ResultList(props) {
-  const { date, list, meal, type } = props;
+  const { date, list, meal, type, userId } = props;
   const [content, updateContent] = useState(null);
+  const id = props.id;
+  console.log('id on resultslist', id);
   let grams = '';
   let kcal = '';
   if (content) {
@@ -72,7 +74,7 @@ function ResultList(props) {
           <div className="item-content">
             <input type="text" id={`${index}${type}`} className="qty-input" placeholder="0" />
             <label> x {item.servingQ} {item.servingUnit} {content ? `${grams} ${kcal}` : '' }</label>
-            <button type="button" className="add-item-btn" onClick={() => addItemToDb(content, index, type, meal, date)}>add</button>
+            <button type="button" className="add-item-btn" onClick={() => addItemToDb(content, index, type, meal, date, userId)}>add</button>
             <span className="added slide-in">Added!</span>
           </div>
         </div>
