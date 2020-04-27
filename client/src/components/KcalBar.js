@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Goalcal(props) {
+function KcalBar(props) {
   const { kcalSum, kcalGoal } = props;
   const percentage = Math.round((kcalSum / kcalGoal) * 100);
 
@@ -15,4 +15,4 @@ function Goalcal(props) {
   )
 }
 
-export default Goalcal;
+export default KcalBar;

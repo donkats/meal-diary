@@ -40,25 +40,6 @@ body {
   padding: 50px;
 }
 
-/* DATE SLIDER */
-
-.date-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: olivedrab;
-  color: white;
-}
-
-.date-header h1 {
-  margin: 0;
-}
-
-.back, .next {
-  font-size: 25px;
-  font-weight: bolder;
-}
-
 /* MEALS OVERVIEW */
 .meal h3 {
   box-sizing: border-box;

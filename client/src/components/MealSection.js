@@ -3,7 +3,6 @@ import Popup from './Popup';
 
 function MealSection(props) {
   const { meal, userId, date, fetchSum } = props;
-  // console.log('mealsection > userid:', userId);
   const [meals, updateMeals] = useState([]);
 
   const totalKcal = meals.length > 0 ? meals.reduce((val, item) => val + item.kcal_intake, 0) : 0;
@@ -16,7 +15,7 @@ function MealSection(props) {
 
   useEffect(() => {
     fetchMeals();
-  }, []);
+  }, [date]);
 
   const showPopup = (meal) => {
     document.getElementById(meal).classList.remove('hidden');

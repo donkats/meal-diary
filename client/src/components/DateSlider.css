@@ -1,0 +1,36 @@
+.dateslider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: olivedrab;
+  color: white;
+}
+
+.dateslider h1 {
+  margin: 0;
+}
+
+.today {
+  margin-left: -30px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.today img {
+  margin-top: -2px;
+  max-width: 20px;
+  max-height: 20px;
+  margin-right: 5px;
+  filter: invert(1);
+}
+
+.back, .next {
+  max-width: 25px;
+  max-height: 25px;
+  filter: invert(1);
+}
