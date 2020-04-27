@@ -1,25 +1,22 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 const moment = require('moment');
 
-class UserInfo extends Component {
-  state = {
-    users: []
-  }
-  componentDidMount() {
+function UserInfo() {
+  const [users,setUsers] = useState([])
+
+  useEffect(() => {
     fetch('/user/9')
       .then(res => res.json())
-      .then((data) => {
-        this.setState({ users: data })
+      .then((users) => {
+        setUsers(users)
       })
       .catch(console.log)
-  }
-
-  render() {
+  },[])
 
     return (
       <div className="userInfo">
         <h1>Meal Diary</h1>
-        {this.state.users.map((user, index) => (
+        {users.map((user, index) => (
           <div className="userWrapper">
             <p className="userName">Name: {user.name}</p>
             <p className="userWeight">Weight: {user.kilograms} kg</p>
@@ -30,7 +27,6 @@ class UserInfo extends Component {
         ))}
       </div>
     );
-  }
 }
 
 export default UserInfo;
