@@ -18,9 +18,13 @@ app
   .get(db.getUsers)
   // .post(db.addUser);
 // database - get latest info of one user - latest weight
-  app
+app
   .route('/user/:id')
   .get(db.getUser)
+  // database - post weight at current date
+app
+  .route('/weight')
+  .post(db.addWeight)
 // database - post - posts in ingredients, then in meals
 // get - all meals per date per user
 app
