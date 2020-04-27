@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './MealSection.css';
 import Popup from './Popup';
 
 function MealSection(props) {

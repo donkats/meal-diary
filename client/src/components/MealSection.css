@@ -1,0 +1,62 @@
+.meal h3 {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  border-bottom: solid 1px #999999;
+  background-color: olivedrab;
+  color: #ffffff;
+}
+
+.meal {
+  margin: 20px 0;
+  border: 1px solid #999999;
+}
+
+.total-kcal {
+  text-align: right;
+  padding: 10px;
+  background-color: olivedrab;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.kcal {
+  float: right;
+  margin-top: 6px;
+  font-size: 14px;
+  color: olivedrab;
+}
+
+.meal-item {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border-bottom: solid 1px #999999;
+  font-size: 14px;
+  background-color: #fafafa;
+}
+
+.meal-item-details {
+  color: #555555;
+}
+
+.add-btn {
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  background-color: #eeeeee;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.add-btn:hover {
+  background-color: #dddddd;
+}
+
+.add-btn:focus {
+  outline: none;
+}
