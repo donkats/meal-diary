@@ -10,8 +10,8 @@ function MealSection(props) {
 
   function fetchMeals() {
     fetch(`/meals/${userId}/${meal}/${date}`)
-        .then((data) => data.json())
-        .then((data) => updateMeals(data));
+      .then((data) => data.json())
+      .then((data) => updateMeals(data));
   }
 
   useEffect(() => {
@@ -28,6 +28,19 @@ function MealSection(props) {
     fetchSum();
   }
 
+  function deleteItem(mealId) {
+    console.log(`delete ${mealId}!`)
+    const fetchObj = {
+      method: 'DELETE'
+    }
+
+    fetch(`/delmeals/${mealId}`, fetchObj)
+      .then(() => {
+        fetchMeals();
+        fetchSum();
+      });
+  }
+
   return (
     <div className="meal">
       <h3>{meal.charAt(0).toUpperCase() + meal.slice(1)}</h3>
@@ -40,7 +53,7 @@ function MealSection(props) {
           </div>
           <input type="image" className="remove-btn" 
             src="https://img.icons8.com/ios/50/000000/cancel.png" alt="remove button"
-            onClick={() => console.log(`delete ${item.food_name}!`)}/>
+            onClick={() => deleteItem(item.id)}/>
         </div>
       ))}
       <button className="add-btn" onClick={() => showPopup(meal)}>+ add {props.meal}</button>
