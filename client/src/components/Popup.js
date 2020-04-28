@@ -15,13 +15,13 @@ function fetchData(updateResults, meal, event) {
 }
 
 function Popup(props) {
-  const { meal, date, hidePopup, closePopup, userId } = props;
+  const { meal, date, hidePopup, userId } = props;
   const [results, updateResults] = useState({});
   
   return (
     <div className="popup hidden" id={props.meal}>
       <div className="popup-inner">
-        <span className="close-popup" onClick={() => hidePopup(meal, closePopup)}>&times;</span>
+        <span className="close-popup" onClick={() => hidePopup()}>&times;</span>
         <div className="popup-content">
           <div className="search-container">
             <input type="search" id={`search${meal}`} className="searchbar" placeholder="search..." 

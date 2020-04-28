@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/MealSection.css';
 import Popup from './Popup';
+import '../styles/MealSection.css';
 
 function MealSection(props) {
   const { meal, isAuth, userId, date, fetchSum } = props;
   const [meals, updateMeals] = useState([]);
+  const [isPopupShown, setPopup] = useState(false);
 
   const totalKcal = meals.length > 0 ? meals.reduce((val, item) => val + item.kcal_intake, 0) : 0;
 
@@ -16,20 +17,20 @@ function MealSection(props) {
 
   useEffect(() => {
     if (isAuth) fetchMeals();
-  }, [date]);
+    if (isPopupShown) document.getElementById(meal).classList.remove('hidden');
+  }, [date, isPopupShown]);
 
-  const showPopup = (meal) => {
-    document.getElementById(meal).classList.remove('hidden');
+  function showPopup() {
+    setPopup(true);
   }
   
-  const hidePopup = (meal) => {
-    document.getElementById(meal).classList.add('hidden');
+  function hidePopup() {
+    setPopup(false);
     fetchMeals();
     fetchSum();
   }
 
   function deleteItem(mealId) {
-    console.log(`delete ${mealId}!`)
     const fetchObj = {
       method: 'DELETE'
     }
@@ -56,9 +57,9 @@ function MealSection(props) {
             onClick={() => deleteItem(item.id)}/>
         </div>
       ))}
-      <button className="add-btn" onClick={() => showPopup(meal)}>+ add {props.meal}</button>
+      <button className="add-btn" onClick={() => showPopup()}>+ add {props.meal}</button>
       <div className="total-kcal">Total: {Math.round(totalKcal)} kcal</div>
-      <Popup meal={meal} hidePopup={hidePopup} date={date} userId={userId} />
+      {isPopupShown && <Popup meal={meal} hidePopup={hidePopup} date={date} userId={userId} />}
     </div>
   )
 }
