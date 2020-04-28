@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, FormGroup, FormControl } from 'react-bootstrap';
-import './Signup.css';
+import '../styles/Signup.css';
 
 function Signup() {
   // const [fields, handleFieldChange] = useState({

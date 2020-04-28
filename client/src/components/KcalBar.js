@@ -1,5 +1,5 @@
 import React from 'react';
-import './KcalBar.css';
+import '../styles/KcalBar.css';
 
 function KcalBar(props) {
   const { kcalSum, kcalGoal } = props;

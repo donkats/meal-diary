@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import KcalBar from './KcalBar';
 import MealSection from './MealSection';
-import DateSlider from './DateSlider';
+import Date from './Date';
 
 const sections = ['breakfast', 'lunch', 'dinner'];
 
@@ -25,7 +25,7 @@ function Dashboard(props) {
 
   return (
     <main className="dashboard">
-      <DateSlider date={date} setDate={setDate} />
+      <Date date={date} setDate={setDate} />
       <KcalBar userId={userId} date={date} kcalSum={kcalSum} kcalGoal={goal} />
       {sections.map((meal) => {
         return <MealSection key={meal} meal={meal} isAuth={isAuth} userId={userId} date={date} fetchSum={fetchSum} />}
