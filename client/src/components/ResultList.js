@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 function showNotification() {
-  document.querySelector('.added').style.display = 'inline';
-  document.querySelector('.added').classList.add('slide-in');
+  document.querySelector('.added-item').style.display = 'inline';
+  document.querySelector('.added-item').classList.add('slide-in');
   setTimeout(() => {
-    document.querySelector('.added').classList.remove('slide-in');
-    document.querySelector('.added').style.display = 'none';
+    document.querySelector('.added-item').classList.remove('slide-in');
+    document.querySelector('.added-item').style.display = 'none';
   }, 2000);
 }
 
@@ -28,9 +28,8 @@ function expandItem(element, type, updateContent) {
 
 function addItemToDb(item, id, type, meal, date, userId) {
   const { foodName, kcal, servingQ, servingUnit, gramsUnit } = item;
-  console.log('resultlist > userid:', userId);
   const units = document.getElementById(id+type).value;
-  console.log('id inside result list-additemtodb', userId)
+  
   const itemObject = { 
     foodName,
     kcal,
@@ -43,7 +42,7 @@ function addItemToDb(item, id, type, meal, date, userId) {
     kcalIntake: units * kcal,
     date
    }
-  console.log('item object on resultlist-additemtodb', itemObject); 
+
   const fetchObj = {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
@@ -74,7 +73,7 @@ function ResultList(props) {
             <input type="text" id={`${index}${type}`} className="qty-input" placeholder="0" />
             <label> x {item.servingQ} {item.servingUnit} {content ? `${grams} ${kcal}` : '' }</label>
             <button type="button" className="add-item-btn" onClick={() => addItemToDb(content, index, type, meal, date, userId)}>add</button>
-            <span className="added slide-in">Added!</span>
+            <span className="added-item slide-in">Added!</span>
           </div>
         </div>
         )
