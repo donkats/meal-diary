@@ -29,19 +29,20 @@ function App() {
   return (
   <AppContext.Provider value={{ auth, setAuth }}>
   <Router>
-    <div>
+    <div className="app">
       {auth.isAuth
         ? <>
           <Redirect to="/dashboard" />
-          <nav className="sidebar">
-            <UserInfo id={auth.userId} />
+          <div className="sidebar">
+            <h1 className="title">MealDiary</h1>
+            <UserInfo userId={auth.userId} />
             <Link to="/dashboard" className="sidebarlink">Dashboard</Link>
             <Link to="/analytics" className="sidebarlink">Analytics</Link>
             <Link to="/carbs" className="sidebarlink">CarbGraph</Link>
             <Link to="/">
               <NavItem onClick={handleLogout}>Logout</NavItem>
             </Link>
-          </nav>
+          </div>
             </>
           : <>
             <Redirect to="/" />

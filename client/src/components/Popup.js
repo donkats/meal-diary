@@ -19,7 +19,7 @@ function Popup(props) {
   const [results, updateResults] = useState({});
   
   return (
-    <div className="popup hidden" id={props.meal}>
+    <div className="popup" id={props.meal}>
       <div className="popup-inner">
         <span className="close-popup" onClick={() => hidePopup()}>&times;</span>
         <div className="popup-content">

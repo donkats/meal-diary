@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Popup from './Popup';
 import '../styles/MealSection.css';
 
 function MealSection(props) {
-  const { meal, isAuth, userId, date, fetchSum } = props;
+  const { meal, userId, date, fetchSum } = props;
   const [meals, updateMeals] = useState([]);
   const [isPopupShown, setPopup] = useState(false);
 
   const totalKcal = meals.length > 0 ? meals.reduce((val, item) => val + item.kcal_intake, 0) : 0;
 
-  function fetchMeals() {
+  const fetchMeals = useCallback(() => {
     fetch(`/meals/${userId}/${meal}/${date}`)
       .then((data) => data.json())
       .then((data) => updateMeals(data));
-  }
+  }, [userId, meal, date]);
 
   useEffect(() => {
-    if (isAuth) fetchMeals();
-    if (isPopupShown) document.getElementById(meal).classList.remove('hidden');
-  }, [date, isPopupShown]);
+    if (!isPopupShown) {
+      fetchMeals();
+      fetchSum();
+    }
+  }, [isPopupShown, fetchMeals, fetchSum]);
 
   function showPopup() {
     setPopup(true);
@@ -26,16 +28,11 @@ function MealSection(props) {
   
   function hidePopup() {
     setPopup(false);
-    fetchMeals();
-    fetchSum();
   }
 
   function deleteItem(mealId) {
-    const fetchObj = {
-      method: 'DELETE'
-    }
 
-    fetch(`/delmeals/${mealId}`, fetchObj)
+    fetch(`/delmeals/${mealId}`, { method: 'DELETE' })
       .then(() => {
         fetchMeals();
         fetchSum();

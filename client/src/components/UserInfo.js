@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-const moment = require('moment');
+import React, { useState, useEffect, useCallback } from 'react';
+import moment from 'moment';
+import '../styles/UserInfo.css';
 
 function showNotification() {
   document.querySelector('.added').style.display = 'inline';
@@ -20,58 +21,70 @@ function showInputField() {
 }
 
 function UserInfo(props) {
-  const { id } = props;
+  const { userId } = props;
   const [users, setUsers] = useState([]);
 
-  function fetchUserInfo(){
-    fetch(`/user/${id}`)
+  const fetchUserInfo = useCallback(() => {
+    fetch(`/user/${userId}`)
       .then(res => res.json())
-      .then((users) => {
-        setUsers(users)
-      })
-      .catch(console.log)
-  }
+      .then((users) => setUsers(users))
+      .catch((err) => console.log(err));
+  }, [userId]);
 
-  useEffect(()=>{
-    fetchUserInfo()
-  },[])
+  useEffect(() => {
+    fetchUserInfo();
+  }, [fetchUserInfo])
 
-  function addWeightToDb(id) {
+  function addWeightToDb() {
     const kilograms = document.getElementById("weight").value;
     const itemObject = {
-      userId: id,
+      userId,
       date: new Date(),
       kilograms
-    }
+    };
+
     const fetchObj = {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(itemObject)
-    }
+    };
   
-    fetch('/weight', fetchObj).then(()=> fetchUserInfo())
+    fetch('/weight', fetchObj)
+      .then(() => fetchUserInfo());
     showNotification();
-    
-    // setUsers(kilograms)
   }
+
   return (
-    <div className="userInfo">
-      <h1>Meal Diary</h1>
+    <div>
       {users.map((user, index) => (
         <div className="userWrapper" key={index}>
-          <p className="userName">Name: {user.name}</p>
-          <p className="userWeight">Weight: {user.kilograms} kg <button type="button" onClick={() => showInputField()}>Adjust weight</button></p>
-
-          <div id="userInputField" style={{ display: "none" }}><input type="text" id="weight" className="weight-input" placeholder="0" /><button type="button" className="add-weight-btn" onClick={() => addWeightToDb(id)}>Submit</button><span className="added slide-in">Added!</span></div>
-
-          <p className="userGoal">BMI: {((user.kilograms) / (((user.height / 100)) * (user.height / 100))).toFixed(1)}</p>
-          <p className="userDate">Date: {moment(user.date).format('DD-MM-YYYY')}</p>
-          <p className="userGoal">Daily Goal: {user.daily_goal} kcal</p>
+          <p className="userName">
+            <strong>Name:</strong> {user.name}
+          </p>
+          <p className="userWeight">
+            <strong>Weight:</strong> {user.kilograms} kg 
+            {/* <input type="button" onClick={() => showInputField()}>Adjust weight</input> */}
+            <input type="image" className="adjust-btn" onClick={() => showInputField()}
+              src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit weight" />
+          </p>
+          <div id="userInputField" style={{ display: "none" }}>
+            <input type="text" id="weight" className="weight-input" placeholder="0" />
+            <button type="button" className="add-weight-btn" onClick={() => addWeightToDb()}>Submit</button>
+            <span className="added slide-in">Added!</span>
+          </div>
+          <p className="userGoal">
+          <strong>BMI:</strong> {((user.kilograms) / (((user.height / 100)) * (user.height / 100))).toFixed(1)}
+          </p>
+          <p className="userDate">
+          <strong>Date:</strong> {moment(user.date).format('DD-MM-YYYY')}
+          </p>
+          <p className="userGoal">
+          <strong>Daily Goal:</strong> {user.daily_goal} kcal
+          </p>
         </div>
       ))}
     </div>
   );
 }
-
 
 export default UserInfo;

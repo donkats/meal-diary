@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import moment from 'moment';
 import KcalBar from './KcalBar';
 import MealSection from './MealSection';
@@ -7,29 +7,29 @@ import DateSlider from './DateSlider';
 const sections = ['breakfast', 'lunch', 'dinner'];
 
 function Dashboard(props) {
-  const { userId, isAuth, goal } = props;
+  const { userId, goal } = props;
   
   const [date, setDate] = useState(moment().format('YYYY-MM-DD'));
   const [kcalSum, updateSum] = useState(0);
 
-  function fetchSum() {
+  const fetchSum = useCallback(() => {
     fetch(`/calories/${userId}/${date}`)
       .then((data) => data.json())
       .then((data) => updateSum(data));
-  }
+  }, [userId, date]);
 
   useEffect(() => {
     fetchSum();
-  }, [date]);
+  }, [fetchSum]);
 
   return (
-    <main className="dashboard">
+    <div className="dashboard">
       <DateSlider date={date} setDate={setDate} />
       <KcalBar userId={userId} date={date} kcalSum={kcalSum} kcalGoal={goal} />
       {sections.map((meal) => {
-        return <MealSection key={meal} meal={meal} isAuth={isAuth} userId={userId} date={date} fetchSum={fetchSum} />}
+        return <MealSection key={meal} meal={meal} userId={userId} date={date} fetchSum={fetchSum} />}
       )}
-    </main>
+    </div>
   );
 }
 
