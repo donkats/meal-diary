@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 import { NavItem } from 'react-bootstrap';
 import { AppContext } from './context';
@@ -10,13 +10,20 @@ import Signup from './Signup';
 import UserInfo from './UserInfo';
 
 function App() {
-  const [auth, setAuth] = useState({ isAuth: false, id: 0 });
-
+  const stored = JSON.parse(localStorage.getItem('auth'));
+  const [auth, setAuth] = useState(stored || { isAuth: false, id: 0 });
   console.log('logged in:', auth.isAuth, 'id:', auth.id);
 
   function handleLogout() {
     setAuth({ isAuth: false, id: 0 });
+    localStorage.clear()
   }
+
+  useEffect(() => {
+    if (auth.isAuth) {
+      localStorage.setItem('auth', JSON.stringify(auth));
+    }
+  }, [auth.isAuth])
 
   return (
   <AppContext.Provider value={{ auth, setAuth }}>
