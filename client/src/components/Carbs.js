@@ -22,7 +22,7 @@ function CarbGraph(props) {
           labels: labels,
           datasets: [
             {
-              label: "Carb intake",
+              label: "Total Carb intake",
               data: data,
               pointRadius: 4,
             pointBorderColor: 'rgba(54, 162, 235, 1)',
