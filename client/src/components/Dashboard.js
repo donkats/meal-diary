@@ -11,7 +11,6 @@ function Dashboard(props) {
   
   const [date, setDate] = useState(moment().format('YYYY-MM-DD'));
   const [kcalSum, updateSum] = useState(0);
-  //const kcalGoal = 2500;
 
   function fetchSum() {
     fetch(`/calories/${userId}/${date}`)

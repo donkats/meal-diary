@@ -17,7 +17,7 @@ function Login(props) {
 
     fetch(`/users/${email}/${password}`)
       .then((data) => data.json())
-      .then((data) => setAuth({ isAuth: data.isAuthenticated, id: data.id, goal: data.goal}));
+      .then((data) => setAuth({ isAuth: data.isAuthenticated, userId: data.id, goal: data.goal}));
   }
   
   return (

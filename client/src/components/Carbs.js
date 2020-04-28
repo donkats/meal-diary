@@ -1,49 +1,42 @@
 import React, { useState, useEffect } from 'react'
 import { Line } from 'react-chartjs-2';
-import axios from 'axios';
 import moment from 'moment';
 
 function CarbGraph(props) {
-  const [data,setData] = useState([])
-  const id = props.id;
-  //id added on line 8 and 11
+  const { userId } = props;
+  const [data, setData] = useState({})
+  
   useEffect(()=> {
-    axios.get(`/carb/${id}`).then(res => {
-      const nutritionalValue = res.data;
-      let labels = [];
-      let data = [];
-      nutritionalValue.forEach(element => {
-        labels.push(moment(element.date).format('DD-MM-YYYY'))
-        data.push(element.sum)
-      })
-
-      setData({
-        Data: {
-          labels: labels,
+    fetch(`/carb/${userId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setData({
+          labels: data.map((item) => moment(item.date).format('DD-MM-YYYY')),
           datasets: [
             {
               label: "Total Carb intake",
-              data: data,
+              data: data.map((item) => item.sum),
               pointRadius: 4,
-            pointBorderColor: 'rgba(54, 162, 235, 1)',
-            pointHoverBackgroundColor: 'rgba(54, 162, 235, 1)',
-            pointHoverRadius: 8,
-            backgroundColor: [
-              'rgba(54, 162, 235, 0.2)',
-            ],
-            borderColor: [
-              'rgba(54, 162, 235, 1)',
-            ],
-            borderWidth: 2
-            }]
-        },
-      })
+              pointBorderColor: 'rgba(54, 162, 235, 1)',
+              pointHoverBackgroundColor: 'rgba(54, 162, 235, 1)',
+              pointHoverRadius: 8,
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+              ],
+              borderColor: [
+                'rgba(54, 162, 235, 1)',
+              ],
+              borderWidth: 2
+            }
+          ]
+        })
     })
-  },[])
+  }, [userId])
 
     return (
       <div className="graphAnalytics">
-        <Line data={data.Data}
+        {data ?
+        <Line data={data}
           options={{
             title: {
               display: true,
@@ -90,6 +83,9 @@ function CarbGraph(props) {
               }]
             }
           }} />
+          :
+          'Loading...'
+          }
       </div>
     )
 }

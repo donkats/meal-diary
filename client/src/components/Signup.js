@@ -3,38 +3,18 @@ import { Button, FormGroup, FormControl } from 'react-bootstrap';
 import '../styles/Signup.css';
 
 function Signup() {
-  // const [fields, handleFieldChange] = useState({
-  //   email: "la",
-  //   password: "",
-  //   username: "",
-  //   name: "",
-  //   height: "",
-  //   diet: "",
-  //   dailyGoal: ""
-  // });
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [weight, setWeight] = useState("");
-  //const [username, setUsername] = useState("");
   const [height, setHeight] = useState("");
   const [diet, setDiet] = useState("");
   const [goal, setGoal] = useState("");
   const username = 'test';
-  //const [newUser, setNewUser] = useState(null);
-  //const [isLoading, setIsLoading] = useState(false);
 
   function validateForm() {
-    return (
-      email.length > 0 &&
-      password.length > 0 
-      // fields.password === fields.confirmPassword
-    )
+    return (email.length > 0 && password.length > 0);
   }
-
-  // function validateConfirmationForm() {
-  //   return fields.confirmationCode.length > 0;
-  // }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -57,23 +37,8 @@ function Signup() {
 
     fetch('/newusers', fetchObj)
       .then((data) => data.json())
-      .then((data) => console.log(data))
-
-    // fetch(`/users/${email}/${password}`)
-    //   .then((data) => data.json())
-    //   .then((data) => console.log(data))  
-    // setIsLoading(true);
-
-    // setNewUser("test");
-
-    // setIsLoading(false);
+      .then((data) => console.log(data));
   }
-
-  // async function handleConfirmationSubmit(event) {
-  //   event.preventDefault();
-
-  //   setIsLoading(true);
-  // }
 
   return (
     <div className='Signup'>

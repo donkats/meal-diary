@@ -19,12 +19,9 @@ function showInputField() {
   }
 }
 
-
-
 function UserInfo(props) {
-  const [users, setUsers] = useState([])
-  const id = props.id;
-  // id added on line 6 and 9
+  const { id } = props;
+  const [users, setUsers] = useState([]);
 
   function fetchUserInfo(){
     fetch(`/user/${id}`)
@@ -61,7 +58,7 @@ function UserInfo(props) {
     <div className="userInfo">
       <h1>Meal Diary</h1>
       {users.map((user, index) => (
-        <div className="userWrapper">
+        <div className="userWrapper" key={index}>
           <p className="userName">Name: {user.name}</p>
           <p className="userWeight">Weight: {user.kilograms} kg <button type="button" onClick={() => showInputField()}>Adjust weight</button></p>
 
