@@ -15,6 +15,7 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [weight, setWeight] = useState("");
   //const [username, setUsername] = useState("");
   const [height, setHeight] = useState("");
   const [diet, setDiet] = useState("");
@@ -44,6 +45,7 @@ function Signup() {
       name, 
       height, 
       diet,
+      weight,
       goal
     }
 
@@ -96,6 +98,13 @@ function Signup() {
           <FormControl
             type="name"
             onChange={e => setName(e.target.value)}
+          />
+        </FormGroup>
+        <FormGroup controlId="weight">
+          <label>Weight</label>
+          <FormControl
+            type="weight"
+            onChange={e => setWeight(e.target.value)}
           />
         </FormGroup>
         <FormGroup controlId="height">
