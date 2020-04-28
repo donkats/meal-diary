@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import './DateSlider.css';
+import '../styles/DateSlider.css';
 
 const formats = {
   sameDay: '[Today]',

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ResultList from './ResultList';
-import './Popup.css';
+import '../styles/Popup.css';
 
 function fetchData(updateResults, meal, event) {
   const input = document.getElementById(`search${meal}`);
