@@ -1,16 +1,8 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import {
-  Button,
-  FormGroup,
-  FormControl
-} from "react-bootstrap";
-import { useAppContext } from "./context";
-import "./Signup.css";
-import { Redirect } from "react-router-dom";
+import React, { useState } from 'react';
+import { Button, FormGroup, FormControl } from 'react-bootstrap';
+import './Signup.css';
 
-
-export default function Signup() {
+function Signup() {
   // const [fields, handleFieldChange] = useState({
   //   email: "la",
   //   password: "",
@@ -28,9 +20,7 @@ export default function Signup() {
   const [diet, setDiet] = useState("");
   const [goal, setGoal] = useState("");
   const username = 'test';
-  const history = useHistory();
   //const [newUser, setNewUser] = useState(null);
-  const { userHasAuthenticated } = useAppContext();
   //const [isLoading, setIsLoading] = useState(false);
 
   function validateForm() {
@@ -56,11 +46,13 @@ export default function Signup() {
       diet,
       goal
     }
+
     const fetchObj = {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(obj)
     }
+
     fetch('/newusers', fetchObj)
       .then((data) => data.json())
       .then((data) => console.log(data))
@@ -129,12 +121,12 @@ export default function Signup() {
         </FormGroup>
         <Button
           block disabled={!validateForm()}
-          type="submit"
-
-        >
+          type="submit">
           Signup
         </Button>
       </form>
     </div>
     );
 }
+
+export default Signup;

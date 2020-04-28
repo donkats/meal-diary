@@ -32,10 +32,15 @@ function MealSection(props) {
     <div className="meal">
       <h3>{meal.charAt(0).toUpperCase() + meal.slice(1)}</h3>
       {meals.map((item, index) => (
-        <div className="meal-item" key={index}>
-          {item['food_name']} <span className="kcal">{Math.round(item.kcal_intake)} kcal</span>
-          <br /> 
-          <span className="meal-item-details">{item.units} x {item.serving_q} {item.serving_unit}</span>
+        <div className="item" key={index}>
+          <div className="meal-item">
+            {item.food_name} <span className="kcal">{Math.round(item.kcal_intake)} kcal</span>
+            <br /> 
+            <span className="meal-item-details">{item.units} x {item.serving_q} {item.serving_unit}</span>
+          </div>
+          <input type="image" className="remove-btn" 
+            src="https://img.icons8.com/ios/50/000000/cancel.png" alt="remove button"
+            onClick={() => console.log(`delete ${item.food_name}!`)}/>
         </div>
       ))}
       <button className="add-btn" onClick={() => showPopup(meal)}>+ add {props.meal}</button>

@@ -22,29 +22,31 @@ function App() {
   <AppContext.Provider value={{ auth, setAuth }}>
   <Router>
     <div>
-      <nav className="sidebar">
-        {auth.isAuth
-          ? <>
-            <Redirect to="/dashboard" />
+      {auth.isAuth
+        ? <>
+          <Redirect to="/dashboard" />
+          <nav className="sidebar">
             <UserInfo id={auth.id} />
             <Link to="/dashboard" className="sidebarlink">Dashboard</Link>
             <Link to="/analytics" className="sidebarlink">Analytics</Link>
             <Link to="/">
               <NavItem onClick={handleLogout}>Logout</NavItem>
             </Link>
+          </nav>
             </>
           : <>
             <Redirect to="/" />
-            <Link to="/" className="sidebarlink">Home</Link>
-            <Link to="/login">
-              <NavItem>Login</NavItem>
-            </Link>
-            <Link to="/signup">
-              <NavItem>Signup</NavItem>
-            </Link>
+            <nav className="sidebar">
+              <Link to="/" className="sidebarlink">Home</Link>
+              <Link to="/login">
+                <NavItem>Login</NavItem>
+              </Link>
+              <Link to="/signup">
+                <NavItem>Signup</NavItem>
+              </Link>
+            </nav>
           </>
-        } 
-      </nav>
+        }
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/analytics">
