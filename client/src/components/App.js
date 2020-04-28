@@ -26,7 +26,7 @@ function App() {
         {auth.isAuth
           ? <>
             <Redirect to="/dashboard" />
-            <UserInfo />
+            <UserInfo id={auth.id} />
             <Link to="/dashboard" className="sidebarlink">Dashboard</Link>
             <Link to="/analytics" className="sidebarlink">Analytics</Link>
             <Link to="/">
@@ -47,14 +47,16 @@ function App() {
       </nav>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/analytics" component={Analytics} />
+        <Route path="/analytics">
+          <Analytics id={auth.id} />
+        </Route>
         <Route path="/dashboard">
           <Dashboard userId={auth.id} isAuth={auth.isAuth} />
         </Route>
         <Route path='/login'>
           <Login auth={auth} setAuth={setAuth} />
-        </Route>/>
-        {/* <Route path='/signup' component={SignUp} /> */}
+        </Route>
+        <Route exact path='/signup' component={Signup}/>
       </Switch>
     </div>
   </Router>

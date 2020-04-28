@@ -22,29 +22,26 @@ function Login(props) {
   
   return (
     <div className="Login">
-      {!isAuthenticated["authentication"] 
-      ? <form onSubmit={handleSubmit}>
-          <FormGroup controlId="email">
-            <label>Email</label>
-            <FormControl
-              autoFocus
-              type="email"
-              onChange={e => setEmail(e.target.value)}
-            />
-          </FormGroup>
-          <FormGroup controlId="password">
-            <label>Password</label>
-            <FormControl
-              onChange={e => setPassword(e.target.value)}
-              type="password"
-            />
-          </FormGroup>
-          <Button block disabled={!validateForm()} type="submit">
-            Login
-          </Button>
-        </form>
-      : <Redirect to='/dashboard'/>
-      }
+      <form onSubmit={handleSubmit}>
+        <FormGroup controlId="email">
+          <label>Email</label>
+          <FormControl
+            autoFocus
+            type="email"
+            onChange={e => setEmail(e.target.value)}
+          />
+        </FormGroup>
+        <FormGroup controlId="password">
+          <label>Password</label>
+          <FormControl
+            onChange={e => setPassword(e.target.value)}
+            type="password"
+          />
+        </FormGroup>
+        <Button block disabled={!validateForm()} type="submit">
+          Login
+        </Button>
+      </form>
     </div>
   );
 }
