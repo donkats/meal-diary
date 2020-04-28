@@ -6,6 +6,7 @@ import Dashboard from './Dashboard';
 import Analytics from './Analytics';
 import Home from './Home';
 import Login from './Login';
+import Signup from './Signup';
 import UserInfo from './UserInfo';
 
 function App() {
