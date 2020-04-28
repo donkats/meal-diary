@@ -25,14 +25,19 @@ function UserInfo(props) {
   const [users, setUsers] = useState([])
   const id = props.id;
   // id added on line 6 and 9
-  useEffect(() => {
+
+  function fetchUserInfo(){
     fetch(`/user/${id}`)
       .then(res => res.json())
       .then((users) => {
         setUsers(users)
       })
       .catch(console.log)
-  }, [users])
+  }
+
+  useEffect(()=>{
+    fetchUserInfo()
+  },[])
 
   function addWeightToDb(id) {
     const kilograms = document.getElementById("weight").value;
@@ -47,8 +52,9 @@ function UserInfo(props) {
       body: JSON.stringify(itemObject)
     }
   
-    fetch('/weight', fetchObj);
+    fetch('/weight', fetchObj).then(()=> fetchUserInfo())
     showNotification();
+    
     // setUsers(kilograms)
   }
   return (
