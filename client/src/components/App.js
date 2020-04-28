@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { NavItem } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import { NavItem } from 'react-bootstrap';
 import { AppContext } from './context';
 import Dashboard from './Dashboard';
 import Analytics from './Analytics';
@@ -9,29 +9,32 @@ import Login from './Login';
 import UserInfo from './UserInfo';
 
 function App() {
-  const [isAuthenticated, userHasAuthenticated] = useState({"authentication": false, "id": 0});
+  const [auth, setAuth] = useState({ isAuth: false, id: 0 });
+
+  console.log('logged in:', auth.isAuth, 'id:', auth.id);
+
   function handleLogout() {
-    userHasAuthenticated( {"authentication": false, "id": 0 });
+    setAuth({ isAuth: false, id: 0 });
   }
-  console.log(isAuthenticated["authentication"], isAuthenticated["id"]);
 
   return (
-  <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
+  <AppContext.Provider value={{ auth, setAuth }}>
   <Router>
     <div>
       <nav className="sidebar">
-        {isAuthenticated["authentication"]
+        {auth.isAuth
           ? <>
+            <Redirect to="/dashboard" />
             <UserInfo />
-            <Link to={'/'} className="sidebarlink">Home</Link>
-            <Link to={'/dashboard'} className="sidebarlink"> Dashboard </Link>
-            <Link to={'/analytics'} className="sidebarlink">Analytics</Link>
-            <Link to='/'>
+            <Link to="/dashboard" className="sidebarlink">Dashboard</Link>
+            <Link to="/analytics" className="sidebarlink">Analytics</Link>
+            <Link to="/">
               <NavItem onClick={handleLogout}>Logout</NavItem>
             </Link>
             </>
           : <>
-            <Link to='/' className="sidebarlink">Home</Link>
+            <Redirect to="/" />
+            <Link to="/" className="sidebarlink">Home</Link>
             <Link to="/login">
               <NavItem>Login</NavItem>
             </Link>
@@ -42,11 +45,15 @@ function App() {
         } 
       </nav>
       <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route path='/analytics' component={Analytics} />
-        <Route path='/dashboard'> <Dashboard id={isAuthenticated["id"]}/> /></Route>
-        
-        <Route exact path='/login' component={Login}/>
+        <Route exact path="/" component={Home} />
+        <Route path="/analytics" component={Analytics} />
+        <Route path="/dashboard">
+          <Dashboard userId={auth.id} isAuth={auth.isAuth} />
+        </Route>
+        <Route path='/login'>
+          <Login auth={auth} setAuth={setAuth} />
+        </Route>/>
+        {/* <Route path='/signup' component={SignUp} /> */}
       </Switch>
     </div>
   </Router>

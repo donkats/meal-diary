@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import moment from 'moment';
 import KcalBar from './KcalBar';
 import MealSection from './MealSection';
 import DateSlider from './DateSlider';
-// import { useAppContext } from './context';
-const moment = require('moment');
 
 const sections = ['breakfast', 'lunch', 'dinner'];
 
 function Dashboard(props) {
-  // const { isAuthenticated } = useAppContext();
-
-  const userId = props.id;
+  const { userId, isAuth } = props;
+  
   const [date, setDate] = useState(moment().format('YYYY-MM-DD'));
   const [kcalSum, updateSum] = useState(0);
   const kcalGoal = 2500;
@@ -29,7 +27,9 @@ function Dashboard(props) {
     <main className="dashboard">
       <DateSlider date={date} setDate={setDate} />
       <KcalBar userId={userId} date={date} kcalSum={kcalSum} kcalGoal={kcalGoal} />
-      {sections.map((meal) => <MealSection key={meal} meal={meal} userId={userId} date={date} fetchSum={fetchSum} />)}
+      {sections.map((meal) => {
+        return <MealSection key={meal} meal={meal} isAuth={isAuth} userId={userId} date={date} fetchSum={fetchSum} />}
+      )}
     </main>
   );
 }
