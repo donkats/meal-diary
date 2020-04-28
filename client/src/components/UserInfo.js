@@ -19,22 +19,7 @@ function showInputField() {
   }
 }
 
-function addWeightToDb(id) {
-  const kilograms = document.getElementById("weight").value;
-  const itemObject = {
-    userId: id,
-    date: new Date(),
-    kilograms
-  }
-  const fetchObj = {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(itemObject)
-  }
 
-  fetch('/weight', fetchObj);
-  showNotification();
-}
 
 function UserInfo(props) {
   const [users, setUsers] = useState([])
@@ -47,8 +32,25 @@ function UserInfo(props) {
         setUsers(users)
       })
       .catch(console.log)
-  }, [])
+  }, [users])
 
+  function addWeightToDb(id) {
+    const kilograms = document.getElementById("weight").value;
+    const itemObject = {
+      userId: id,
+      date: new Date(),
+      kilograms
+    }
+    const fetchObj = {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(itemObject)
+    }
+  
+    fetch('/weight', fetchObj);
+    showNotification();
+    // setUsers(kilograms)
+  }
   return (
     <div className="userInfo">
       <h1>Meal Diary</h1>
