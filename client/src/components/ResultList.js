@@ -32,7 +32,7 @@ function expandItem(element, type, index, updateContent) {
 }
 
 function addItemToDb(item, id, type, meal, date, userId) {
-  const { foodName, kcal, servingQ, servingUnit, gramsUnit } = item;
+  const { foodName, kcal, servingQ, servingUnit, gramsUnit, carbs } = item;
   const units = document.getElementById(id+type).value;
   
   const itemObject = { 
@@ -41,11 +41,13 @@ function addItemToDb(item, id, type, meal, date, userId) {
     servingQ,
     servingUnit,
     gramsUnit,
+    carbs,
     userId,
     meal,
     units,
     kcalIntake: units * kcal,
-    date
+    date,
+    carbIntake: units * carbs
    }
 
   const fetchObj = {
