@@ -1,6 +1,7 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import cors from 'cors';
+import path from 'path'
 
 const db = require ('./db-functions');
 const api = require('./api-functions')
@@ -9,14 +10,6 @@ const app = express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors());
-
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('client/build'));
-}
-
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
 
 app
   .route('/newusers')
