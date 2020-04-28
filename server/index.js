@@ -33,6 +33,9 @@ app
   .get(db.getAllMeals);
   // database - get amount of calories per user of all dates
 app
+  .route('/delmeals/:id')
+  .delete(db.deleteMeal)
+app
 .route('/calorie/:id')
 .get(db.getUserCalories);
 // database - get amount of calories per date per user

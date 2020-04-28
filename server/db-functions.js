@@ -4,7 +4,8 @@ function userDataParse(data) {
   if (data.length) {
     return {
       isAuthenticated: true,
-      id: data[0].id
+      id: data[0].id,
+      goal: data[0].daily_goal
     }
   } else {
     return {
@@ -96,6 +97,16 @@ const getAllMeals = (request, response) => {
   })
 };
 
+const deleteMeal = (request, response) => {
+  const id = request.params.id;
+  pool.query('DELETE from meals where id = $1', [id], (error, results) => {
+    if(error) {
+      throw error
+    }
+    response.status(200).json({message: 'Meal deleted'})
+  });
+}
+
 const getDailyCalories = (request, response) => {
   const id = request.params.id;
   const date = request.params.date
@@ -123,7 +134,7 @@ const getMeals = (request, response) => {
   const meal = request.params.meal;
   const date = request.params.date;
   
-  pool.query('SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3', [id, date, meal], (error, results) => {
+  pool.query('SELECT meals.id, meals.meal, meals.ingredients_id, ingredients.food_name, meals.units, meals.kcal_intake, meals.users_id, meals.date, ingredients.kcal, ingredients.serving_q, ingredients.serving_unit, ingredients.grams_unit from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3', [id, date, meal], (error, results) => {
     if (error) {
       throw error
     }
@@ -137,10 +148,9 @@ module.exports = {
   addUser,
   addWeight,
   addMeals, 
-  getAllMeals, 
+  getAllMeals,
+  deleteMeal, 
   getDailyCalories,
   getUserCalories,
-  getMeals
+  getMeals 
 }
-
-// 'SELECT * from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3';

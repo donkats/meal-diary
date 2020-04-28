@@ -31,8 +31,8 @@ function MealSection(props) {
   return (
     <div className="meal">
       <h3>{meal.charAt(0).toUpperCase() + meal.slice(1)}</h3>
-      {meals.map((item, index) => (
-        <div className="item" key={index}>
+      {meals.map((item) => (
+        <div className="item" key={item.id}>
           <div className="meal-item">
             {item.food_name} <span className="kcal">{Math.round(item.kcal_intake)} kcal</span>
             <br /> 

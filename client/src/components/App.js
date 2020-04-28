@@ -11,11 +11,11 @@ import UserInfo from './UserInfo';
 
 function App() {
   const stored = JSON.parse(localStorage.getItem('auth'));
-  const [auth, setAuth] = useState(stored || { isAuth: false, id: 0 });
-  console.log('logged in:', auth.isAuth, 'id:', auth.id);
+  const [auth, setAuth] = useState(stored || { isAuth: false, id: 0, goal: 0 });
+  console.log('logged in:', auth.isAuth, 'id:', auth.id, 'goal:',auth.goal);
 
   function handleLogout() {
-    setAuth({ isAuth: false, id: 0 });
+    setAuth({ isAuth: false, id: 0, goal: 0 });
     localStorage.clear()
   }
 
@@ -60,10 +60,10 @@ function App() {
           <Analytics id={auth.id} />
         </Route>
         <Route path="/dashboard">
-          <Dashboard userId={auth.id} isAuth={auth.isAuth} />
+          <Dashboard userId={auth.id} isAuth={auth.isAuth} goal={auth.goal} />
         </Route>
         <Route path='/login'>
-          <Login auth={auth} setAuth={setAuth} />
+          <Login auth={auth} setAuth={setAuth} goal={auth.goal}/>
         </Route>
         <Route exact path='/signup' component={Signup}/>
       </Switch>
