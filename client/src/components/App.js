@@ -34,8 +34,8 @@ function App() {
           <div className="sidebar">
             <h1 className="title">MealDiary</h1>
             <UserInfo userId={auth.userId} />
-            <Link to="/dashboard" className="sidebarlink">Dashboard</Link>
-            <Link to="/analytics" className="sidebarlink">Analytics</Link>
+            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/analytics">Analytics</Link>
             <Link to="/">
               <NavItem onClick={handleLogout}>Logout</NavItem>
             </Link>
@@ -44,7 +44,7 @@ function App() {
           : <>
             <Redirect to="/" />
             <nav className="sidebar">
-              <Link to="/" className="sidebarlink">Home</Link>
+              <Link to="/">Home</Link>
               <Link to="/login">
                 <NavItem>Login</NavItem>
               </Link>

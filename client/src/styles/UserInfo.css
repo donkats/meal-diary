@@ -1,10 +1,18 @@
 .userWrapper {
-  margin: 15px 0;
-  padding: 10px;
-  border: 1px solid #eeeeee;
-  border-radius: 25px;
+  margin: 10px 0;
   font-size: 16px;
-  color: black;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.welcome {
+  border-bottom: 1px dotted #000000;
+  font-size: 22px;
+}
+
+.name {
+  font-weight: bold;
 }
 
 .adjust-btn {

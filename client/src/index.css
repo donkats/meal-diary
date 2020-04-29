@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,800;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  background-color: #ffffff;
+}
+
+.app {
+  background: url('https://i.imgur.com/2qCWyY9.jpg.com/KriuVEX.jpg') no-repeat fixed;
+  background-size: 400px;
+  background-position-x: right;
+  background-position-y: bottom;
 }
 
 .sidebar {
@@ -11,36 +20,38 @@ body {
   position: fixed;
   padding: 20px;
   height: 100%;
-  width: 300px;
-  background-color: #a9cbd6;
+  width: 20%;
   font-size: 18px;
+  background: #eeeeee;
+  color: #000000;
 }
 
 .sidebar a {
+  padding: 8px 5px;
   display: block;
-  color: black;
   font-weight: bold;
+  color: #000000;
 }
 
 .sidebar a:hover {
-  color: white;
+  color: #999999;
 }
 
 .dashboard {
-  margin-left: 300px;
-  padding: 40px;
-  min-width: 650px;
+  margin-left: 20%;
+  padding: 30px;
+  width: 60%;
+  min-width: 600px;
 }
 
 .title {
+  margin-bottom: 20px;
   text-align: center;
-  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Leckerli One', cursive;
   font-size: 40px;
-  font-weight: bold;
-  color: black;
 }
 
-/* 'added' notification */
+/* ADDED NOTIFICATION */
 
 @keyframes fade-in {
   from {
@@ -61,7 +72,7 @@ body {
   animation: fade-in 1s ease alternate infinite;
 }
 
-/* Analytics Component */
+/* GRAPHS */
 
 .graphAnalytics{
   padding-top: 5%;
@@ -70,7 +81,7 @@ body {
   width: 800px;
 }
 
-/* Bootstrap styles for forms*/
+/* FORMS */
 
 select.form-control,
 textarea.form-control,
@@ -79,10 +90,4 @@ input.form-control {
 }
 input[type=file] {
   width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  .dashboard {
-    max-width: 1000px;
-  }
 }

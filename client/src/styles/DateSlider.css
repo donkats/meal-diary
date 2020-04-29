@@ -3,8 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: olivedrab;
+  background-color: #98af10;
   color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.45);
 }
 
 .dateslider h1 {
@@ -19,6 +21,7 @@
   border: none;
   font-size: 24px;
   font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.45);
 }
 
 .today img {
@@ -27,6 +30,7 @@
   max-height: 20px;
   margin-right: 5px;
   filter: invert(1);
+  box-shadow: 2px 2px 4px rgba(255,255,255,0.45);
 }
 
 .back, .next {

@@ -11,7 +11,11 @@ function KcalBar(props) {
         <div id="filler" style={{width: `${percentage}%`}}>
           <p className="kcal-text">Calories: {Math.round(kcalSum)} / {kcalGoal} kcal ({percentage}%)</p>
         </div>
-      <div>fat: {Math.round(fat)}g carbs: {Math.round(carbs)}g proteins:{Math.round(proteins)}g</div>
+      </div>
+      <div className="macros">
+        <div className="protein">PROTEIN<br />{Math.round(proteins)}g</div>
+        <div className="carbs">CARBS<br />{Math.round(carbs)}g</div>
+        <div className="fat">FAT<br />{Math.round(fat)}g</div>
       </div>
     </div>
   )

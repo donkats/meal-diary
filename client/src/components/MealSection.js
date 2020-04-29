@@ -31,14 +31,13 @@ function MealSection(props) {
   }
 
   function deleteItem(mealId) {
-
     fetch(`/delmeals/${mealId}`, { method: 'DELETE' })
       .then(() => {
         fetchMeals();
         fetchSum();
       });
   }
-  // item.protein_intake; item.carb_intake; item.fat_intake
+
   return (
     <div className="meal">
       <h3>{meal.charAt(0).toUpperCase() + meal.slice(1)}</h3>
@@ -46,14 +45,18 @@ function MealSection(props) {
         <div className="item" key={item.id}>
           {console.log(item)}
           <div className="meal-item">
-            {item.food_name} <span className="kcal">{Math.round(item.kcal_intake)} kcal</span>
-            <br /> 
-            <span className="meal-item-details">{item.units} x {item.serving_q} {item.serving_unit}</span>
+            {item.food_name} 
+            <span className="meal-item-details">{item.units} x {item.serving_q} {item.serving_unit}</span> 
+            <span className="kcal">{Math.round(item.kcal_intake)} kcal</span>
             <br />
             <span className="macro-details">
-              <span className="dot protein"></span> 12
-              <span className="dot carbs"></span> 35
-              <span className="dot fat"></span> 64
+              <span className="dot protein"></span> {item.protein_intake}g
+            </span>
+            <span className="macro-details">
+              <span className="dot carbs"></span> {item.carb_intake}g
+            </span>
+            <span className="macro-details">
+              <span className="dot fat"></span> {item.fat_intake}g
             </span>
           </div>
           <input type="image" className="remove-btn" 

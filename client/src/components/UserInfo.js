@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import moment from 'moment';
 import '../styles/UserInfo.css';
 
 function showNotification() {
@@ -58,12 +57,14 @@ function UserInfo(props) {
     <div>
       {users.map((user, index) => (
         <div className="userWrapper" key={index}>
-          <p className="userName">
-            <strong>Name:</strong> {user.name}
+          <p className="welcome">
+            Hello, <span className="name">{user.name}</span>
+          </p>
+          <p className="userHeight">
+            <strong>Height:</strong> {user.height}
           </p>
           <p className="userWeight">
-            <strong>Weight:</strong> {user.kilograms} kg 
-            {/* <input type="button" onClick={() => showInputField()}>Adjust weight</input> */}
+            <strong>Weight:</strong> {user.kilograms} kg
             <input type="image" className="adjust-btn" onClick={() => showInputField()}
               src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit weight" />
           </p>
@@ -72,14 +73,13 @@ function UserInfo(props) {
             <button type="button" className="add-weight-btn" onClick={() => addWeightToDb()}>Submit</button>
             <span className="added slide-in">Added!</span>
           </div>
-          <p className="userGoal">
-          <strong>BMI:</strong> {((user.kilograms) / (((user.height / 100)) * (user.height / 100))).toFixed(1)}
-          </p>
-          <p className="userDate">
-          <strong>Date:</strong> {moment(user.date).format('DD-MM-YYYY')}
+          <p className="userBMI">
+            <strong>BMI:</strong> {((user.kilograms) / (((user.height / 100)) * (user.height / 100))).toFixed(1)}
           </p>
           <p className="userGoal">
-          <strong>Daily Goal:</strong> {user.daily_goal} kcal
+            <strong>Daily Goal:</strong> {user.daily_goal} kcal
+            {/* <input type="image" className="adjust-btn" onClick={() => console.log('change goal')}
+              src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit goal" /> */}
           </p>
         </div>
       ))}
