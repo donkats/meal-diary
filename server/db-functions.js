@@ -52,10 +52,10 @@ const addUser = (request, response) => {
     })
   })
 };
-
+//'INSERT INTO weight (users_id, date, kilograms) VALUES ($1, $2, $3)'
 const addWeight = (request, response) => {
-  const { userId, date, kilograms  } = request.body;
-  pool.query('INSERT INTO weight (users_id, date, kilograms) VALUES ($1, $2, $3)', 
+  const { userId, kilograms  } = request.body;
+  pool.query('INSERT INTO weight (users_id, date, kilograms) VALUES ($1, $2, $3) ON CONFLICT ON CONSTRAINT weightdateconstraint DO UPDATE SET kilograms = $3', 
   [userId, new Date(), kilograms], error => {
     if (error) {
       throw error
