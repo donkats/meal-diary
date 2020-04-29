@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
+import WeightGraph from './Graphs/WeightGraph';
 import CalorieGraph from './Graphs/CalorieGraph';
 import CarbGraph from './Graphs/CarbGraph';
 import FatGraph from './Graphs/FatGraph';
@@ -11,11 +12,15 @@ function Analytics(props) {
   return (
     <div className="graphAnalytics">
       <Router>
+        <Link to="/weightgraph">Weight</Link> 
         <Link to="/caloriegraph">Calories</Link>
         <Link to="/carbgraph">Carbs</Link>
         <Link to="/fatgraph">Fat</Link>
-        <Link to="/proteingraph">Proteins</Link> 
+        <Link to="/proteingraph">Proteins</Link>
       <Switch>
+        <Route exact path="/weightgraph">
+          <WeightGraph userId={userId} />
+        </Route>
         <Route path="/caloriegraph">
           <CalorieGraph userId={userId} />
         </Route>

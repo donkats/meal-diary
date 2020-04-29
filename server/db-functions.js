@@ -52,10 +52,10 @@ const addUser = (request, response) => {
     })
   })
 };
-
+//'INSERT INTO weight (users_id, date, kilograms) VALUES ($1, $2, $3)'
 const addWeight = (request, response) => {
-  const { userId, date, kilograms  } = request.body;
-  pool.query('INSERT INTO weight (users_id, date, kilograms) VALUES ($1, $2, $3)', 
+  const { userId, kilograms  } = request.body;
+  pool.query('INSERT INTO weight (users_id, date, kilograms) VALUES ($1, $2, $3) ON CONFLICT ON CONSTRAINT weightdateconstraint DO UPDATE SET kilograms = $3', 
   [userId, new Date(), kilograms], error => {
     if (error) {
       throw error
@@ -165,12 +165,24 @@ const getUserProteins = (request, response) => {
     response.status(200).json((results.rows))
   })
 };
+
+const getUserWeight = (request, response) => {
+  const id = request.params.id;
+  const date = request.params.date
+  pool.query('SELECT date, sum(kilograms) FROM weight GROUP BY date, users_id HAVING users_id= $1 ORDER BY date ASC', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json((results.rows))
+  })
+};
+
 const getMeals = (request, response) => {
   const id = request.params.id;
   const meal = request.params.meal;
   const date = request.params.date;
   
-  pool.query('SELECT meals.id, meals.meal, meals.ingredients_id, ingredients.food_name, meals.units, meals.kcal_intake, meals.users_id, meals.date, ingredients.kcal, ingredients.serving_q, ingredients.serving_unit, ingredients.grams_unit from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3', [id, date, meal], (error, results) => {
+  pool.query('SELECT meals.id, meals.meal, meals.ingredients_id, ingredients.food_name, meals.units, meals.kcal_intake, meals.users_id, meals.date, meals.fat_intake, meals.protein_intake, meals.carb_intake, ingredients.kcal, ingredients.serving_q, ingredients.serving_unit, ingredients.grams_unit from meals INNER JOIN ingredients on meals.ingredients_id = ingredients.id WHERE meals.users_id = $1 AND meals.date = $2 AND meals.meal = $3', [id, date, meal], (error, results) => {
     if (error) {
       throw error
     }
@@ -191,5 +203,6 @@ module.exports = {
   getUserCarbs,
   getUserProteins,
   getUserFat,
+  getUserWeight,
   getMeals 
 }

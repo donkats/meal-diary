@@ -61,6 +61,9 @@ app
 app
   .route('/protein/:id')
   .get(db.getUserProteins);
+  app
+  .route('/kilograms/:id')
+  .get(db.getUserWeight);
 // database - get amount of calories per date per user
 app
   .route('/calories/:id/:date')
