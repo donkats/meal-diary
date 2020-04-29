@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, FormGroup, FormControl } from 'react-bootstrap';
-import '../styles/Login.css';
 
 function Login(props) {
   const { setAuth } = props;
@@ -21,7 +20,7 @@ function Login(props) {
   }
   
   return (
-    <div className="Login">
+    <div className="login">
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email">
           <label>Email</label>
@@ -38,7 +37,7 @@ function Login(props) {
             type="password"
           />
         </FormGroup>
-        <Button block disabled={!validateForm()} type="submit">
+        <Button bsClass="custom-btn" block disabled={!validateForm()} type="submit">
           Login
         </Button>
       </form>

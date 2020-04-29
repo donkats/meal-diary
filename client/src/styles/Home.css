@@ -1,13 +1,49 @@
-.Home .lander {
-  padding: 80px 0;
+.home {
+  padding: 60px 0 20px;
   text-align: center;
 }
 
-.Home .lander h1 {
-  font-family: "Open Sans", sans-serif;
+.home h1 {
   font-weight: 600;
 }
 
-.Home .lander p {
+.home a {
+  color: #000000;
+}
+
+.home p {
+  color: #999999;
+}
+
+.login, .signup {
+  padding: 10px 0;
+  text-align: left;
+}
+
+.login form, .signup form {
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.signup form span.help-block {
+  font-size: 14px;
+  padding-bottom: 10px;
   color: #999;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary[disabled]:hover, .btn-primary:active, 
+.btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:focus {
+  background-color: #98af10;
+  border-color: #98af10;
+  font-weight: 500;
+}
+
+.btn-primary:focus, .btn-primary:active:focus {
+  outline-color: #98af10;
+}
+
+@media all and (max-width: 480px) {
+  .login, .signup {
+    padding: 10px;
+  }
 }

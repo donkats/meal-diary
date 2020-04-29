@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, FormGroup, FormControl } from 'react-bootstrap';
-import '../styles/Signup.css';
 
 function Signup(props) {
   const { setAuth } = props;
@@ -41,12 +40,11 @@ function Signup(props) {
         .then((data) => setAuth({ isAuth: data.isAuthenticated, userId: data.id, goal: data.goal}));
     }
     fetch('/newusers', fetchObj)
-      //.then((data) => data.json())
       .then(() => fetchUsers())
   }
 
   return (
-    <div className='Signup'>
+    <div className='signup'>
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email">
           <label>Email</label>
