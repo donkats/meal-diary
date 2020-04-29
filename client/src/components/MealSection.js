@@ -38,7 +38,7 @@ function MealSection(props) {
         fetchSum();
       });
   }
-
+  // item.protein_intake; item.carb_intake; item.fat_intake
   return (
     <div className="meal">
       <h3>{meal.charAt(0).toUpperCase() + meal.slice(1)}</h3>
