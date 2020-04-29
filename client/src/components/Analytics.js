@@ -1,89 +1,35 @@
-import React, { useState, useEffect } from 'react'
-import { Line } from 'react-chartjs-2';
-import moment from 'moment';
+import React from 'react'
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
+import CalorieGraph from './Graphs/CalorieGraph';
+import CarbGraph from './Graphs/CarbGraph';
+import FatGraph from './Graphs/FatGraph';
+import ProteinGraph from './Graphs/ProteinGraph';
 
 function Analytics(props) {
   const { userId } = props;
-  const [data, setData] = useState(null);
-
-  useEffect(()=> {
-    fetch(`/calorie/${userId}`)
-      .then((res) => res.json())
-      .then((data) => setData({
-          labels: data.map((item) => moment(item.date).format('DD-MM-YYYY')),
-          datasets: [
-            {
-              label: "Calorie intake",
-              data: data.map((item) => Math.round(item.sum)),
-              pointRadius: 4,
-              pointBorderColor: 'rgba(54, 162, 235, 1)',
-              pointHoverBackgroundColor: 'rgba(54, 162, 235, 1)',
-              pointHoverRadius: 8,
-              backgroundColor: [
-                'rgba(54, 162, 235, 0.2)',
-              ],
-              borderColor: [
-                'rgba(54, 162, 235, 1)',
-              ],
-              borderWidth: 2
-            }
-          ]
-        })
-      );
-  }, [userId])
-
+  
   return (
     <div className="graphAnalytics">
-      {data ?
-      <Line data={data}
-        options={{
-          title: {
-            display: true,
-            text: 'Calorie intake per day',
-            fontSize: 20
-          },
-          legend: {
-            display: true,
-            position: 'right'
-          },
-          scales: {
-            xAxes: [{
-              type: 'time',
-              time: {
-                parser: 'DD-MM-YYYY',
-                unit: 'day',
-                unitStepSize: 1,
-                displayFormats: {
-                  day: 'DD-MM-YYYY'
-                },
-              },
-              ticks: {
-                source: 'data',
-                autoSkip: false,
-                minRotation: 45,
-                fontSize: 14,
-              },
-              scaleLabel: {
-                display: true,
-                labelString: 'Day',
-                fontSize: 20,
-              }
-            }],
-            yAxes: [{
-              ticks: {
-                beginAtZero: true,
-                fontSize: 14,
-              },
-              scaleLabel: {
-                display: true,
-                labelString: 'Number of calories',
-                fontSize: 20
-              }
-            }]
-          }
-        }} />
-      :
-      'Loading...'}
+      <Router>
+        <Link to="/caloriegraph">Calories</Link>
+        <Link to="/carbgraph">Carbs</Link>
+        <Link to="/fatgraph">Fat</Link>
+        <Link to="/proteingraph">Proteins</Link> 
+      <Switch>
+        <Route path="/caloriegraph">
+          <CalorieGraph userId={userId} />
+        </Route>
+        <Route path="/carbgraph">
+          <CarbGraph userId={userId} />
+        </Route>
+        <Route path="/fatgraph">
+          <FatGraph userId={userId} />
+        </Route>
+        <Route path="/proteingraph">
+          <ProteinGraph userId={userId} />
+        </Route>
+      </Switch>
+  </Router>
     </div>
   );
 }

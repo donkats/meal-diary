@@ -4,7 +4,6 @@ import { NavItem } from 'react-bootstrap';
 import { AppContext } from './context';
 import Dashboard from './Dashboard';
 import Analytics from './Analytics';
-import CarbGraph from './Carbs';
 import Home from './Home';
 import Login from './Login';
 import Signup from './Signup';
@@ -38,7 +37,6 @@ function App() {
             <UserInfo userId={auth.userId} />
             <Link to="/dashboard" className="sidebarlink">Dashboard</Link>
             <Link to="/analytics" className="sidebarlink">Analytics</Link>
-            <Link to="/carbs" className="sidebarlink">CarbGraph</Link>
             <Link to="/">
               <NavItem onClick={handleLogout}>Logout</NavItem>
             </Link>
@@ -61,9 +59,6 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/analytics">
           <Analytics userId={auth.userId} />
-        </Route>
-        <Route path="/carbs">
-          <CarbGraph userId={auth.userId} />
         </Route>
         <Route path="/dashboard">
           <Dashboard userId={auth.userId} isAuth={auth.isAuth} goal={auth.goal} />
