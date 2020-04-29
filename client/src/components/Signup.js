@@ -8,7 +8,6 @@ function Signup(props) {
   const [name, setName] = useState("");
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
-  const [diet, setDiet] = useState("");
   const [goal, setGoal] = useState("");
   const username = 'test';
 
@@ -24,7 +23,7 @@ function Signup(props) {
       username, 
       name, 
       height, 
-      diet,
+      diet: 'none',
       weight,
       goal
     }
@@ -80,13 +79,6 @@ function Signup(props) {
           <FormControl
             type="height"
             onChange={e => setHeight(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup controlId="diet">
-          <label>Diet</label>
-          <FormControl
-            type="diet"
-            onChange={e => setDiet(e.target.value)}
           />
         </FormGroup>
         <FormGroup controlId="goal">

@@ -1,14 +1,14 @@
-.userWrapper {
-  margin: 10px 0;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 15px;
+.welcome {
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 22px;
   background-color: #ffffff;
 }
 
-.welcome {
-  border-bottom: 1px dotted #000000;
-  font-size: 22px;
+.userinfo {
+  font-size: 14px;
+  padding: 5px 15px;
+  color: #555555;
 }
 
 .name {

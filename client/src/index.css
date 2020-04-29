@@ -15,52 +15,11 @@ body {
   background-position-y: bottom;
 }
 
-.sidebar {
-  box-sizing: border-box;
-  position: fixed;
-  padding: 30px;
-  height: 100%;
-  width: 20%;
-  font-size: 18px;
-  background: #eeeeee;
-  color: #000000;
-}
-
-.sidebar a {
-  padding: 8px 5px;
-  display: block;
-  font-weight: bold;
-  color: #000000;
-}
-
-.sidebar a:hover {
-  color: #999999;
-}
-
-.sidebar img {
-  margin-right: 6px;
-  width: 18px;
-  height: 18px;
-}
-
 .dashboard {
   margin-left: 20%;
-  padding: 30px;
+  padding: 30px 40px;
   width: 60%;
   min-width: 600px;
-}
-
-.title {
-  margin-bottom: 20px;
-  text-align: center;
-  font-family: 'Leckerli One', cursive;
-  font-size: 40px;
-  /* font-weight: 800; */
-  /* text-shadow: 2px 2px 4px rgba(0,0,0,0.12); */
-}
-
-.title a:hover {
-  text-decoration: none;
 }
 
 /* ADDED NOTIFICATION */

@@ -1,0 +1,41 @@
+.sidebar {
+  box-sizing: border-box;
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  background: #f4f4f4;
+  color: #000000;
+}
+
+.sidebar a {
+  padding: 8px 15px;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.sidebar a:hover {
+  text-decoration: none;
+  background-color: #ffffff;
+}
+
+.selected {
+  background-color: #ffffff;
+}
+
+.sidebar img {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.title {
+  margin: 40px 0 20px;
+  text-align: center;
+  font-family: 'Leckerli One', cursive;
+}
+
+.title a:hover {
+  text-decoration: none;
+}

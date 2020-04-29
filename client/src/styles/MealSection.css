@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   padding: 5px 15px;
-  border-bottom: solid 1px #eeeeee;
+  border-bottom: solid 1px #f8f8f8;
   background-color: #ffffff;
 }
 
@@ -87,7 +87,7 @@
   cursor: pointer;
   padding: 10px 15px;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #f8f8f8;
   border: none;
   font-size: 14px;
   font-weight: bold;

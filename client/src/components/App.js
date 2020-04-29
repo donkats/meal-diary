@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import { AppContext } from './context';
+// import { AppContext } from './context';
 import Dashboard from './Dashboard';
 import Analytics from './Analytics';
 import Home from './Home';
@@ -22,7 +22,7 @@ function App() {
   }, [auth])
 
   return (
-  <AppContext.Provider value={{ auth, setAuth }}>
+  // <AppContext.Provider value={{ auth, setAuth }}>
   <Router>
     <div className="app">
       {auth.isAuth
@@ -46,7 +46,7 @@ function App() {
       </Switch>
     </div>
   </Router>
-  </AppContext.Provider>
+  // </AppContext.Provider>
   );
 }
 

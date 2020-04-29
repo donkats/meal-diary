@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import UserInfo from './UserInfo';
+import '../styles/Sidebar.css';
 
 function Sidebar(props) {
   const { userId, handleLogout } = props;
@@ -8,18 +9,18 @@ function Sidebar(props) {
     <div className="sidebar">
       <h1 className="title">MealDiary</h1>
       <UserInfo userId={userId} />
-      <Link to="/dashboard">
+      <NavLink to="/dashboard" activeClassName="selected">
         <img src="https://img.icons8.com/ios/50/000000/food.png" alt="dashboard"/>
         Dashboard
-      </Link>
-      <Link to="/analytics">
+      </NavLink>
+      <NavLink to="/analytics" activeClassName="selected">
         <img src="https://img.icons8.com/ios/50/000000/line-chart.png" alt="analytics"/>
         Analytics
-      </Link>
-      <Link onClick={handleLogout} to="/">
+      </NavLink>
+      <NavLink exact to="/" activeClassName="selected" onClick={handleLogout}>
         <img src="https://img.icons8.com/ios/50/000000/logout-rounded.png" alt="logout"/>
         Logout
-      </Link>
+      </NavLink>
     </div>
   )
 }

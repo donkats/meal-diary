@@ -56,10 +56,11 @@ function UserInfo(props) {
   return (
     <div>
       {users.map((user, index) => (
-        <div className="userWrapper" key={index}>
-          <p className="welcome">
-            Hello, <span className="name">{user.name}</span>
-          </p>
+        <>
+        <p className="welcome">
+          Hello, <span className="name">{user.name}</span>
+        </p>
+        <div className="userinfo" key={index}>
           <p className="userHeight">
             <strong>Height:</strong> {user.height}
           </p>
@@ -82,6 +83,7 @@ function UserInfo(props) {
               src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit goal" /> */}
           </p>
         </div>
+        </>
       ))}
     </div>
   );
