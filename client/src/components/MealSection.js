@@ -44,10 +44,17 @@ function MealSection(props) {
       <h3>{meal.charAt(0).toUpperCase() + meal.slice(1)}</h3>
       {meals.map((item) => (
         <div className="item" key={item.id}>
+          {console.log(item)}
           <div className="meal-item">
             {item.food_name} <span className="kcal">{Math.round(item.kcal_intake)} kcal</span>
             <br /> 
             <span className="meal-item-details">{item.units} x {item.serving_q} {item.serving_unit}</span>
+            <br />
+            <span className="macro-details">
+              <span className="dot protein"></span> 12
+              <span className="dot carbs"></span> 35
+              <span className="dot fat"></span> 64
+            </span>
           </div>
           <input type="image" className="remove-btn" 
             src="https://img.icons8.com/ios/50/000000/cancel.png" alt="remove button"
