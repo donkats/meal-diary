@@ -12,7 +12,6 @@ import UserInfo from './UserInfo';
 function App() {
   const stored = JSON.parse(localStorage.getItem('auth'));
   const [auth, setAuth] = useState(stored || { isAuth: false, userId: 0, goal: 0 });
-  // console.log('logged in:', auth.isAuth, 'id:', auth.userId, 'goal:', auth.goal);
 
   function handleLogout() {
     setAuth({ isAuth: false, userId: 0, goal: 0 });
@@ -66,7 +65,9 @@ function App() {
         <Route path='/login'>
           <Login setAuth={setAuth} goal={auth.goal}/>
         </Route>
-        <Route exact path='/signup' component={Signup}/>
+        <Route path='/signup'>
+          <Signup setAuth={setAuth}/>
+        </Route>
       </Switch>
     </div>
   </Router>

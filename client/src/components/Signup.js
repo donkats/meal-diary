@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Button, FormGroup, FormControl } from 'react-bootstrap';
 import '../styles/Signup.css';
 
-function Signup() {
+function Signup(props) {
+  const { setAuth } = props;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -34,10 +35,14 @@ function Signup() {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(obj)
     }
-
+    function fetchUsers() {
+      fetch(`/users/${email}/${password}`)
+        .then((data) => data.json())
+        .then((data) => setAuth({ isAuth: data.isAuthenticated, userId: data.id, goal: data.goal}));
+    }
     fetch('/newusers', fetchObj)
-      .then((data) => data.json())
-      .then((data) => console.log(data));
+      //.then((data) => data.json())
+      .then(() => fetchUsers())
   }
 
   return (
