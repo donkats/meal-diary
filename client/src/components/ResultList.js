@@ -32,7 +32,7 @@ function expandItem(element, type, index, updateContent) {
 }
 
 function addItemToDb(item, id, type, meal, date, userId) {
-  const { foodName, kcal, servingQ, servingUnit, gramsUnit, carbs } = item;
+  const { foodName, kcal, servingQ, servingUnit, gramsUnit, carbs, fat, proteins } = item;
   const units = document.getElementById(id+type).value;
   
   const itemObject = { 
@@ -47,7 +47,11 @@ function addItemToDb(item, id, type, meal, date, userId) {
     units,
     kcalIntake: units * kcal,
     date,
-    carbIntake: units * carbs
+    carbIntake: units * carbs,
+    fat,
+    fatIntake: units * fat,
+    proteins,
+    proteinIntake: units * proteins
    }
 
   const fetchObj = {
@@ -67,6 +71,7 @@ function ResultList(props) {
   let kcal = '';
   if (content) {
     if (content.gramsUnit) grams = `(${content.gramsUnit}g)`;
+    console.log(content);
     kcal = `(${content.kcal}kcal)`;
   }
 

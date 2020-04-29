@@ -65,11 +65,11 @@ const addWeight = (request, response) => {
 };
 
 const addMeals = (request, response) => {
-  const { foodName, kcal, servingQ, servingUnit, gramsUnit, carbs, userId, meal, units, kcalIntake, carbIntake, date } = request.body;
-  pool.query('INSERT INTO ingredients (food_name, kcal, serving_q, serving_unit, grams_unit, carbs) VALUES ($1, $2, $3, $4, $5, $6) ON CONFLICT ON CONSTRAINT constraintname DO NOTHING', [foodName, kcal, servingQ, servingUnit, gramsUnit, carbs], error => {
+  const { foodName, kcal, servingQ, servingUnit, gramsUnit, carbs, userId, meal, units, kcalIntake, carbIntake, date, fat, fatIntake, proteins, proteinIntake } = request.body;
+  pool.query('INSERT INTO ingredients (food_name, kcal, serving_q, serving_unit, grams_unit, carbs, fat, proteins) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) ON CONFLICT ON CONSTRAINT constraintname DO NOTHING', [foodName, kcal, servingQ, servingUnit, gramsUnit, carbs, fat, proteins], error => {
 
-    pool.query('INSERT INTO meals (meal, units, kcal_intake, carb_intake, date, users_id, ingredients_id) VALUES ($1, $2, $3, $4, $5, $6, (select id from ingredients where food_name = $7))', 
-    [meal, units, kcalIntake, carbIntake, date, userId, foodName], error => {
+    pool.query('INSERT INTO meals (meal, units, kcal_intake, carb_intake, date, users_id, ingredients_id, fat_intake, protein_intake) VALUES ($1, $2, $3, $4, $5, $6, (select id from ingredients where food_name = $7), $8, $9)', 
+    [meal, units, kcalIntake, carbIntake, date, userId, foodName, fatIntake, proteinIntake], error => {
       if (error) {
         throw error
       }
@@ -105,10 +105,24 @@ const getDailyCalories = (request, response) => {
     if (error) {
       throw error
     }
-    response.status(200).json((results.rows).map(a => a.kcal_intake).reduce((a, b) => a + b, 0))
+    response.status(200).json(calculateIntakes(results.rows))
   })
 };
-
+// .map(a => a.kcal_intake).reduce((a, b) => a + b, 0))
+function calculateIntakes(results) {
+  let kcal = 0;
+  let fat = 0;
+  let proteins = 0;
+  let carbs = 0;
+  for (let i=0; i<results.length; i+=1) {
+    kcal += results[i]["kcal_intake"];
+    fat += results[i]["fat_intake"];
+    carbs += results[i]["carb_intake"];
+    proteins += results[i]["protein_intake"];
+  }
+  return { kcal, carbs, fat, proteins};
+}
+// .map(a => a.kcal_intake).reduce((a, b) => a + b, 0))
 const getUserCalories = (request, response) => {
   const id = request.params.id;
   const date = request.params.date
@@ -130,7 +144,27 @@ const getUserCarbs = (request, response) => {
     response.status(200).json((results.rows))
   })
 };
+const getUserFat = (request, response) => {
+  const id = request.params.id;
+  const date = request.params.date
+  pool.query('SELECT date, sum(fat_intake) FROM meals GROUP BY date, users_id HAVING users_id= $1 ORDER BY date ASC', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json((results.rows))
+  })
+};
 
+const getUserProteins = (request, response) => {
+  const id = request.params.id;
+  const date = request.params.date
+  pool.query('SELECT date, sum(protein_intake) FROM meals GROUP BY date, users_id HAVING users_id= $1 ORDER BY date ASC', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json((results.rows))
+  })
+};
 const getMeals = (request, response) => {
   const id = request.params.id;
   const meal = request.params.meal;
@@ -155,5 +189,7 @@ module.exports = {
   getDailyCalories,
   getUserCalories,
   getUserCarbs,
+  getUserProteins,
+  getUserFat,
   getMeals 
 }
