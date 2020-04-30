@@ -31,42 +31,12 @@ function expandItem(element, type, index, updateContent) {
   document.getElementById(elementId).classList.toggle('active');
 }
 
-function addItemToDb(item, id, type, meal, date, userId) {
-  const { foodName, kcal, servingQ, servingUnit, gramsUnit, carbs, fat, proteins } = item;
-  const units = document.getElementById(id+type).value;
-  
-  const itemObject = { 
-    foodName,
-    kcal,
-    servingQ,
-    servingUnit,
-    gramsUnit,
-    carbs,
-    userId,
-    meal,
-    units,
-    kcalIntake: units * kcal,
-    date,
-    carbIntake: units * carbs,
-    fat,
-    fatIntake: units * fat,
-    proteins,
-    proteinIntake: units * proteins
-   }
 
-  const fetchObj = {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(itemObject)
-  }
-
-  fetch('/meals', fetchObj);
-  showNotification();
-}
 
 function ResultList(props) {
   const { date, list, meal, type, userId } = props;
   const [content, updateContent] = useState(null);
+  const [message, setMessage] = useState('Added');
   let grams = '';
   let kcal = '';
   if (content) {
@@ -75,6 +45,43 @@ function ResultList(props) {
     kcal = `(${content.kcal}kcal)`;
   }
 
+  function addItemToDb(item, id, type, meal, date, userId) {
+    const { foodName, kcal, servingQ, servingUnit, gramsUnit, carbs, fat, proteins } = item;
+    const units = document.getElementById(id+type).value;
+    if (!/(^[0-9]+\.?[0-9]?$)/.test(units) || units === 0) {
+      setMessage('Not passing');
+    } else {
+      setMessage('Added');
+      const itemObject = { 
+        foodName,
+        kcal,
+        servingQ,
+        servingUnit,
+        gramsUnit,
+        carbs,
+        userId,
+        meal,
+        units,
+        kcalIntake: units * kcal,
+        date,
+        carbIntake: units * carbs,
+        fat,
+        fatIntake: units * fat,
+        proteins,
+        proteinIntake: units * proteins
+      }
+  
+      const fetchObj = {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(itemObject)
+      }
+  
+      fetch('/meals', fetchObj);
+      showNotification();
+    }
+  }
+  console.log('message', message);
   return (
     <div className="result-column">
       {list.map((item, index) => (
@@ -82,10 +89,10 @@ function ResultList(props) {
           <button type="button" className="item-btn" key={item.foodName} id={item.nixItemId}
           onClick={(e) => expandItem(e.target, type, index, updateContent)}>{item.foodName}</button>
           <div className="item-content" id={`${type}-${index}-content`}>
-            <input type="text" id={`${index}${type}`} className="qty-input" placeholder="0" />
+            <input type="text" id={`${index}${type}`} className="qty-input" placeholder="0"/>
             <label> x {item.servingQ} {item.servingUnit} {content ? `${grams} ${kcal}` : '' }</label>
             <button type="button" className="add-item-btn" onClick={() => addItemToDb(content, index, type, meal, date, userId)}>add</button>
-            <span className="added-item slide-in">Added!</span>
+            <span className="added-item slide-in">{message}</span>
           </div>
         </div>
         )
