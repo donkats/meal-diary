@@ -2,49 +2,14 @@ import React, { useState } from 'react';
 import ResultList from './ResultList';
 import '../styles/Popup.css';
 
-const test = {
-  "common": [
-    {
-      "foodName": "cheese",
-      "servingUnit": "slice (1 oz)",
-      "servingQ": 1,
-      "photo": {
-        "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/1034_thumb.jpg"
-      }
-    },
-    {
-      "foodName": "cheesecake",
-      "servingUnit": "piece (1 NLEA serving)",
-      "servingQ": 1,
-      "photo": {
-        "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/107_thumb.jpg"
-      }
-    }
-  ],
-  "branded": [
-    {
-      "nixItemId": "51c3f2c997c3e6de73cbd718",
-      "foodName": "Light String Cheese",
-      "brandName": "Frigo Cheese Heads",
-      "servingUnit": "piece",
-      "servingQ": 1,
-      "calories": 50,
-      "photo": {
-        "thumb": "https://d1r9wva3zcpswd.cloudfront.net/5cc2b4d8cb53916614c21c69.jpeg"
-      }
-    }
-  ]
-}
-
 function fetchData(updateResults, meal, event) {
   const input = document.getElementById(`search${meal}`);
   const query = input.value.trim();
 
   if ((event.type === 'click' || event.keyCode === 13) && query !== '') {
-    // fetch(`/search/${query}`)
-    //   .then((data) => data.json())
-    //   .then((res) => updateResults(res));
-    updateResults(test);
+    fetch(`/search/${query}`)
+      .then((data) => data.json())
+      .then((res) => updateResults(res));
     input.value = '';
   }
 }
