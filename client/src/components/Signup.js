@@ -9,21 +9,19 @@ function Signup(props) {
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
   const [goal, setGoal] = useState("");
-  const username = 'test';
+  const [exists, setExists] = useState("");
 
   function validateForm() {
-    return (email.length > 0 && password.length > 0);
+    return (email.length > 0 && password.length > 0 && height.length > 0 && weight.length > 0 && goal.length > 0);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     const obj = {
       email, 
-      password,
-      username, 
+      password, 
       name, 
       height, 
-      diet: 'none',
       weight,
       goal
     }
@@ -34,12 +32,27 @@ function Signup(props) {
       body: JSON.stringify(obj)
     }
     function fetchUsers() {
+      console.log('fetch users tried')
       fetch(`/users/${email}/${password}`)
         .then((data) => data.json())
         .then((data) => setAuth({ isAuth: data.isAuthenticated, userId: data.id, goal: data.goal}));
     }
-    fetch('/newusers', fetchObj)
-      .then(() => fetchUsers())
+    function createUser(data) {
+      console.log('data', data)
+      if (data.length === 0) {
+        console.log('attempt made');
+        fetch('/newusers', fetchObj)
+      //.then((data) => data.json())
+          
+      } else {
+        setExists(email);
+        console.log(`user with email ${email} already exists`)
+      }
+    }
+    fetch(`usersby/${email}`)
+      .then((data) => data.json())
+      .then((data) => createUser(data))
+      .then(() => fetchUsers());
   }
 
   return (
@@ -68,23 +81,23 @@ function Signup(props) {
           />
         </FormGroup>
         <FormGroup controlId="weight">
-          <label>Weight</label>
+          <label>Weight (kg)</label>
           <FormControl
-            type="weight"
+            type="number" min="1"
             onChange={e => setWeight(e.target.value)}
           />
         </FormGroup>
         <FormGroup controlId="height">
-          <label>Height</label>
+          <label>Height (cm)</label>
           <FormControl
-            type="height"
+            type="number" min="1"
             onChange={e => setHeight(e.target.value)}
           />
         </FormGroup>
         <FormGroup controlId="goal">
           <label>Daily calorie goal</label>
           <FormControl
-            type="goal"
+            type="number" min="1"
             onChange={e => setGoal(e.target.value)}
           />
         </FormGroup>
@@ -93,7 +106,13 @@ function Signup(props) {
           type="submit">
           Signup
         </Button>
+        {exists.length > 0 &&
+        <p>
+          User with email {exists} allready exists!
+        </p>
+        }
       </form>
+      
     </div>
     );
 }

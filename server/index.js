@@ -35,6 +35,9 @@ app
   .get(db.getUser)
   // database - post weight at current date
 app
+  .route('/usersby/:email')
+  .get(db.getUserByEmail)
+app
   .route('/weight')
   .post(db.addWeight)
 // database - post - posts in ingredients, then in meals

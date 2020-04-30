@@ -37,12 +37,22 @@ const getUser = (request, response) => {
   })
 };
 
+const getUserByEmail = (request, response) => {
+  const email = request.params.email;
+  pool.query('SELECT * from USERS WHERE email = $1', [email], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json(results.rows)
+  })
+}
+
 const addUser = (request, response) => {
-  const { password, email, height, goal, name, diet, username, weight } = request.body;
+  const { password, email, height, goal, name, weight } = request.body;
   // console.log(username, password);
   // const info = [ 'newuser', 'newpass'];
-  pool.query('INSERT INTO users (password, email, height, daily_goal, name, diet, username) VALUES ($1, $2, $3, $4, $5, $6, $7)', 
-  [password, email, height, goal, name, diet, username], error => {
+  pool.query('INSERT INTO users (password, email, height, daily_goal, name) VALUES ($1, $2, $3, $4, $5)', 
+  [password, email, height, goal, name], error => {
     pool.query('INSERT INTO weight (kilograms, date, users_id) VALUES ($1, $2, (select id from users where email = $3))', 
     [weight, new Date(), email], error => {
       if (error) {
@@ -193,6 +203,7 @@ const getMeals = (request, response) => {
 module.exports = {
   getUsers,
   getUser,
+  getUserByEmail,
   addUser,
   addWeight,
   addMeals, 
