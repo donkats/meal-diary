@@ -10,15 +10,15 @@ function Sidebar(props) {
       <h1 className="title">MealDiary</h1>
       <UserInfo userId={userId} />
       <NavLink to="/dashboard" activeClassName="selected">
-        <img src="https://img.icons8.com/ios/50/000000/food.png" alt="dashboard"/>
+        <img className="icon" src="https://img.icons8.com/ios/50/000000/food.png" alt="dashboard"/>
         Dashboard
       </NavLink>
-      <NavLink to="/analytics" activeClassName="selected">
-        <img src="https://img.icons8.com/ios/50/000000/line-chart.png" alt="analytics"/>
+      <NavLink to="/analytics/calories" activeClassName="selected">
+        <img className="icon" src="https://img.icons8.com/ios/50/000000/line-chart.png" alt="analytics"/>
         Analytics
       </NavLink>
       <NavLink exact to="/" activeClassName="selected" onClick={handleLogout}>
-        <img src="https://img.icons8.com/ios/50/000000/logout-rounded.png" alt="logout"/>
+        <img className="icon" src="https://img.icons8.com/ios/50/000000/logout-rounded.png" alt="logout"/>
         Logout
       </NavLink>
     </div>

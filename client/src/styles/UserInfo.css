@@ -1,14 +1,25 @@
 .welcome {
-  padding: 5px 15px;
+  margin-bottom: 5px;
+  padding: 0 15px;
   text-align: center;
   font-size: 22px;
-  background-color: #ffffff;
+}
+
+.user img {
+  margin-bottom: 5px;
+  padding: 10px 50px;
+  width: 100%;
+  height: 100%;
 }
 
 .userinfo {
   font-size: 14px;
   padding: 5px 15px;
   color: #555555;
+}
+
+.user-item {
+  padding: 6px 0;
 }
 
 .name {
@@ -30,9 +41,38 @@
   outline: none;
 }
 
-.add-weight-btn {
-  padding: 5px;
-  border: none;
+#weight-field {
+  display: inline;
+}
+
+.weight-input {
+  margin-left: 5px;
+  text-align: right;
+  width: 45px;
   font-size: 12px;
-  background-color: olivedrab;
+}
+
+.weight-msg {
+  margin: 0 0 5px;
+  display: none;
+  color: #c63e42;
+}
+
+.add-weight-btn {
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 3px 6px;
+  font-size: 12px;
+  background-color: #98af10;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.add-weight-btn:focus {
+  outline: none;
+}
+
+.add-weight-btn:hover {
+  background-color: #98af10;
 }

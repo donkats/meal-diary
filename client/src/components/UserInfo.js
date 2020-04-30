@@ -1,27 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/UserInfo.css';
 
-function showNotification() {
-  document.querySelector('.added').style.display = 'inline';
-  document.querySelector('.added').classList.add('slide-in');
-  setTimeout(() => {
-    document.querySelector('.added').classList.remove('slide-in');
-    document.querySelector('.added').style.display = 'none';
-  }, 2000);
-}
-
-function showInputField() {
-  let userInputField = document.getElementById("userInputField");
-  if (userInputField.style.display === "none") {
-    userInputField.style.display = "block";
-  } else {
-    userInputField.style.display = "none";
-  }
-}
-
 function UserInfo(props) {
   const { userId } = props;
   const [user, setUser] = useState([]);
+  const [showWeightField, setFieldVisible] = useState(false);
 
   const fetchUserInfo = useCallback(() => {
     fetch(`/user/${userId}`)
@@ -36,11 +19,12 @@ function UserInfo(props) {
 
   function addWeightToDb(event) {
     event.preventDefault();
+
     const kilograms = document.getElementById("weight").value;
-    console.log('kilograms', kilograms);
     if (kilograms < 0 || isNaN(kilograms) || kilograms.length === 0 || kilograms % 1 !==0) {
-      console.log('false attempt');
+      document.querySelector('.weight-msg').style.display = 'inline';
     } else {
+      document.querySelector('.weight-msg').style.display = 'none';
       const itemObject = {
         userId,
         date: new Date(),
@@ -52,43 +36,44 @@ function UserInfo(props) {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(itemObject)
       };
-      console.log('new weight sending to db', kilograms)
+      
       fetch('/weight', fetchObj)
         .then(() => fetchUserInfo());
-      showNotification();
+      setFieldVisible(false);
     }
   }
 
   return (
-    <div>
+    <div className="user">
+      <img src="https://res.cloudinary.com/heo8hwtja/image/upload/w_300,h_300,c_fill,g_face,r_max,f_auto/IMG-20190701-WA0003_dbf0dg.jpg" 
+        alt="profile" />
       <p className="welcome">
         Hello, <span className="name">{user.name}</span>
       </p>
       <div className="userinfo">
-        <p className="userHeight">
+        <div className="user-item">
           <strong>Height:</strong> {user.height}
-        </p>
-        <p className="userWeight">
-          <strong>Weight:</strong> {user.kilograms} kg
-          <input type="image" className="adjust-btn" onClick={() => showInputField()}
-            src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit weight" />
-        </p>
-        <div id="userInputField" style={{ display: "none" }}>
-          <form>
-          <input type="number" step="1" min="1" id="weight" className="weight-input" placeholder="0" />
-          <input type="submit" className="add-weight-btn" onClick={(e) => addWeightToDb(e)}/>
-          
-          <span className="added slide-in">Added!</span>
-          </form>
         </div>
-        <p className="userBMI">
+        <div className="user-item">
+          <strong>Weight: </strong>
+          { showWeightField ?
+            <div id="weight-field">
+              <input type="number" step="1" min="1" id="weight" className="weight-input" placeholder="0" /> kg
+              <input type="button" className="add-weight-btn" onClick={(e) => addWeightToDb(e)} value="update" />
+            </div>
+          :
+          `${user.kilograms} kg`
+          }
+          <input type="image" className="adjust-btn" onClick={() => setFieldVisible(!showWeightField)} // showInputField()
+            src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit weight" />
+        </div>
+        <p className="weight-msg slide-in">Please enter a whole number.</p>
+        <div className="user-item">
           <strong>BMI:</strong> {((user.kilograms) / (((user.height / 100)) * (user.height / 100))).toFixed(1)}
-        </p>
-        <p className="userGoal">
+        </div>
+        <div className="user-item">
           <strong>Daily Goal:</strong> {user.daily_goal} kcal
-          {/* <input type="image" className="adjust-btn" onClick={() => console.log('change goal')}
-            src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit goal" /> */}
-        </p>
+        </div>
       </div>
     </div>
   );

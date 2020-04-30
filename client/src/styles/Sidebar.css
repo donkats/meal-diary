@@ -24,14 +24,14 @@
   background-color: #ffffff;
 }
 
-.sidebar img {
+.sidebar .icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
 }
 
 .title {
-  margin: 40px 0 20px;
+  margin: 40px 0 10px;
   text-align: center;
   font-family: 'Leckerli One', cursive;
 }

@@ -14,36 +14,26 @@ function Analytics(props) {
     <Router>
       <div className="graph">
         <div className="graph-links">
-          <Link to="/weight">Weight</Link>
+          <Link to="/analytics/calories">Calories</Link>
           •
-          <Link to="/calories">Calories</Link>
+          <Link to="/analytics/weight">Weight</Link>
           •
-          <Link to="/macros">Macros</Link>
-          {/* <Link to="/carbgraph">Carbs</Link> */}
-          {/* •
-          <Link to="/fatgraph">Fat</Link>
-          •
-          <Link to="/proteingraph">Proteins</Link> */}
+          <Link to="/analytics/macros">Macros</Link>
         </div>
         
+        
       <Switch>
-        <Route exact path="/weight">
-          <WeightGraph userId={userId} />
-        </Route>
-        <Route path="/calories">
+        <Route path="/analytics/calories">
           <CalorieGraph userId={userId} />
         </Route>
-        <Route path="/macros">
+        <Route exact path="/analytics/weight">
+          <WeightGraph userId={userId} />
+        </Route>
+        <Route path="/analytics/macros">
           <CarbGraph userId={userId} />
           <FatGraph userId={userId} />
           <ProteinGraph userId={userId} />
         </Route>
-        {/* <Route path="/fatgraph">
-          <FatGraph userId={userId} />
-        </Route>
-        <Route path="/proteingraph">
-          <ProteinGraph userId={userId} />
-        </Route> */}
       </Switch>
       </div>
     </Router>
