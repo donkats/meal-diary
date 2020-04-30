@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Button, FormGroup, FormControl } from 'react-bootstrap';
 
 function Login(props) {
-  const { setAuth } = props;
+  const { auth, setAuth } = props;
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -17,8 +18,10 @@ function Login(props) {
     fetch(`/users/${email}/${password}`)
       .then((data) => data.json())
       .then((data) => setAuth({ isAuth: data.isAuthenticated, userId: data.id, goal: data.goal}));
+    if (!auth["isAuth"]) {
+      setError("Wrong login credentials, please try again");
+    }
   }
-  
   return (
     <div className="login">
       <form onSubmit={handleSubmit}>
@@ -40,6 +43,8 @@ function Login(props) {
         <Button block disabled={!validateForm()} type="submit">
           Login
         </Button>
+        <p>{error}</p>
+
       </form>
     </div>
   );
