@@ -43,6 +43,11 @@
   outline-color: #98af10;
 }
 
+.login .error {
+  padding: 5px 0;
+  color: #c63e42;
+}
+
 @media all and (max-width: 480px) {
   .login, .signup {
     padding: 10px;

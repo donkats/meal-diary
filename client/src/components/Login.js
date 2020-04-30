@@ -17,34 +17,25 @@ function Login(props) {
 
     fetch(`/users/${email}/${password}`)
       .then((data) => data.json())
-      .then((data) => setAuth({ isAuth: data.isAuthenticated, userId: data.id, goal: data.goal}));
-    if (!auth["isAuth"]) {
-      setError("Wrong login credentials, please try again");
-    }
+      .then((data) => setAuth({ isAuth: data.isAuthenticated, userId: data.id, goal: data.goal}))
+      .then(() => {
+        if (!auth.isAuth) setError('Email or password was entered incorrectly, please try again.');
+      });
   }
+
   return (
     <div className="login">
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email">
           <label>Email</label>
-          <FormControl
-            autoFocus
-            type="email"
-            onChange={e => setEmail(e.target.value)}
-          />
+          <FormControl autoFocus type="email" onChange={e => setEmail(e.target.value)} />
         </FormGroup>
         <FormGroup controlId="password">
           <label>Password</label>
-          <FormControl
-            onChange={e => setPassword(e.target.value)}
-            type="password"
-          />
+          <FormControl onChange={e => setPassword(e.target.value)} type="password" />
         </FormGroup>
-        <Button block disabled={!validateForm()} type="submit">
-          Login
-        </Button>
-        <p>{error}</p>
-
+        <Button block disabled={!validateForm()} type="submit">Login</Button>
+        <p className="error">{error}</p>
       </form>
     </div>
   );
