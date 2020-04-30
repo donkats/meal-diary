@@ -34,23 +34,29 @@ function UserInfo(props) {
     fetchUserInfo();
   }, [fetchUserInfo])
 
-  function addWeightToDb() {
+  function addWeightToDb(event) {
+    event.preventDefault();
     const kilograms = document.getElementById("weight").value;
-    const itemObject = {
-      userId,
-      date: new Date(),
-      kilograms
-    };
-
-    const fetchObj = {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(itemObject)
-    };
+    console.log('kilograms', kilograms);
+    if (kilograms < 0 || isNaN(kilograms) || kilograms.length === 0 || kilograms % 1 !==0) {
+      console.log('false attempt');
+    } else {
+      const itemObject = {
+        userId,
+        date: new Date(),
+        kilograms
+      };
   
-    fetch('/weight', fetchObj)
-      .then(() => fetchUserInfo());
-    showNotification();
+      const fetchObj = {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(itemObject)
+      };
+      console.log('new weight sending to db', kilograms)
+      fetch('/weight', fetchObj)
+        .then(() => fetchUserInfo());
+      showNotification();
+    }
   }
 
   return (
@@ -68,9 +74,12 @@ function UserInfo(props) {
             src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit weight" />
         </p>
         <div id="userInputField" style={{ display: "none" }}>
-          <input type="text" id="weight" className="weight-input" placeholder="0" />
-          <button type="button" className="add-weight-btn" onClick={() => addWeightToDb()}>Submit</button>
+          <form>
+          <input type="number" step="1" min="1" id="weight" className="weight-input" placeholder="0" />
+          <input type="submit" className="add-weight-btn" onClick={(e) => addWeightToDb(e)}/>
+          
           <span className="added slide-in">Added!</span>
+          </form>
         </div>
         <p className="userBMI">
           <strong>BMI:</strong> {((user.kilograms) / (((user.height / 100)) * (user.height / 100))).toFixed(1)}
