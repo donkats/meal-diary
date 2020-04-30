@@ -21,12 +21,12 @@ function showInputField() {
 
 function UserInfo(props) {
   const { userId } = props;
-  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState([]);
 
   const fetchUserInfo = useCallback(() => {
     fetch(`/user/${userId}`)
       .then(res => res.json())
-      .then((users) => setUsers(users))
+      .then((users) => setUser(users[0]))
       .catch((err) => console.log(err));
   }, [userId]);
 
@@ -55,36 +55,32 @@ function UserInfo(props) {
 
   return (
     <div>
-      {users.map((user, index) => (
-        <>
-        <p className="welcome">
-          Hello, <span className="name">{user.name}</span>
+      <p className="welcome">
+        Hello, <span className="name">{user.name}</span>
+      </p>
+      <div className="userinfo">
+        <p className="userHeight">
+          <strong>Height:</strong> {user.height}
         </p>
-        <div className="userinfo" key={index}>
-          <p className="userHeight">
-            <strong>Height:</strong> {user.height}
-          </p>
-          <p className="userWeight">
-            <strong>Weight:</strong> {user.kilograms} kg
-            <input type="image" className="adjust-btn" onClick={() => showInputField()}
-              src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit weight" />
-          </p>
-          <div id="userInputField" style={{ display: "none" }}>
-            <input type="text" id="weight" className="weight-input" placeholder="0" />
-            <button type="button" className="add-weight-btn" onClick={() => addWeightToDb()}>Submit</button>
-            <span className="added slide-in">Added!</span>
-          </div>
-          <p className="userBMI">
-            <strong>BMI:</strong> {((user.kilograms) / (((user.height / 100)) * (user.height / 100))).toFixed(1)}
-          </p>
-          <p className="userGoal">
-            <strong>Daily Goal:</strong> {user.daily_goal} kcal
-            {/* <input type="image" className="adjust-btn" onClick={() => console.log('change goal')}
-              src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit goal" /> */}
-          </p>
+        <p className="userWeight">
+          <strong>Weight:</strong> {user.kilograms} kg
+          <input type="image" className="adjust-btn" onClick={() => showInputField()}
+            src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit weight" />
+        </p>
+        <div id="userInputField" style={{ display: "none" }}>
+          <input type="text" id="weight" className="weight-input" placeholder="0" />
+          <button type="button" className="add-weight-btn" onClick={() => addWeightToDb()}>Submit</button>
+          <span className="added slide-in">Added!</span>
         </div>
-        </>
-      ))}
+        <p className="userBMI">
+          <strong>BMI:</strong> {((user.kilograms) / (((user.height / 100)) * (user.height / 100))).toFixed(1)}
+        </p>
+        <p className="userGoal">
+          <strong>Daily Goal:</strong> {user.daily_goal} kcal
+          {/* <input type="image" className="adjust-btn" onClick={() => console.log('change goal')}
+            src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit goal" /> */}
+        </p>
+      </div>
     </div>
   );
 }

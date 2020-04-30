@@ -43,7 +43,6 @@ function MealSection(props) {
       <h3>{meal.charAt(0).toUpperCase() + meal.slice(1)}</h3>
       {meals.map((item) => (
         <div className="item" key={item.id}>
-          {console.log(item)}
           <div className="meal-item">
             {item.food_name} 
             <span className="meal-item-details">{item.units} x {item.serving_q} {item.serving_unit}</span> 

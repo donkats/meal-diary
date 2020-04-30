@@ -37,7 +37,7 @@ function Login(props) {
             type="password"
           />
         </FormGroup>
-        <Button bsClass="custom-btn" block disabled={!validateForm()} type="submit">
+        <Button block disabled={!validateForm()} type="submit">
           Login
         </Button>
       </form>
