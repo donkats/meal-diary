@@ -21,9 +21,10 @@ function Popup(props) {
   return (
     <div className="popup" id={props.meal}>
       <div className="popup-inner">
-        <span className="close-popup" onClick={() => hidePopup()}>&times;</span>
-        <h2>Add to <strong>{props.meal}</strong>:</h2>
+        <input type="image" src="https://img.icons8.com/ios-filled/26/000000/delete-sign.png" alt="close"
+        className="close-popup" onClick={() => hidePopup()} />
         <div className="popup-content">
+          <h2>Add to <strong>{props.meal}</strong>:</h2>
           <div className="search-container">
             <input type="search" id={`search${meal}`} className="searchbar" placeholder="search..." 
             onKeyUp={(event) => fetchData(updateResults, meal, event)}/>
@@ -32,7 +33,7 @@ function Popup(props) {
               onClick={(event) => fetchData(updateResults, meal, event)} />
           </div>
           {Object.entries(results).length ? 
-            <div className="results">
+            <div>
               <ResultList list={results.common} meal={meal} date={date} userId={userId} type="common" />
               <ResultList list={results.branded} meal={meal} date={date} userId={userId} type="branded" />
             </div>

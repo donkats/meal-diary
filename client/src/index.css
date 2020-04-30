@@ -33,13 +33,13 @@ body {
   }
 }
 
-.added, .added-item {
+.added {
   display: none;
-  margin-left: 8px;
+  margin-left: 10px;
   color: #98af10
 }
 
-.slide-in {
+.faded {
   animation: fade-in 1s ease alternate infinite;
 }
 

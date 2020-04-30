@@ -10,12 +10,6 @@
   background-color: rgba(0,0,0, 0.5);  
 }
 
-.popup h2 {
-  margin: 0 0 5px;
-  padding: 0 25px;
-  font-size: 18px;
-}
-
 .popup-inner {  
   position: absolute;  
   left: 25%;  
@@ -28,12 +22,13 @@
 }
 
 .popup-content {
-  padding: 5px 20px 20px;
+  padding: 0 25px 20px;
 }
 
-.popup-content h3 {
-  margin: 0;
-  border: 0;
+.popup-content h2 {
+  margin: 20px 0 15px;
+  padding-left: 5px;
+  font-size: 18px;
 }
 
 .search-container {
@@ -59,47 +54,63 @@
   height: 20px;
 }
 
-.result-item {
-  padding: 10px 0;
-  border-bottom: 1px solid #dddddd;
+.search-icon:focus {
+  outline-color: #98af10;
 }
 
 .item-btn {
   cursor: pointer;
-  padding: 10px;
+  padding: 12px 10px;
   width: 100%;
-  font-size: 16px;
+  font-size: 15px;
   text-align: left;
   border: none;
+  border-bottom: 1px solid #dddddd;
 }
 
 .item-btn:hover {
-  background-color: #eeeeee;
+  background-color: #f4f4f4;
+}
+
+.item-btn:focus {
+  outline: none;
 }
 
 .item-content {
   padding: 10px;
   display: none;
   font-size: 14px;
-  background-color: #eeeeee;
+  background-color: #f4f4f4;
   color: #555555;
 }
 
+.item-content label {
+  font-weight: 500;
+}
+
 .qty-input {
-  width: 15px;
+  margin-right: 5px;
+  text-align: right;
+  width: 23px;
   font-size: 14px;
 }
 
-.active {
+.qty-input:focus {
+  outline: none;
+}
+
+.expanded {
   display: block;
 }
 
 .add-item-btn {
   cursor: pointer;
-  margin-left: 8px;
+  margin-left: 10px;
   padding: 5px 10px;
   font-size: 14px;
-  background-color: olivedrab;
+  background-color: #98af10;
+  border: none;
+  border-radius: 5px;
   color: white;
 }
 
@@ -108,13 +119,24 @@
 }
 
 .add-item-btn:hover {
-  background-color: #4f691a;
+  background-color: #98af10;
+}
+
+.added-msg {
+  margin-left: 10px;
+  color: #98af10
 }
 
 .close-popup {
-  display: block;
   cursor: pointer;
-  padding: 8px 8px 0 0;
-  text-align: right;
+  position: fixed;
+  right: 25%;
+  margin: 10px 20px;
+  width: 18px;
+  height: 18px;
   font-weight: bold;
+}
+
+.close-popup:focus {
+  outline: none;
 }
