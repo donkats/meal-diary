@@ -32,11 +32,18 @@ function Popup(props) {
               src="https://img.icons8.com/ios-filled/24/000000/search.png" alt="search icon"
               onClick={(event) => fetchData(updateResults, meal, event)} />
           </div>
+          {console.log('results', results.common, results.branded)}
+          {console.log('object entries', Object.entries(results))}
           {Object.entries(results).length ? 
+            (
+            results.common.length === 0 && results.branded.length === 0 ?
+              <span className="no-results">No results were found for this query.</span>
+            :
             <div>
               <ResultList list={results.common} meal={meal} date={date} userId={userId} type="common" />
               <ResultList list={results.branded} meal={meal} date={date} userId={userId} type="branded" />
             </div>
+            )
             : ''}
         </div>
       </div>

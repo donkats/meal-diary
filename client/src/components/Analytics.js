@@ -5,37 +5,48 @@ import CalorieGraph from './Graphs/CalorieGraph';
 import CarbGraph from './Graphs/CarbGraph';
 import FatGraph from './Graphs/FatGraph';
 import ProteinGraph from './Graphs/ProteinGraph';
+import '../styles/Analytics.css';
 
 function Analytics(props) {
   const { userId } = props;
   
   return (
-    <div className="graphAnalytics">
-      <Router>
-        <Link to="/weightgraph">Weight</Link> 
-        <Link to="/caloriegraph">Calories</Link>
-        <Link to="/carbgraph">Carbs</Link>
-        <Link to="/fatgraph">Fat</Link>
-        <Link to="/proteingraph">Proteins</Link>
+    <Router>
+      <div className="graph">
+        <div className="graph-links">
+          <Link to="/weight">Weight</Link>
+          •
+          <Link to="/calories">Calories</Link>
+          •
+          <Link to="/macros">Macros</Link>
+          {/* <Link to="/carbgraph">Carbs</Link> */}
+          {/* •
+          <Link to="/fatgraph">Fat</Link>
+          •
+          <Link to="/proteingraph">Proteins</Link> */}
+        </div>
+        
       <Switch>
-        <Route exact path="/weightgraph">
+        <Route exact path="/weight">
           <WeightGraph userId={userId} />
         </Route>
-        <Route path="/caloriegraph">
+        <Route path="/calories">
           <CalorieGraph userId={userId} />
         </Route>
-        <Route path="/carbgraph">
+        <Route path="/macros">
           <CarbGraph userId={userId} />
+          <FatGraph userId={userId} />
+          <ProteinGraph userId={userId} />
         </Route>
-        <Route path="/fatgraph">
+        {/* <Route path="/fatgraph">
           <FatGraph userId={userId} />
         </Route>
         <Route path="/proteingraph">
           <ProteinGraph userId={userId} />
-        </Route>
+        </Route> */}
       </Switch>
-  </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 

@@ -4,13 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Manrope', sans-serif;
-  background-color: #ffffff;
-}
-
-.app {
-  min-height: 100vh;
   background: url('https://i.imgur.com/2qCWyY9.jpg.com/KriuVEX.jpg') no-repeat fixed;
-  background-size: 400px;
+  background-size: 28vw;
   background-position-x: right;
   background-position-y: bottom;
 }
@@ -41,15 +36,6 @@ body {
 
 .faded {
   animation: fade-in 1s ease alternate infinite;
-}
-
-/* GRAPHS */
-
-.graphAnalytics{
-  padding-top: 5%;
-  margin-left: 30%;
-  height: 800px;
-  width: 800px;
 }
 
 /* FORMS */

@@ -16,15 +16,11 @@ function WeightGraph(props) {
               label: "Weight",
               data: data.map((item) => Math.round(item.sum)),
               pointRadius: 4,
-              pointBorderColor: 'rgba(54, 162, 235, 1)',
+              pointBorderColor: '#98af10',
               pointHoverBackgroundColor: 'rgba(54, 162, 235, 1)',
               pointHoverRadius: 8,
-              backgroundColor: [
-                'rgba(54, 162, 235, 0.2)',
-              ],
-              borderColor: [
-                'rgba(54, 162, 235, 1)',
-              ],
+              backgroundColor: 'rgba(152, 175, 16, 0.2)',
+              borderColor: '#98af10',
               borderWidth: 2
             }
           ]
@@ -33,58 +29,53 @@ function WeightGraph(props) {
   }, [userId])
 
   return (
-    <div className="graphAnalytics">
-      {data ?
-      <Line data={data}
-        options={{
-          title: {
-            display: true,
-            text: 'Weight',
-            fontSize: 20
-          },
-          legend: {
-            display: true,
-            position: 'right'
-          },
-          scales: {
-            xAxes: [{
-              type: 'time',
-              time: {
-                parser: 'DD-MM-YYYY',
-                unit: 'day',
-                unitStepSize: 1,
-                displayFormats: {
-                  day: 'DD-MM-YYYY'
-                },
+    data ?
+    <Line data={data}
+      options={{
+        title: {
+          display: true,
+          text: 'Weight history',
+          fontSize: 20
+        },
+        legend: {
+          display: false,
+        },
+        scales: {
+          xAxes: [{
+            type: 'time',
+            time: {
+              parser: 'DD-MM-YYYY',
+              unit: 'day',
+              unitStepSize: 1,
+              displayFormats: {
+                day: 'DD-MM-YYYY'
               },
-              ticks: {
-                source: 'data',
-                autoSkip: false,
-                minRotation: 45,
-                fontSize: 14,
-              },
-              scaleLabel: {
-                display: true,
-                labelString: 'Day',
-                fontSize: 20,
-              }
-            }],
-            yAxes: [{
-              ticks: {
-                beginAtZero: true,
-                fontSize: 14,
-              },
-              scaleLabel: {
-                display: true,
-                labelString: 'Weight in kilograms',
-                fontSize: 20
-              }
-            }]
-          }
-        }} />
-      :
-      'Loading...'}
-    </div>
+            },
+            ticks: {
+              source: 'data',
+              autoSkip: false,
+              minRotation: 45,
+              fontSize: 14,
+            },
+            scaleLabel: {
+              display: false,
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              fontSize: 14,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Weight (kg)',
+              fontSize: 16
+            }
+          }]
+        }
+      }} />
+    :
+    'Loading...'
   );
 }
 

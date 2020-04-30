@@ -1,0 +1,30 @@
+.graph {
+  margin-left: 20%;
+  width: 60%;
+  padding: 50px 40px;
+}
+
+.graph-links {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.graph a {
+  margin: 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.graph a:hover {
+  text-decoration: none;
+  color: #555555;
+}
+
+.graph canvas {
+  margin: 30px 0;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.45);
+}

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Line } from 'react-chartjs-2';
 import moment from 'moment';
 
+const yellow = '#efca08';
+const yellowBg = 'rgba(239, 202, 8, 0.2)';
+
 function CarbGraph(props) {
   const { userId } = props;
   const [data, setData] = useState({})
@@ -17,15 +20,11 @@ function CarbGraph(props) {
               label: "Total Carb intake",
               data: data.map((item) => item.sum),
               pointRadius: 4,
-              pointBorderColor: 'rgba(54, 162, 235, 1)',
+              pointBorderColor: yellow,
               pointHoverBackgroundColor: 'rgba(54, 162, 235, 1)',
               pointHoverRadius: 8,
-              backgroundColor: [
-                'rgba(54, 162, 235, 0.2)',
-              ],
-              borderColor: [
-                'rgba(54, 162, 235, 1)',
-              ],
+              backgroundColor: yellowBg,
+              borderColor: yellow,
               borderWidth: 2
             }
           ]
@@ -33,61 +32,55 @@ function CarbGraph(props) {
     })
   }, [userId])
 
-    return (
-      <div className="graphAnalytics">
-        {data ?
-        <Line data={data}
-          options={{
-            title: {
-              display: true,
-              text: 'Carb intake per day',
-              fontSize: 20
+  return (
+    data ?
+    <Line data={data}
+      options={{
+        title: {
+          display: true,
+          text: 'Carbohydrates',
+          fontSize: 20
+        },
+        legend: {
+          display: false
+        },
+        scales: {
+          xAxes: [{
+            type: 'time',
+            time: {
+              parser: 'DD-MM-YYYY',
+              unit: 'day',
+              unitStepSize: 1,
+              displayFormats: {
+                day: 'DD-MM-YYYY'
+              },
             },
-            legend: {
-              display: true,
-              position: 'right'
+            ticks: {
+              source: 'data',
+              autoSkip: false,
+              minRotation: 45,
+              fontSize: 14,
             },
-            scales: {
-              xAxes: [{
-                type: 'time',
-                time: {
-                  parser: 'DD-MM-YYYY',
-                  unit: 'day',
-                  unitStepSize: 1,
-                  displayFormats: {
-                    day: 'DD-MM-YYYY'
-                  },
-                },
-                ticks: {
-                  source: 'data',
-                  autoSkip: false,
-                  minRotation: 45,
-                  fontSize: 14,
-                },
-                scaleLabel: {
-                  display: true,
-                  labelString: 'Day',
-                  fontSize: 20,
-                }
-              }],
-              yAxes: [{
-                ticks: {
-                  beginAtZero: true,
-                  fontSize: 14,
-                },
-                scaleLabel: {
-                  display: true,
-                  labelString: 'Number of carbs',
-                  fontSize: 20
-                }
-              }]
+            scaleLabel: {
+              display: false,
             }
-          }} />
-          :
-          'Loading...'
-          }
-      </div>
-    )
+          }],
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              fontSize: 14,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Carbohydrates (g)',
+              fontSize: 16
+            }
+          }]
+        }
+      }} />
+    :
+    'Loading...'
+  );
 }
 
 export default CarbGraph;
