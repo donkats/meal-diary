@@ -38,8 +38,7 @@ function CalorieGraph(props) {
           fontSize: 20
         },
         legend: {
-          display: true,
-          position: 'right'
+          display: false,
         },
         scales: {
           xAxes: [{

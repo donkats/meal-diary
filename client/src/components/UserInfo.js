@@ -51,7 +51,7 @@ function UserInfo(props) {
       </p>
       <div className="userinfo">
         <div className="user-item">
-          <strong>Height:</strong> {user.height}
+          <strong>Height:</strong> {user.height}cm
         </div>
         <div className="user-item">
           <strong>Weight: </strong>
@@ -61,7 +61,7 @@ function UserInfo(props) {
               <input type="button" className="add-weight-btn" onClick={(e) => addWeightToDb(e)} value="update" />
             </div>
           :
-          `${user.kilograms} kg`
+          `${user.kilograms}kg`
           }
           <input type="image" className="adjust-btn" onClick={() => setFieldVisible(!showWeightField)} // showInputField()
             src="https://img.icons8.com/ios/50/000000/pencil-tip.png" alt="edit weight" />
