@@ -45,8 +45,7 @@ function UserInfo(props) {
 
   return (
     <div className="user">
-      <img src="https://res.cloudinary.com/heo8hwtja/image/upload/w_300,h_300,c_fill,g_face,r_max,f_auto/IMG-20190701-WA0003_dbf0dg.jpg" 
-        alt="profile" />
+      <img src="https://i.imgur.com/O0jWLRN.png" alt="profile" />
       <p className="welcome">
         Hello, <span className="name">{user.name}</span>
       </p>
