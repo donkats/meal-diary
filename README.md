@@ -1,6 +1,6 @@
 # Meal Diary, our final project for \</Salt\>
 
-For our final project of the </Salt> programme we created a meal tracker.
+For our final project of the \</Salt\> bootcamp we created a meal tracker.
 
 ## Demonstration
 
